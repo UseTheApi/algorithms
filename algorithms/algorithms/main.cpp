@@ -14,12 +14,15 @@
 
 int main(int argc, const char * argv[]) {
     
+// TEST: Jump Stairs tasks DP: hopSomeStairs.hpp
+//    std::cout << walkThoughStairs(10) << std::endl;
+    
 // TEST: Fibonacci and Factorial DP: factorial_fibonacci.hpp
 //    std::cout << fibonacci(45) << std::endl;
 //    std::cout << factorial(15) << std::endl;
     
 // TEST: Binomial coefficients calculation: binomialCoefficient.hpp
-//    std::cout << bimonialCoefficient(8,4) << std::endl;
+//    std::cout << bimonialCoefficient(5,4) << std::endl;
     
 //    BinaryTree *tree = new BinaryTree(4);
 //    tree->root->left = new Tnode(3);
