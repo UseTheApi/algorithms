@@ -20,7 +20,7 @@
                                                                     from the stair 1,2 or 3 below
 */
 
-int walkThoughStairs(int n){
+int walkThroughStairs(int n){
     int hops[n+1];
     hops[0] = 1; // we don't use this item for calculations but stil filling it
     hops[1] = 1;

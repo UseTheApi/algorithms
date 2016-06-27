@@ -11,6 +11,6 @@
 
 #include <stdio.h>
 
-int walkThoughStairs(int n);
+int walkThroughStairs(int n);
 
 #endif /* hopSomeStairs_hpp */
