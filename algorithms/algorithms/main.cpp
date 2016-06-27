@@ -9,7 +9,7 @@
 #include <iostream>
 
 /* In order to run one of the tests including of appropriate .hpp file is required 
-   ex. : #include "factorial_fibonacci" then comment out section marked TEST: Fibonacci and Factorial DP */
+   ex. : #include "factorial_fibonacci.hpp" then comment out section marked TEST: Fibonacci and Factorial DP */
 
 
 int main(int argc, const char * argv[]) {
