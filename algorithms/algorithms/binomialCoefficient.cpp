@@ -48,6 +48,7 @@ int ** initMatrix(int size){
 int bimonialCoefficient(int n, int k){
     int max_size = std::max(n, k);
     int **matrix = initMatrix(max_size);
+    std::cout << "Initial matrix" << std::endl;
     printMatrix(matrix, max_size);
     
     for(int i = 2; i < max_size; ++i){
@@ -55,7 +56,7 @@ int bimonialCoefficient(int n, int k){
             matrix[i][j] = matrix[i-1][j-1] + matrix[i-1][j];
         }
     }
-    
+    std::cout << "Final filled out Matrix" << std::endl;
     printMatrix(matrix, max_size);
     return matrix[n-1][k-1];
 }
