@@ -6,10 +6,17 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXFileReference section */
+		E1A154C61D1DB600005F5969 /* stackWithLinkedList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stackWithLinkedList.cpp; sourceTree = "<group>"; };
+		E1A154C71D1DB600005F5969 /* stackWithLinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = stackWithLinkedList.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		E1A154BF1D1DB5BE005F5969 = {
 			isa = PBXGroup;
 			children = (
+				E1A154C61D1DB600005F5969 /* stackWithLinkedList.cpp */,
+				E1A154C71D1DB600005F5969 /* stackWithLinkedList.hpp */,
 			);
 			sourceTree = "<group>";
 		};
