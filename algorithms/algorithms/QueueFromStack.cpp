@@ -8,6 +8,11 @@
 #include <iostream>
 #include "QueueFromStack.hpp"
 
+/* Implementation of a Queue with Stack
+   Queue is operating with two stacks
+   enqueue1 and dequeue1 represent implementation by making enqueue method costly
+   enqueue2 and dequeue2 represent implementation by making dequeue method costly*/
+
 StackNode::StackNode(int data){
     this->data = data;
     this->next = 0;

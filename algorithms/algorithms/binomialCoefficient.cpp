@@ -8,7 +8,11 @@
 
 #include <iostream>
 #include <math.h>
-#include "binomialCoeffitient.hpp"
+#include "binomialCoefficient.hpp"
+
+/* Implementation shows creating a matrix representation of Pascal's triangle
+   At First initial filling of the matrix fills vertical and diogonal with 1
+   Then based on pre-cached results in the matrix it becomes possible to fill the matrix without recursion */
 
 int ** fillInitial(int ** matrix, int size){
     for(int i=0; i < size; ++i){
@@ -45,7 +49,6 @@ int bimonialCoefficient(int n, int k){
     int max_size = std::max(n, k);
     int **matrix = initMatrix(max_size);
     printMatrix(matrix, max_size);
-    //std::cout << matrix[2-1][0] << " " << matrix[2][1] << std::endl;
     
     for(int i = 2; i < max_size; ++i){
         for(int j = 1; j < i; ++j){

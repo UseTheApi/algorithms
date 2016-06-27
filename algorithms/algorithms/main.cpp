@@ -7,13 +7,13 @@
 //
 
 #include <iostream>
-#include "binomialCoefficient.hpp"
+#include "stackUsingLinkedList.hpp"
 
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     
-    std::cout << bimonialCoefficient(8,4) << std::endl;
+    //std::cout << bimonialCoefficient(8,4) << std::endl;
     
 //    BinaryTree *tree = new BinaryTree(4);
 //    tree->root->left = new Tnode(3);
@@ -63,13 +63,13 @@ int main(int argc, const char * argv[]) {
 //    std::cout << stack->pop() << std::endl;
     
 // TEST: stack using linked list
-//    stackNode *head = newNode(1);
-//    push(&head, 2);
-//    push(&head, 3);
-//    push(&head, 4);
-//    std::cout << pop(&head) << std::endl;
-//    std::cout << peek(head) << std::endl;
-//    std::cout << " ================== " << std::endl;
+    stackNode *head = newNode(1);
+    push(&head, 2);
+    push(&head, 3);
+    push(&head, 4);
+    std::cout << pop(&head) << std::endl;
+    std::cout << peek(head) << std::endl;
+    std::cout << " ================== " << std::endl;
 //
 // TEST: queue using linked list
 //    Queue *q = createQueue();

@@ -9,6 +9,11 @@
 #include "queueUsingLinkedList.hpp"
 #include <iostream>
 
+/* Implementation of a Queue using Linked List
+   Queue has two pointers to a Linked List nodes: front and rear
+   enqueue to the end of the Linked List
+   dequeue from the head of the Linked List */
+
 Qnode * newQNode(int data){
     Qnode * node = new Qnode();
     node->data = data;

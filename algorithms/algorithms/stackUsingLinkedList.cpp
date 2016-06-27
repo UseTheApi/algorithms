@@ -8,6 +8,10 @@
 #include "stackUsingLinkedList.hpp"
 #include <iostream>
 
+/* Implementation of a Stack using Linked List
+   Node of a Stack is a node of Linked List
+   push to the head of the Linked List
+   pop from the head of the Linked List */
 
 stackNode * newNode(int data){
     stackNode *node = new stackNode();

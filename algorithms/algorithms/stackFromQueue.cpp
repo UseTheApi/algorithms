@@ -9,6 +9,10 @@
 #include "stackFromQueue.hpp"
 #include <iostream>
 
+/* Implementation of a Stack using Queue
+   Stack is operting with two Queues
+   in this case implementation represents making push operation costly */
+
 namespace stackFromQueue{
     
     Qnode::Qnode(int data){
