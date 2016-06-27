@@ -10,7 +10,7 @@
 build/
 DerivedData/
 algorithms/*.xcodeproj*
-
+*.xcodeproj
 ## Various settings
 *.pbxuser
 !default.pbxuser
