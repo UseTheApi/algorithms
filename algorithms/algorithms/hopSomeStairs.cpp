@@ -22,7 +22,7 @@
 
 int walkThroughStairs(int n){
     int hops[n+1];
-    hops[0] = 1; // we don't use this item for calculations but stil filling it
+    hops[0] = 1; // we don't use this item for calculations but still filling it
     hops[1] = 1;
     hops[2] = 2;
     hops[3] = 4;
