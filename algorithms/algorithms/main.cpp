@@ -14,6 +14,13 @@
 
 int main(int argc, const char * argv[]) {
     
+// TEST: ways to calculate amount with give list of debominations: amountWithCoins.hpp
+//    int *denominations = new int[3];
+//    denominations[0] = 1;
+//    denominations[1] = 2;
+//    denominations[2] = 3;
+//    std::cout <<waysToGetAmount(6, denominations) << std::endl;
+    
 // TEST: Jump Stairs tasks DP: hopSomeStairs.hpp
 //    std::cout << walkThoughStairs(10) << std::endl;
     
