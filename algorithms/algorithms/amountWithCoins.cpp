@@ -19,9 +19,9 @@
  so for amount of 5 we got coins [1,3,5]
     n=0 => 1
     n=1 => 1
-    n=2 => 0 (2 is not given)
+    n=2 => 1: 11  (2 is not given)
     n=3 => 2: 111, 3 - how can we figure out how to calculate possibilities of 3?
-    n=4 => 0 (4 is not given)
+    n=4 => 2: 1111, 13 (4 is not given)
     n=5 => 3: 11111, 113, 5 => f(n-2)+f(n-4) = f(n=3)+f(n=1) = 2+1 = 3.
  
  Indexes of array that we use for caching calculations is representing a given number: arr[5+1] = [0,0,0,0,0,0] (indices are: 0,1,2,3,4,5). 
