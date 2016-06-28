@@ -12,7 +12,19 @@
 
 /* Implementation shows creating a matrix representation of Pascal's triangle
    At First initial filling of the matrix fills vertical and diogonal with 1
-   Then based on pre-cached results in the matrix it becomes possible to fill the matrix without recursion */
+   Then based on pre-cached results in the matrix it becomes possible to fill the matrix without recursion
+ Solution:
+    calculate binomial coefficients: n=5, k=4
+    Building a Pascal's triangle:
+ 
+    n/k| 0 1 2 3  4  5
+     0   1
+     1   1 1
+     2   1 2 1
+     3   1 3 3 1
+     4   1 4 6 4 1
+     5   1 5 10 10 5 1 solution is 5
+*/
 
 int ** fillInitial(int ** matrix, int size){
     for(int i=0; i < size; ++i){
