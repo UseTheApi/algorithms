@@ -7,6 +7,9 @@
 //
 
 #include <iostream>
+#include <string>
+#include <vector>
+#include <sstream>
 
 /* In order to run one of the tests including of appropriate .hpp file is required 
    ex. : #include "factorial_fibonacci.hpp" then comment out section marked TEST: Fibonacci and Factorial DP */
@@ -14,12 +17,36 @@
 
 int main(int argc, const char * argv[]) {
     
+//    std::string str("Split me by spaces");
+//    std::string buf;
+//    std::stringstream ss(str);
+//    
+//    std::vector<std::string> tokens;
+//    while(ss >> buf)
+//        tokens.push_back(buf);
+//    
+//    for (std::vector<std::string>::const_iterator i = tokens.begin(); i != tokens.end(); ++i)
+//        std::cout << *i << std::endl;
+    
+// TEST: Knapsack 1-0 problem: knapsackProblem.hpp
+//    int n_items = 5;
+//    int capacity = 11;
+//    int *values = new int[n_items];
+//    int *weights = new int[n_items];
+//    values[0] = 1; weights[0] = 1;
+//    values[1] = 6; weights[1] = 2;
+//    values[2] = 18; weights[2] = 5;
+//    values[3] = 22; weights[3] = 6;
+//    values[4] = 28; weights[4] = 7;
+//    
+//    maxValueforKnapsack(capacity, n_items, values, weights);
+    
 // TEST: ways to calculate amount with give list of debominations: amountWithCoins.hpp
 //    int *denominations = new int[3];
 //    denominations[0] = 1;
 //    denominations[1] = 2;
 //    denominations[2] = 3;
-//    std::cout <<waysToGetAmount(6, denominations) << std::endl;
+//    std::cout << waysToGetAmount(6, denominations) << std::endl;
     
 // TEST: Jump Stairs tasks DP: hopSomeStairs.hpp
 //    std::cout << walkThoughStairs(10) << std::endl;
