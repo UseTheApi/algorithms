@@ -8,6 +8,7 @@
 
 #include "binarySearchTree.hpp"
 #include <iostream>
+#include <stack>
 
 Tnode::Tnode(int data){
     this->data = data;
@@ -53,9 +54,9 @@ void Bst::insert(int data){
 void inOrderTraversal(Tnode *root){
     // recursive in order traversal
     if(root){
-        preOrderTraversal(root->left);
+        inOrderTraversal(root->left);
         std::cout << root->data << " ";
-        preOrderTraversal(root->right);
+        inOrderTraversal(root->right);
     }
 }
 
@@ -63,8 +64,8 @@ void preOrderTraversal(Tnode *root){
     // recursive pre order traversal
     if(root){
         std::cout << root->data << " ";
-        inOrderTraversal(root->left);
-        inOrderTraversal(root->right);
+        preOrderTraversal(root->left);
+        preOrderTraversal(root->right);
     }
 }
 
@@ -74,5 +75,30 @@ void postOrderTraversal(Tnode *root){
         postOrderTraversal(root->left);
         postOrderTraversal(root->right);
         std::cout << root->data << " ";
+    }
+}
+
+void inOrderTraversalStack(Tnode *root){
+    /*
+     Recursion uses a memory stack to store all function calls
+     In this case we use our own dynamic stack
+    */
+    std::stack<Tnode *> s;
+    Tnode * current = root;
+    int done = 0;
+    while(!done){
+        if(current){
+            s.push(current);
+            current = current->left;
+        } else{
+            if(!s.empty()){
+                std::cout << s.top()->data << " ";
+                current = s.top();
+                s.pop();
+                current = current->right;
+            } else{
+                done = 1;
+            }
+        }
     }
 }

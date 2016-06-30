@@ -41,5 +41,6 @@ private:
 void preOrderTraversal(Tnode *root);
 void inOrderTraversal(Tnode *root);
 void postOrderTraversal(Tnode *root);
+void inOrderTraversalStack(Tnode *root);
 
 #endif /* binaryTree_hpp */
