@@ -29,4 +29,6 @@ Current list:
           >  * *a list of coin denominations*
 
        > *computes the number of ways to make amount of money with coins of the available denominations.*
-    4. Knapsack problem *TBD*
+    4. Knapsack problem *in progress*
+  9. Interesting tasks
+    * Reverse a sentance *in progress*
