@@ -22,6 +22,8 @@ private:
 
 class Bst {
 public:
+    Tnode * getRoot();
+    void * setRoot();
     void insert(int data);
     Tnode * search(int key);
     Tnode * findMin();
@@ -35,5 +37,9 @@ private:
     Tnode * findMinHelper(Tnode *root);
     Tnode * removeHelper(Tnode *root, int key); // remove noe with given key and return new root of the tree
 };
+
+void preOrderTraversal(Tnode *root);
+void inOrderTraversal(Tnode *root);
+void postOrderTraversal(Tnode *root);
 
 #endif /* binaryTree_hpp */
