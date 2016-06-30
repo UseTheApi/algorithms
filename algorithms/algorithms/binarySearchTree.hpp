@@ -37,13 +37,4 @@ private:
     Tnode * findMinHelper(Tnode *root);
     Tnode * removeHelper(Tnode *root, int key); // remove noe with given key and return new root of the tree
 };
-
-void preOrderTraversal(Tnode *root);
-void inOrderTraversal(Tnode *root);
-void postOrderTraversal(Tnode *root);
-void inOrderTraversalStack(Tnode *root);
-void inOrderTraversalNoRecursion(Tnode *root);
-void breadthFirstTraversalQueue(Tnode *root);
-void breadthFirstTraversalHeight(Tnode *root);
-
 #endif /* binaryTree_hpp */

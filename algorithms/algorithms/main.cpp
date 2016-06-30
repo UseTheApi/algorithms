@@ -16,7 +16,39 @@
 
 
 int main(int argc, const char * argv[]) {
-
+    
+    
+// TEST: Binary Search Tree Traversals: bstTraversals.hpp
+//    Bst *tree = new Bst();
+//    tree->insert(4);
+//    tree->insert(6);
+//    tree->insert(2);
+//    tree->insert(5);
+//    tree->insert(8);
+//    tree->insert(3);
+//    tree->insert(1);
+//    std::cout << "Pre Order Traversal:" << std::endl;
+//    preOrderTraversal(tree->getRoot());
+//    std::cout << std::endl;
+//    std::cout << "In Order Traversal:" << std::endl;
+//    inOrderTraversal(tree->getRoot());
+//    std::cout << std::endl;
+//    std::cout << "Post Order Traversal:" << std::endl;
+//    postOrderTraversal(tree->getRoot());
+//    std::cout << std::endl;
+//    std::cout << "In Order Traversal using Stack:" << std::endl;
+//    inOrderTraversalStack(tree->getRoot());
+//    std::cout << std::endl;
+//    std::cout << "In Order Traversal Morris:" << std::endl;
+//    inOrderTraversalNoRecursion(tree->getRoot());
+//    std::cout << std::endl;
+//    std::cout << "Breadth First Traversal using Queue:" << std::endl;
+//    breadthFirstTraversalQueue(tree->getRoot());
+//    std::cout << std::endl;
+//    std::cout << "Breadth First Traversal using Height:" << std::endl;
+//    breadthFirstTraversalHeight(tree->getRoot());
+//    std::cout << std::endl;
+    
 // TEST: Reverse a sentance: sentecReverse.hpp
 //    std::string array = "practice reverse words";
 //    char arr[22];
@@ -50,7 +82,6 @@ int main(int argc, const char * argv[]) {
 //    values[2] = 18; weights[2] = 5;
 //    values[3] = 22; weights[3] = 6;
 //    values[4] = 28; weights[4] = 7;
-//    
 //    maxValueforKnapsack(capacity, n_items, values, weights);
     
 // TEST: ways to calculate amount with give list of debominations: amountWithCoins.hpp
