@@ -7,12 +7,12 @@ Current list:
   4. **Queue implemented from a Stack**
   5. **Binary Search Tree**:
     1. Depth traversal (with and InOrder without recursion) *TBD*
-      * Pre-, In-, Post-order traversals using recursion *TBD*
+      * Pre-, In-, Post-order traversals using recursion
       * In-order traversal using Stack *TBD*
       * In-order traversal without recursion or Stack *TBD*
     2. Bredth traversal (using queue) *TBD*
     3. Search and findMin *TBD*
-    4. Insertion and Deletion *TBD*
+    4. Insertion and Deletion *In Progress*
   6. AVL tree balancing *TBD*
   7. Red-Black tree *TBD*
   8. **Dynamic Programming**
