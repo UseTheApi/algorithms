@@ -102,3 +102,30 @@ void inOrderTraversalStack(Tnode *root){
         }
     }
 }
+
+void inOrderTraversalNoRecursion(Tnode *root){
+    Tnode *pre = 0;
+    Tnode *current = root;
+    if(!root){
+        return;
+    }
+    while(current){
+        if(!current->left){
+            std::cout << current->data << " ";
+            current = current->right;
+        } else{
+            pre = current->left;
+            if(pre->right && pre->right!=current){
+                pre = pre->right;
+            }
+            if(!pre->right){
+                pre->right = current;
+                current = current->left;
+            } else{
+                pre->right = 0;
+                std::cout << current->data << " ";
+                current = current->right;
+            }
+        }
+    }
+}
