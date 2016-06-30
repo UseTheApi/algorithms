@@ -8,7 +8,7 @@ Current list:
   5. **Binary Search Tree**:
     1. Depth traversal (with and InOrder without recursion) *TBD*
       * Pre-, In-, Post-order traversals using recursion
-      * In-order traversal using Stack *TBD*
+      * In-order traversal using Stack
       * In-order traversal without recursion or Stack *TBD*
     2. Bredth traversal (using queue) *TBD*
     3. Search and findMin *TBD*
