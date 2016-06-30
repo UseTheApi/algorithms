@@ -134,7 +134,7 @@ void inOrderTraversalNoRecursion(Tnode *root){
     }
 }
 
-void breadthFirstTraversal(Tnode *root){
+void breadthFirstTraversalQueue(Tnode *root){
     /*
      Level Order Traversal. Using Queue
     */
@@ -151,5 +151,35 @@ void breadthFirstTraversal(Tnode *root){
         if(current->right){
             q.push(current->right);
         }
+    }
+}
+
+int height(Tnode *root){
+    if(!root) return 0;
+    int lheight = height(root->left);
+    int rheight = height(root->right);
+    if(lheight > rheight)
+        return lheight+1;
+    else
+        return rheight+1;
+}
+
+void printLevelNodes(Tnode *root, int level){
+    if(!root) return;
+    if(level == 1){
+        std::cout << root->data << " ";
+    } else{
+        printLevelNodes(root->left, level-1);
+        printLevelNodes(root->right, level-1);
+    }
+}
+
+void breadthFirstTraversalHeight(Tnode *root){
+    /*
+     This function prints nodes level by level using height of the tree
+    */
+    int h = height(root);
+    for(int i=1; i <= h; ++i){
+        printLevelNodes(root, i);
     }
 }
