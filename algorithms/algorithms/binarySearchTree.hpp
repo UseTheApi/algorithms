@@ -43,5 +43,6 @@ void inOrderTraversal(Tnode *root);
 void postOrderTraversal(Tnode *root);
 void inOrderTraversalStack(Tnode *root);
 void inOrderTraversalNoRecursion(Tnode *root);
+void breadthFirstTraversal(Tnode *root);
 
 #endif /* binaryTree_hpp */

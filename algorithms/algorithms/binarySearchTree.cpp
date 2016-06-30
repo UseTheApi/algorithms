@@ -9,6 +9,7 @@
 #include "binarySearchTree.hpp"
 #include <iostream>
 #include <stack>
+#include <queue>
 
 Tnode::Tnode(int data){
     this->data = data;
@@ -104,6 +105,9 @@ void inOrderTraversalStack(Tnode *root){
 }
 
 void inOrderTraversalNoRecursion(Tnode *root){
+    /*
+     Morris Traversal
+    */
     Tnode *pre = 0;
     Tnode *current = root;
     if(!root){
@@ -126,6 +130,26 @@ void inOrderTraversalNoRecursion(Tnode *root){
                 std::cout << current->data << " ";
                 current = current->right;
             }
+        }
+    }
+}
+
+void breadthFirstTraversal(Tnode *root){
+    /*
+     Level Order Traversal. Using Queue
+    */
+    if(!root) return;
+    std::queue<Tnode *> q;
+    q.push(root);
+    while (!q.empty()) {
+        Tnode *current = q.front();
+        std::cout << current->data << " ";
+        q.pop();
+        if(current->left){
+            q.push(current->left);
+        }
+        if(current->right){
+            q.push(current->right);
         }
     }
 }
