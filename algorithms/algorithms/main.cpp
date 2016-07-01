@@ -17,8 +17,20 @@
 
 int main(int argc, const char * argv[]) {
     
+// TEST: BST insertion, search for key, find Min, find min in a subtree: binarySearchTree.hpp or bstTraversals.hpp
+//    Bst *tree = new Bst();
+//    tree->insert(4);
+//    tree->insert(6);
+//    tree->insert(2);
+//    tree->insert(5);
+//    tree->insert(8);
+//    tree->insert(3);
+//    tree->insert(1);
+//    std::cout << tree->search(3)->data << std::endl;
+//    std::cout << tree->findMin()->data << std::endl;
+//    std::cout << tree->findSubtreeMin(tree->search(6))->data << std::endl;
     
-// TEST: Binary Search Tree Traversals: bstTraversals.hpp
+// TEST: BST Traversals: bstTraversals.hpp
 //    Bst *tree = new Bst();
 //    tree->insert(4);
 //    tree->insert(6);

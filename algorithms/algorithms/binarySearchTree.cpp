@@ -49,3 +49,34 @@ void Bst::insert(int data){
         this->insertHelper(root, data);
     }
 }
+
+Tnode * Bst::searchHelper(Tnode *root, int key){
+    if(root->data == key) return root;
+    if(key >= root->data){
+        return this->searchHelper(root->right, key);
+    }
+    return this->searchHelper(root->left, key);
+}
+
+Tnode * Bst::search(int key){
+    if(!root) return this->root;
+    else return this->searchHelper(this->root, key);
+}
+
+Tnode * Bst::findMinHelper(Tnode *root){
+    Tnode *cur = root;
+    while(cur->left){
+        cur = cur->left;
+    }
+    return cur;
+}
+
+Tnode * Bst::findMin(){
+    if(!this->root) return this->root;
+    return this->findMinHelper(this->root);
+}
+
+Tnode * Bst::findSubtreeMin(Tnode *node){
+    if(!node) return node;
+    return this->findMinHelper(node);
+}

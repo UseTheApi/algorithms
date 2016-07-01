@@ -27,7 +27,7 @@ public:
     void insert(int data);
     Tnode * search(int key);
     Tnode * findMin();
-    Tnode * findMinSubtree(Tnode *node);
+    Tnode * findSubtreeMin(Tnode *node);
     Tnode * remove(int key);
     Bst();
 private:
