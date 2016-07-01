@@ -12,8 +12,8 @@ Current list:
       * In-order traversal without recursion or Stack - Morris traversal
     2. Breadth traversal (using queue)
     3. Breadth traversal (using height of the tree)
-    3. Search and findMin *TBD*
-    4. Insertion and Deletion *In Progress*
+    3. Search and findMin (for tree nad a subtree)
+    4. Insertion and Deletion
   6. AVL tree balancing *TBD*
   7. Red-Black tree *TBD*
   8. **Dynamic Programming**
