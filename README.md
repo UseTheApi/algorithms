@@ -14,9 +14,9 @@ Current list:
     3. Breadth traversal (using height of the tree)
     3. Search and findMin (for tree nad a subtree)
     4. Insertion and Deletion
-  6. Heap *TBD*
-  7. AVL tree balancing *TBD*
-  8. Red-Black tree *TBD*
+  6. **Heap** *TBD*
+  7. **AVL tree balancing** *TBD*
+  8. **Red-Black tree** *TBD*
   9. **Dynamic Programming**
     1. Factorial and Fibonacci
     2. Binomial Coefficients
