@@ -23,6 +23,10 @@ Tnode * Bst::getRoot(){
     return this->root;
 }
 
+void Bst::setRoot(Tnode *node){
+    this->root = node;
+}
+
 void Bst::insertHelper(Tnode *root, int data){
     // Inserts a node to a tree with given root
     Tnode *node = new Tnode(data);
@@ -52,7 +56,7 @@ void Bst::insert(int data){
 
 Tnode * Bst::searchHelper(Tnode *root, int key){
     if(root->data == key) return root;
-    if(key >= root->data){
+    if(key > root->data){
         return this->searchHelper(root->right, key);
     }
     return this->searchHelper(root->left, key);
@@ -79,4 +83,32 @@ Tnode * Bst::findMin(){
 Tnode * Bst::findSubtreeMin(Tnode *node){
     if(!node) return node;
     return this->findMinHelper(node);
+}
+
+Tnode * Bst::removeHelper(Tnode *root, int key) {
+    if(key > root->data){
+        root->right = this->removeHelper(root->right, key);
+    } else if(key < root->data){
+        root->left = this->removeHelper(root->left, key);
+    } else{
+        if(!root->left){
+            Tnode *tmp = root->right;
+            delete root;
+            return tmp;
+        } else if(!root->right){
+            Tnode *tmp = root->left;
+            delete root;
+            return tmp;
+        } else{
+            Tnode *minRight = this->findSubtreeMin(root->right);
+            root->data = minRight->data;
+            root->right = this->removeHelper(root->right, minRight->data);
+        }
+    }
+    return root;
+}
+
+Tnode * Bst::remove(int key) {
+    if(!this->root) return root;
+    return this->removeHelper(this->root, key);
 }

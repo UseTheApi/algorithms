@@ -23,7 +23,7 @@ private:
 class Bst {
 public:
     Tnode * getRoot();
-    void * setRoot();
+    void setRoot(Tnode *node);
     void insert(int data);
     Tnode * search(int key);
     Tnode * findMin();

@@ -16,6 +16,35 @@
 
 
 int main(int argc, const char * argv[]) {
+
+// TEST: deletion from BST: bstTraversals.hpp or binarySearchTree.hpp
+//    Bst *tree = new Bst();
+//    tree->insert(4);
+//    tree->insert(6);
+//    tree->insert(2);
+//    tree->insert(5);
+//    tree->insert(8);
+//    tree->insert(3);
+//    tree->insert(1);
+//    std::cout << "Current root:" << tree->getRoot()->data << std::endl;
+//    std::cout << "In Order Traversal:" << std::endl;
+//    inOrderTraversal(tree->getRoot());
+//    std::cout << std::endl;
+//    tree->setRoot(tree->remove(4));
+//    std::cout << "Current root:" << tree->getRoot()->data << std::endl;
+//    std::cout << "In Order Traversal:" << std::endl;
+//    inOrderTraversal(tree->getRoot());
+//    std::cout << std::endl;
+//    tree->setRoot(tree->remove(2));
+//    std::cout << "Current root:" << tree->getRoot()->data << std::endl;
+//    std::cout << "In Order Traversal:" << std::endl;
+//    inOrderTraversal(tree->getRoot());
+//    std::cout << std::endl;
+//    tree->setRoot(tree->remove(3));
+//    std::cout << "Current root:" << tree->getRoot()->data << std::endl;
+//    std::cout << "In Order Traversal:" << std::endl;
+//    inOrderTraversal(tree->getRoot());
+//    std::cout << std::endl;
     
 // TEST: BST insertion, search for key, find Min, find min in a subtree: binarySearchTree.hpp or bstTraversals.hpp
 //    Bst *tree = new Bst();
