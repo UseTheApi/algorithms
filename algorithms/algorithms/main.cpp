@@ -17,6 +17,11 @@
 
 int main(int argc, const char * argv[]) {
 
+// TEST: Drone Flight Planning. both solutions: droneFlightPlanner.hpp
+//    std::vector<int> coordinates {10, 0, 6, 15, 8};
+//    std::cout << littersRequired(coordinates) << std::endl;
+//    std::cout << littersRequiredSimple(coordinates) << std::endl;
+
 // TEST: deletion from BST: bstTraversals.hpp or binarySearchTree.hpp
 //    Bst *tree = new Bst();
 //    tree->insert(4);
