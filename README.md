@@ -14,9 +14,10 @@ Current list:
     3. Breadth traversal (using height of the tree)
     3. Search and findMin (for tree nad a subtree)
     4. Insertion and Deletion
-  6. AVL tree balancing *TBD*
-  7. Red-Black tree *TBD*
-  8. **Dynamic Programming**
+  6. Heap *TBD*
+  7. AVL tree balancing *TBD*
+  8. Red-Black tree *TBD*
+  9. **Dynamic Programming**
     1. Factorial and Fibonacci
     2. Binomial Coefficients
     3. Jump Stairs task:
@@ -31,5 +32,6 @@ Current list:
 
        > *computes the number of ways to make amount of money with coins of the available denominations.*
     4. Knapsack problem
-  9. **Interesting tasks**
+  10. **Sorting Algorithms** *TBD*
+  11. **Interesting tasks**
     * Reverse a sentance
