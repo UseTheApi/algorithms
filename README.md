@@ -14,6 +14,7 @@ Current list:
     3. Breadth traversal (using height of the tree) : bstTraversals.hpp
     3. Search and findMin (for tree nad a subtree) : binarySearchTree.hpp
     4. Insertion and Deletion : binarySearchTree.hpp
+    5. In-order Successor (2 methods) : bstInorderSuccessor.hpp
   6. **Heap** *TBD*
   7. **AVL tree balancing** *TBD*
   8. **Red-Black tree** *TBD*
