@@ -17,6 +17,17 @@
 
 int main(int argc, const char * argv[]) {
 
+// TEST: In Order Successor in BST: bstInorderSuccessor.hpp
+//    BstWithParent *tree = new BstWithParent();
+//    tree->setRoot(tree->insert(tree->getRoot(), 5));
+//    tree->setRoot(tree->insert(tree->getRoot(), 7));
+//    tree->setRoot(tree->insert(tree->getRoot(), 10));
+//    tree->setRoot(tree->insert(tree->getRoot(), 3));
+//    tree->setRoot(tree->insert(tree->getRoot(), 4));
+//    BstNodeWithParent *temp = tree->getRoot()->left->right;
+//    std::cout << tree->findSuccessorByParent(temp)->data << std::endl;
+//    std::cout << tree->findSuccessorByRoot(tree->getRoot(), temp)->data << std::endl;
+
 // TEST: Drone Flight Planning. both solutions: droneFlightPlanner.hpp
 //    std::vector<int> coordinates {10, 0, 6, 15, 8};
 //    std::cout << littersRequired(coordinates) << std::endl;
