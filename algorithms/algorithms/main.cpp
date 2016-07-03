@@ -17,6 +17,26 @@
 
 int main(int argc, const char * argv[]) {
 
+// TEST: calculate the longest list of non-related nodes: nonRelativeNodes.hpp (+ binarySearchTree.hpp)
+//    Bst *tree = new Bst();
+//    tree->insert(7);
+//    tree->insert(5);
+//    tree->insert(10);
+//    tree->insert(6);
+//    tree->insert(3);
+//    tree->insert(4);
+//    tree->insert(1);
+//    tree->insert(8);
+//    tree->insert(11);
+//    tree->insert(9);
+//    tree->insert(12);
+//    
+//    std::vector<Tnode *> non_related_nodes = nonRelativeNodes(tree->getRoot());
+//    for(auto it: non_related_nodes){
+//        std::cout << it->data << " "; // 10 5 12 9 4 1
+//    }
+//    std::cout << std::endl;
+
 // TEST: In Order Successor in BST: bstInorderSuccessor.hpp
 //    BstWithParent *tree = new BstWithParent();
 //    tree->setRoot(tree->insert(tree->getRoot(), 5));
