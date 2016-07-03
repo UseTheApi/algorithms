@@ -15,6 +15,9 @@ Current list:
     3. Search and findMin (for tree nad a subtree) : binarySearchTree.hpp
     4. Insertion and Deletion : binarySearchTree.hpp
     5. In-order Successor (2 methods) : bstInorderSuccessor.hpp
+    6. Non-related nodes in BST: nonRelativeNodes.hpp
+      
+      > Given a pointer to the root of BST. Write a function that will return the max set of nodes that are not children or parents for each other.
   6. **Heap** *TBD*
   7. **AVL tree balancing** *TBD*
   8. **Red-Black tree** *TBD*
