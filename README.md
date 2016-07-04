@@ -18,6 +18,8 @@ Current list:
     6. Non-related nodes in BST: nonRelativeNodes.hpp
       
       > Given a pointer to the root of BST. Write a function that will return the max set of nodes that are not children or parents for each other.
+    7. Determine if two trees are equal: equalTrees.hpp
+    8. Lower Common Ancestor for two nodes in BST: lowerCommonAncestor.hpp (2 methods)
   6. **Heap** *TBD*
   7. **AVL tree balancing** *TBD*
   8. **Red-Black tree** *TBD*
