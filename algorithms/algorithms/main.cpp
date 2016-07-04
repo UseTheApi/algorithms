@@ -10,13 +10,31 @@
 #include <string>
 #include <vector>
 #include <sstream>
+#include "bstInorderSuccessor.hpp"
 
 /* In order to run one of the tests including of appropriate .hpp file is required 
    ex. : #include "factorial_fibonacci.hpp" then comment out section marked TEST: Fibonacci and Factorial DP */
 
 
 int main(int argc, const char * argv[]) {
-
+   
+// TEST: check if trees are equal: equalTree.hpp (+ binarySearchTree.hpp)
+//    Bst *tree1 = new Bst();
+//    Bst *tree2 = new Bst();
+//    tree1->insert(7);
+//    tree1->insert(9);
+//    tree1->insert(8);
+//    tree1->insert(5);
+//    tree1->insert(6);
+//    
+//    tree2->insert(7);
+//    tree2->insert(9);
+//    tree2->insert(8);
+//    tree2->insert(5);
+//    tree2->insert(6);
+//    
+//    std::cout << equalTrees(tree1->getRoot(), tree2->getRoot()) << std::endl; // cout 1 if true, 0 if false
+    
 // TEST: calculate the longest list of non-related nodes: nonRelativeNodes.hpp (+ binarySearchTree.hpp)
 //    Bst *tree = new Bst();
 //    tree->insert(7);
@@ -38,7 +56,7 @@ int main(int argc, const char * argv[]) {
 //    std::cout << std::endl;
 
 // TEST: In Order Successor in BST: bstInorderSuccessor.hpp
-//    BstWithParent *tree = new BstWithParent();
+//    bstSuccessor *tree = new bstSuccessor();
 //    tree->setRoot(tree->insert(tree->getRoot(), 5));
 //    tree->setRoot(tree->insert(tree->getRoot(), 7));
 //    tree->setRoot(tree->insert(tree->getRoot(), 10));
