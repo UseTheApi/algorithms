@@ -16,6 +16,14 @@
 
 
 int main(int argc, const char * argv[]) {
+    
+// TEST: Row in Pascal's Triangle by number: pascalsTriangle.hpp
+//    int k = 5;
+//    std::vector<int> row = rowInPascalsTriangle(k);
+//    for(auto it: row){
+//        std::cout << it << " ";
+//    }
+//    std::cout << std::endl;
 
 // TEST: Max Stock Profit: maxProfitInStock.hpp
 //    std::vector<int> prices = {10, 7, 11, 5, 8, 9};
