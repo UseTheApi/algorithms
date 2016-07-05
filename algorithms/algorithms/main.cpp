@@ -17,6 +17,22 @@
 
 int main(int argc, const char * argv[]) {
 
+// TEST: Product of all numbers in array except itself: productAllNumsExceptItself.hpp
+//    const std::vector<int> numbers = {3,2,4,1,5};
+//    std::cout << numbers.size() << std::endl;
+//    std::vector<int> result1 = productOfAllNumExceptItself(numbers);
+//    std::cout << "Brute Force: " << std::endl;
+//    for(auto it: result1){
+//        std::cout << it << " ";
+//    }
+//    std::cout << std::endl;
+//    std::vector<int> result2 = productOfAllNyumbersExceptItselfLinear(numbers);
+//    std::cout << "Linear complexity: " << std::endl;
+//    for(auto it: result2){
+//        std::cout << it << " ";
+//    }
+//    std::cout << std::endl;
+
 // TEST: Lowest Common Ancestor: lowestCommonAncestor.hpp
 //    Lca *tree = new Lca();
 //    tree->setRoot(tree->insert(tree->getRoot(), 6));
