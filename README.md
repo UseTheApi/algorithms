@@ -71,4 +71,10 @@ Current list:
       > Write an efficient function that takes stock_prices_yesterday and returns the best profit I could have made from 1 purchase and 1 sale of 1 Apple stock yesterday.
       
       > Ex: stock_prices_yesterday = [10, 7, 5, 8, 11, 9], then you'd buy for $5 and sell for $11 => answer is 6
+      
+    * Pascal's Triangle
+    
+      > Given an index k, return the kth row of the Pascal's triangle.
+        For example, given k = 3,
+        Return [1,3,3,1].
 
