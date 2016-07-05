@@ -17,7 +17,7 @@
 
 int main(int argc, const char * argv[]) {
 
-// TEST: Max Stock Profit: maxProfitStock.hpp
+// TEST: Max Stock Profit: maxProfitInStock.hpp
 //    std::vector<int> prices = {10, 7, 11, 5, 8, 9};
 //    std::cout << maxStockProfit(prices) << std::endl;
 
