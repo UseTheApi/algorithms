@@ -16,6 +16,11 @@
 
 
 int main(int argc, const char * argv[]) {
+
+// TEST: Pairs of the same diff: pairs.hpp
+//    int diff = 2;
+//    std::vector<int> arr = {1,5,3,4,2};
+//    std::cout << pairs(arr, diff) << std::endl;
     
 // TEST: Row in Pascal's Triangle by number: pascalsTriangle.hpp
 //    int k = 5;
