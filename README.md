@@ -60,3 +60,15 @@ Current list:
  
       > Example:
       > Completing the route [{x:0, y:2, z:10}, {x:3, y:5, z:0}, {x:9, y:20, z:6}, {x:10, y:12, z:15}, {x:10, y:10, z:8}] requires a minimum of 5 liters of fuel.
+      
+    * Multiplication in Array: productAllNumsExceptItself.hpp
+    
+      > Given an array of integrs. Write a function that will return array of products of all numbers in a given array except itslef.
+        Ex: [3,2,4,1] => [2*4*1, 3*4*1, 3*2*1, 3*2*4] => [8, 12, 6, 24]
+        
+    * Prices in Stock
+      
+      > Write an efficient function that takes stock_prices_yesterday and returns the best profit I could have made from 1 purchase and 1 sale of 1 Apple stock yesterday.
+      
+      > Ex: stock_prices_yesterday = [10, 7, 5, 8, 11, 9], then you'd buy for $5 and sell for $11 => answer is 6
+
