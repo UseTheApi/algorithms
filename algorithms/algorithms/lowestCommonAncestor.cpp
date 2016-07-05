@@ -53,5 +53,3 @@ BstNodeWithParent *Lca::lowestCommonAncestorParent(BstNodeWithParent *n1, BstNod
         return p1;
     }
 }
-
-

@@ -80,11 +80,3 @@ int Queue::dequeue2(){
     }
     return this->stack2->pop();
 }
-
-
-
-
-
-
-
-
