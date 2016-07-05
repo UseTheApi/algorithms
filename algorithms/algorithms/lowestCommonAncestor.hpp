@@ -10,5 +10,12 @@
 #define lowestCommonAncestor_hpp
 
 #include <stdio.h>
+#include "bstWithParent.hpp"
+
+class Lca: public BstWithParent{
+public:
+    BstNodeWithParent * lowestCommonAncestorParent(BstNodeWithParent *n1, BstNodeWithParent *n2);
+    BstNodeWithParent * lowestCommonAncesrotRoot(BstNodeWithParent *root, BstNodeWithParent *n1, BstNodeWithParent *n2);
+};
 
 #endif /* lowestCommonAncestor_hpp */

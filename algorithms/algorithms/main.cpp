@@ -10,13 +10,28 @@
 #include <string>
 #include <vector>
 #include <sstream>
-#include "bstInorderSuccessor.hpp"
 
 /* In order to run one of the tests including of appropriate .hpp file is required 
    ex. : #include "factorial_fibonacci.hpp" then comment out section marked TEST: Fibonacci and Factorial DP */
 
 
 int main(int argc, const char * argv[]) {
+
+// TEST: Lowest Common Ancestor: lowestCommonAncestor.hpp
+//    Lca *tree = new Lca();
+//    tree->setRoot(tree->insert(tree->getRoot(), 6));
+//    tree->setRoot(tree->insert(tree->getRoot(), 7));
+//    tree->setRoot(tree->insert(tree->getRoot(), 10));
+//    tree->setRoot(tree->insert(tree->getRoot(), 3));
+//    tree->setRoot(tree->insert(tree->getRoot(), 4));
+//    tree->setRoot(tree->insert(tree->getRoot(), 5));
+//    tree->setRoot(tree->insert(tree->getRoot(), 2));
+//    
+//    BstNodeWithParent *n1 = tree->search(tree->getRoot(), 2);
+//    BstNodeWithParent *n2 = tree->search(tree->getRoot(), 5);
+//    
+//    std::cout << tree->lowestCommonAncesrotRoot(tree->getRoot(), n1, n2)->data << std::endl;
+//    std::cout << tree->lowestCommonAncestorParent(n1, n2)->data << std::endl;
    
 // TEST: check if trees are equal: equalTree.hpp (+ binarySearchTree.hpp)
 //    Bst *tree1 = new Bst();
