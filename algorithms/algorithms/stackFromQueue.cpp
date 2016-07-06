@@ -15,39 +15,39 @@
 
 namespace stackFromQueue{
     
-    Qnode::Qnode(int data){
-        this->data = data;
-        this->next = 0;
+    Qnode::Qnode(int new_data){
+        data = new_data;
+        next = 0;
     }
     
     Qnode::Qnode(){
-        this->data = 0;
-        this->next = 0;
+        data = 0;
+        next = 0;
     }
 
     Queue::Queue(){
-        this->front = 0;
-        this->rear = 0;
+        front = 0;
+        rear = 0;
     }
 
-    void Queue::enqueue(int data) {
-        Qnode *node = new Qnode(data);
-        if(this->rear == 0){
-            this->front = this->rear = node;
+    void Queue::enqueue(int new_data) {
+        Qnode *node = new Qnode(new_data);
+        if(rear == 0){
+            front = rear = node;
         } else{
-            this->rear->next = node;
-            this->rear = node;
+            rear->next = node;
+            rear = node;
         }
     }
 
     int Queue::dequeue(){
-        if(this->front == 0){
+        if(front == 0){
             return 0;
         }
-        Qnode *tmp = this->front;
-        this->front = tmp->next;
-        if(this->front == 0){
-            this->rear = 0;
+        Qnode *tmp = front;
+        front = tmp->next;
+        if(front == 0){
+            rear = 0;
         }
         int popped = tmp->data;
         delete tmp;
@@ -55,25 +55,25 @@ namespace stackFromQueue{
     }
 
     Stack::Stack(){
-        this->queue1 = new Queue();
-        this->queue2 = new Queue();
+        queue1 = new Queue();
+        queue2 = new Queue();
     }
 
-    void Stack::push(int data) {
+    void Stack::push(int new_data) {
         std::cout << "pushing" << std::endl;
-        this->queue2->enqueue(data);
-        while(this->queue1->rear != 0){
-            this->queue2->enqueue(this->queue1->dequeue());
+        queue2->enqueue(new_data);
+        while(queue1->rear != 0){
+            queue2->enqueue(queue1->dequeue());
         }
-        Queue *tmp = this->queue2;
-        this->queue2 = this->queue1;
-        this->queue1 = tmp;
+        Queue *tmp = queue2;
+        queue2 = queue1;
+        queue1 = tmp;
     }
 
     int Stack::pop(){
-        if(this->queue1->rear == 0){
+        if(queue1->rear == 0){
             return 0;
         }
-        return this->queue1->dequeue();
+        return queue1->dequeue();
     }
 }

@@ -14,20 +14,20 @@ namespace stackFromQueue{
     struct Qnode{
         int data;
         Qnode* next = 0;
-        Qnode(int data);
+        Qnode(int);
         Qnode();
     };
 
     struct Queue{
         Qnode *front, *rear;
-        void enqueue(int data);
+        void enqueue(int);
         int dequeue();
         Queue();
     };
 
     class Stack{
     public:
-        void push(int data);
+        void push(int);
         int pop();
         Stack();
     private:

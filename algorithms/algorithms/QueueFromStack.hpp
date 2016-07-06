@@ -21,7 +21,7 @@ private:
 
 class Stack{
 public:
-    void push(int data);
+    void push(int);
     int pop();
     Stack();
     int isEmpty();
@@ -31,9 +31,9 @@ private:
 
 class Queue {
 public:
-    void enqueue1(int data);
+    void enqueue1(int);
     int dequeue1();
-    void enqueue2(int data);
+    void enqueue2(int);
     int dequeue2();
     Queue();
 private:

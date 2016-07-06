@@ -16,6 +16,7 @@
 
 
 int main(int argc, const char * argv[]) {
+    
 
 // TEST: Pairs of the same diff: pairs.hpp
 //    int diff = 2;
@@ -243,11 +244,6 @@ int main(int argc, const char * argv[]) {
     
 // TEST: Binomial coefficients calculation: binomialCoefficient.hpp
 //    std::cout << bimonialCoefficient(5,4) << std::endl;
-    
-//    BinaryTree *tree = new BinaryTree(4);
-//    tree->root->left = new Tnode(3);
-//    tree->root->right = new Tnode(5);
-//    tree->inOrderTraversal();
     
 // TEST: Stack using Queue: stackFromQueue.hpp
 //    {

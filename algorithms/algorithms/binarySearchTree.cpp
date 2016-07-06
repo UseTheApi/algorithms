@@ -9,10 +9,10 @@
 #include "binarySearchTree.hpp"
 #include <iostream>
 
-Tnode::Tnode(int data){
-    this->data = data;
-    this->left = 0; // same as NULL
-    this->right = 0;
+Tnode::Tnode(int new_data){
+    data = new_data;
+    left = 0; // same as NULL
+    right = 0;
 }
 
 Bst::Bst(){
@@ -27,44 +27,44 @@ void Bst::setRoot(Tnode *node){
     this->root = node;
 }
 
-void Bst::insertHelper(Tnode *root, int data){
+void Bst::insertHelper(Tnode *root, int new_data){
     // Inserts a node to a tree with given root
-    Tnode *node = new Tnode(data);
-    if(data >= root->data){
+    Tnode *node = new Tnode(new_data);
+    if(new_data >= root->data){
         if(!root->right){
             root->right = node;
         } else{
-            this->insertHelper(root->right, data);
+            insertHelper(root->right, new_data);
         }
     } else{
         if(!root->left){
             root->left = node;
         } else{
-            this->insertHelper(root->left, data);
+            insertHelper(root->left, new_data);
         }
     }
 }
 
-void Bst::insert(int data){
+void Bst::insert(int new_data){
     // inserts a node to a tree using private insertHelper
-    if(!this->root){
-        this->root = new Tnode(data);
+    if(!root){
+        root = new Tnode(new_data);
     } else{
-        this->insertHelper(root, data);
+        insertHelper(root, new_data);
     }
 }
 
 Tnode * Bst::searchHelper(Tnode *root, int key){
     if(root->data == key) return root;
     if(key > root->data){
-        return this->searchHelper(root->right, key);
+        return searchHelper(root->right, key);
     }
-    return this->searchHelper(root->left, key);
+    return searchHelper(root->left, key);
 }
 
 Tnode * Bst::search(int key){
-    if(!root) return this->root;
-    else return this->searchHelper(this->root, key);
+    if(!root) return root;
+    else return searchHelper(root, key);
 }
 
 Tnode * Bst::findMinHelper(Tnode *root){
@@ -76,20 +76,20 @@ Tnode * Bst::findMinHelper(Tnode *root){
 }
 
 Tnode * Bst::findMin(){
-    if(!this->root) return this->root;
-    return this->findMinHelper(this->root);
+    if(!root) return root;
+    return findMinHelper(root);
 }
 
 Tnode * Bst::findSubtreeMin(Tnode *node){
     if(!node) return node;
-    return this->findMinHelper(node);
+    return findMinHelper(node);
 }
 
 Tnode * Bst::removeHelper(Tnode *root, int key) {
     if(key > root->data){
-        root->right = this->removeHelper(root->right, key);
+        root->right = removeHelper(root->right, key);
     } else if(key < root->data){
-        root->left = this->removeHelper(root->left, key);
+        root->left = removeHelper(root->left, key);
     } else{
         if(!root->left){
             Tnode *tmp = root->right;
@@ -100,9 +100,9 @@ Tnode * Bst::removeHelper(Tnode *root, int key) {
             delete root;
             return tmp;
         } else{
-            Tnode *minRight = this->findSubtreeMin(root->right);
+            Tnode *minRight = findSubtreeMin(root->right);
             root->data = minRight->data;
-            root->right = this->removeHelper(root->right, minRight->data);
+            root->right = removeHelper(root->right, minRight->data);
         }
     }
     return root;

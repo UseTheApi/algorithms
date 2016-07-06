@@ -15,7 +15,7 @@ struct Tnode{
     int data;
     Tnode *left;
     Tnode *right;
-    Tnode(int data);
+    Tnode(int);
 private:
     Tnode();
 };
@@ -23,18 +23,18 @@ private:
 class Bst {
 public:
     Tnode * getRoot();
-    void setRoot(Tnode *node);
-    void insert(int data);
-    Tnode * search(int key);
+    void setRoot(Tnode *);
+    void insert(int);
+    Tnode * search(int);
     Tnode * findMin();
-    Tnode * findSubtreeMin(Tnode *node);
-    Tnode * remove(int key);
+    Tnode * findSubtreeMin(Tnode *);
+    Tnode * remove(int);
     Bst();
 private:
     Tnode *root;
-    void insertHelper(Tnode *root, int data);
-    Tnode * searchHelper(Tnode *root, int key);
-    Tnode * findMinHelper(Tnode *root);
-    Tnode * removeHelper(Tnode *root, int key); // remove noe with given key and return new root of the tree
+    void insertHelper(Tnode *, int);
+    Tnode * searchHelper(Tnode *, int);
+    Tnode * findMinHelper(Tnode *);
+    Tnode * removeHelper(Tnode *, int); // remove noe with given key and return new root of the tree
 };
 #endif /* binaryTree_hpp */

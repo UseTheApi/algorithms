@@ -19,7 +19,7 @@
 BstNodeWithParent * bstSuccessor::findSuccessorByParent(BstNodeWithParent *node){
     if(!node) return node;
     if(node->right){
-        return this->findMin(node->right);
+        return findMin(node->right);
     } else{
         BstNodeWithParent *p = node->parent;
         while(p && node == p->right){
@@ -33,7 +33,7 @@ BstNodeWithParent * bstSuccessor::findSuccessorByParent(BstNodeWithParent *node)
 BstNodeWithParent * bstSuccessor::findSuccessorByRoot(BstNodeWithParent *root, BstNodeWithParent *node){
     if(!node) return node;
     if(node->right){
-        return this->findMin(node->right);
+        return findMin(node->right);
     }
     BstNodeWithParent *successor = 0;
     while(root){

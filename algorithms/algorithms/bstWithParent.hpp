@@ -16,7 +16,7 @@ struct BstNodeWithParent {
     BstNodeWithParent *left;
     BstNodeWithParent *right;
     BstNodeWithParent *parent;
-    BstNodeWithParent(int data);
+    BstNodeWithParent(int);
 private:
     BstNodeWithParent();
 };
@@ -24,13 +24,13 @@ private:
 class BstWithParent{
     // the structure should like in binarySearchTree.hpp + parent. But due to short time and small task I leave it like this
 public:
-    BstNodeWithParent * insert(BstNodeWithParent *root, int data); // returns new root
-    BstNodeWithParent * search(BstNodeWithParent *root, int key);
-    BstNodeWithParent * remove(BstNodeWithParent* root, int key); // returns new root
-    BstNodeWithParent * findMin(BstNodeWithParent *node);
+    BstNodeWithParent * insert(BstNodeWithParent *, int); // returns new root
+    BstNodeWithParent * search(BstNodeWithParent *, int);
+    BstNodeWithParent * remove(BstNodeWithParent *, int); // returns new root
+    BstNodeWithParent * findMin(BstNodeWithParent *);
     BstWithParent();
     BstNodeWithParent * getRoot();
-    void setRoot(BstNodeWithParent *node);
+    void setRoot(BstNodeWithParent *);
 private:
     BstNodeWithParent *root;
 };

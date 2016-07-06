@@ -24,9 +24,9 @@
 BstNodeWithParent *Lca::lowestCommonAncesrotRoot(BstNodeWithParent *root, BstNodeWithParent *n1, BstNodeWithParent *n2){
     if(!root) return root;
     if(n1->data > root->data && n2->data > root->data){
-        return this->lowestCommonAncesrotRoot(root->right, n1, n2);
+        return lowestCommonAncesrotRoot(root->right, n1, n2);
     } else if(n1->data < root->data && n2->data < root->data){
-        return this->lowestCommonAncesrotRoot(root->left, n1, n2);
+        return lowestCommonAncesrotRoot(root->left, n1, n2);
     }
     return root;
 }
