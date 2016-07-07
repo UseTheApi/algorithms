@@ -17,6 +17,26 @@
 
 int main(int argc, const char * argv[]) {
     
+// TEST: Min Binary Heap: "binaryMinHeap.hpp"
+//    BinaryMinHeap *heap = new BinaryMinHeap();
+//    heap->Insert(4);
+//    heap->Insert(6);
+//    heap->Insert(3);
+//    heap->Insert(2);
+//    heap->Insert(7);
+//    heap->Insert(5);
+//    heap->Insert(1);
+//    std::cout << "Initial Heap:" << std::endl;
+//    heap->print();
+//    std::cout << "Current Minimal element: ";
+//    std::cout << heap->GetMin() << std::endl;
+//    std::cout << "Extract Min: " << heap->RemoveMin() << std::endl;
+//    std::cout << "Heap:" << std::endl;
+//    heap->print();
+//    size_t index_to_remove = 3;
+//    std::cout << "Remove element at postition: " << index_to_remove << std::endl;
+//    heap->RemoveAt(3);
+//    heap->print();
 
 // TEST: Pairs of the same diff: pairs.hpp
 //    int diff = 2;

@@ -45,7 +45,7 @@ std::vector<int> productOfAllNyumbersExceptItselfLinear(const std::vector<int> &
         tmp*=numbers[i];
     }
     tmp = 1; // for the most right element right product is 1 as well
-    for(int i=int(products.size())-1; i >= 0; --i){
+    for(int i=static_cast<int>(products.size())-1; i >= 0; --i){ // C++ method for int()
         products[i] *= tmp;
         tmp *= numbers[i];
     }
