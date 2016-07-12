@@ -16,6 +16,12 @@
 
 
 int main(int argc, const char * argv[]) {
+
+// TEST: Binary Search: binary_search.hpp
+//    std::vector<int> arr = {1, 3, 6, 8, 10, 15, 20, 21, 23, 45, 47};
+//    std::cout << BinarySearch(arr, 15) << std::endl;
+//    std::cout << BinarySearch(arr, 1) << std::endl;
+//    std::cout << BinarySearch(arr, 55) << std::endl;
     
 // TEST: Count distinct absolute numbers in array: countElementsInArray.hpp
 //    std::vector<int> numbers = {-3, -2, -1, -1, -1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 3};
