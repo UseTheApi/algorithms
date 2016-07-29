@@ -16,4 +16,6 @@ using std::size_t;
 
 int BinarySearch(const std::vector<int> &, int);
 
+int FloorIndex(const std::vector<int> &, int);
+
 #endif /* binary_search_hpp */
