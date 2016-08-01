@@ -14,7 +14,14 @@ int main(int argc, const char *argv[]){
 	int i = 10;
 	while(i){
 		std::cout << "number " << i << " -> " << binary_int(i) << " - ";
-		std::cout << "result: " << count_bits_int(i) << std::endl;
+		std::cout << "result: " << count_set_bits_int(i) << std::endl;
+		--i;
+	}
+	std::cout << "--> Kernighan method" << std::endl;
+	i = 10;
+	while(i){
+		std::cout << "number " << i << " -> " << binary_int(i) << " - ";
+		std::cout << "result: " << count_set_bits_int_Kernighan(i) << std::endl;
 		--i;
 	}
 }

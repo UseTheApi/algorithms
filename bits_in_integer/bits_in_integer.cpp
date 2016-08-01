@@ -13,12 +13,22 @@
  Write an efficient program to count number of 1s in binary representation of an integer.
 */
 
-int count_bits_int(int number){
+int count_set_bits_int(int number){
 	// simple method
 	unsigned int bits = 0;
 	while(number){
 		bits += number & 1; // + either 0 or 1
 		number >>= 1;
+	}
+	return bits;
+}
+
+int count_set_bits_int_Kernighan(int number){
+	// Kernighan method using bitwise & of number with number-1
+	unsigned int bits = 0;
+	while(number){
+		number = number & (number-1);
+		++bits;
 	}
 	return bits;
 }
