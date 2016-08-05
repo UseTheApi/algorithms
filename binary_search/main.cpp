@@ -10,7 +10,7 @@
 #include <iostream>
 #include <vector>
 
-int main(int argc, const char * argv[]){
+int main(int argc, const char *argv[]){
 	// TEST: Binary Search: binary_search.hpp
    std::vector<int> arr = {1, 3, 6, 8, 10, 15, 20, 21, 23, 45, 47};
    std::cout << BinarySearch(arr, 15) << std::endl;
