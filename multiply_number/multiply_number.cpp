@@ -48,6 +48,9 @@ int MultiplyXPlusOne::perform_cubical_step(int &result){
 }
 
 int MultiplyXPlusOne::MinimalSteps(int start, int result){
+    /*
+     Doesn't work with input 4;22 or with any input when it is impossible to step to second number
+    */
     if(result < start){
         return -1;
     }
