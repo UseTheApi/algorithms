@@ -9,6 +9,7 @@
 #include "easy_tasks.hpp"
 #include <iostream>
 #include <string>
+#include <map>
 
 /*
  Initial matrix creation. subtask
@@ -104,4 +105,64 @@ void staircase(int n){
 		// --number_of_spaces;
 	}
 	// space.pop_back();
+}
+
+
+void foo(){
+	/*
+	3 2 3
+	1 2 3
+	0
+	1
+	2
+
+ 	3 - n, 2 - k(times of rotation), 3 - q (number os query)
+ 	arr = 1 2 3
+ 	0
+ 	1
+ 	2
+	*/
+	using namespace std;
+    int n = 3;
+    int k = 2;
+    int q = 3;
+    //cin >> n >> k >> q;
+//    cout << " ";
+//    cin >> k;
+//    cout << " ";
+//    cin >> q;
+    cout << endl;
+    int element;
+    vector<int> input;
+    for(int i = 0; i < n; ++i){
+        cin >> element;
+        input.push_back(element);
+    }
+    int to_rotate;
+    for(int i = 0; i < k; ++i){
+        to_rotate = input.back();
+        input.pop_back();
+        input.insert(input.begin(), to_rotate);
+        
+    }
+    cout << endl;
+    for( auto it: input){
+        cout << it << " ";
+    }
+    cout << endl;
+    int index;
+    for(int i = 0; i < q; ++i){
+        cin >> index;
+        cout << input[index] << endl;
+    }
+
+}
+
+void count_numbers(std::vector<int> &array){
+	size_t size = static_cast<int>(array.size());
+	int cur_count;
+	std::map<int, int> counts;
+	for(size_t i = 0; i < size; ++i){
+		counts[array[i]] += 
+	}
 }
