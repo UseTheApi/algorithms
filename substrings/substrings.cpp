@@ -8,6 +8,10 @@
 
 #include "substrings.hpp"
 
+/*
+ Given a string. Write a function to return all substrings for a given string
+*/
+
 std::vector<std::string> * find_all_substrings(const std::string & str){
 	std::vector<std::string> *result = new std::vector<std::string>();
 	std::string temp;
