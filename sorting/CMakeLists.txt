@@ -3,4 +3,4 @@ project (sorting)
 
 add_definitions(-std=c++11)
 
-add_executable(sorting selection_sort.cpp main.cpp)
+add_executable(sorting selection_sort.cpp insertion_sort.cpp merge_sort.cpp main.cpp)
