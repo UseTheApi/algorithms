@@ -23,26 +23,6 @@ using namespace std;
  Adjacency matrix has size n*n where n is number of vertices in G.
 */
 
- vector< vector<int> > init_matrix(int size){
- 	vector< vector<int> > mat(size, vector<int>(size));
- 	for(int i = 0; i < size; ++i){
- 		cout << i+1 << "st row: ";
- 		for(int j = 0; j < size; ++j){
- 			cin >> mat[i][j];
- 		}
- 	}
- 	return mat;
- }
-
- void print_matrix(const vector< vector<int> > &matrix){
- 	for(auto it = matrix.begin(); it != matrix.end(); ++it){
- 		for(auto el = it->begin(); el != it->end(); ++el){
- 			cout << *el << " ";
- 		}
- 		cout << endl;
- 	}
- }
-
 vector< vector<int> > transitive_closure_warshall(vector< vector<int> > &adjacency_matrix){
 	int k_max = adjacency_matrix.size();
 	for(int k = 0; k < k_max; ++k){

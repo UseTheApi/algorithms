@@ -3,4 +3,4 @@ project (warshall_floyd_algorithm)
 
 add_definitions(-std=c++11)
 
-add_executable(warshall_floyd_algorithm warshall_algorithm_dp.cpp main.cpp)
+add_executable(warshall_floyd_algorithm warshall_algorithm_dp.cpp floyd_algorithm_dp.cpp main.cpp)
