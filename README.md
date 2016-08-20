@@ -5,6 +5,7 @@ Current list:
   2. **Queue implemented with Linked List** : queueUsingLinkedList.hpp
   3. **Stack implemented from a Queue** : stackUsingQueue.hpp
   4. **Queue implemented from a Stack** : queueUsingStack.hpp
+  5. **Special Stack with getMin() method** : special_stack/
   5. **Binary Search Tree**:
     1. Depth traversal (with and InOrder without recursion) : bstTraversals.hpp
       * Pre-, In-, Post-order traversals using recursion
@@ -20,7 +21,7 @@ Current list:
       > Given a pointer to the root of BST. Write a function that will return the max set of nodes that are not children or parents for each other.
     7. Determine if two trees are equal: equalTrees.hpp
     8. Lower Common Ancestor for two nodes in BST: lowerCommonAncestor.hpp (2 methods)
-  6. **Heap** *TBD*
+  6. **Heap** : Binary Min Heap: binaryMinHeap.hpp
   7. **AVL tree balancing** *TBD*
   8. **Red-Black tree** *TBD*
   9. **Dynamic Programming**
