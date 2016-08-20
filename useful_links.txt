@@ -1,0 +1,13 @@
+Graph:
+
+http://math.tut.fi/~ruohonen/GT_English.pdf
+http://www.geeksforgeeks.org/graph-and-its-representations/
+
+Tasks:
+https://leetcode.com/problems/insert-delete-getrandom-o1/
+http://www.geeksforgeeks.org/nearly-sorted-algorithm/
+http://www.geeksforgeeks.org/write-a-c-program-that-given-a-set-a-of-n-numbers-and-another-number-x-determines-whether-or-not-there-exist-two-elements-in-s-whose-sum-is-exactly-x/
+http://www.practice.geeksforgeeks.org/problem-page.php?pid=590
+https://www.glassdoor.com/Interview/Giving-a-windows-size-K-and-an-array-of-size-N-find-the-minimum-of-each-window-as-it-slides-through-the-array-QTN_140420.htm
+http://stackoverflow.com/questions/8031939/finding-maximum-for-every-window-of-size-k-in-an-array
+http://www.geeksforgeeks.org/find-the-maximum-of-minimums-for-every-window-size-in-a-given-array/
