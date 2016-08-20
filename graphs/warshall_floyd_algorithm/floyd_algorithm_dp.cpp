@@ -8,6 +8,18 @@
 #include "floyd_algorithm_dp.hpp"
 #include <algorithm>
 
+/*
+ In a weighted (di)graph find shortest paths between every pair of verticals.
+
+ Adjacency matrix example:
+ 	0 2 INF 6
+ 	INF 0 7 INF
+ 	3 INF 0 INF
+ 	INF INF 1 0
+
+ For simplicity instead of INF can be passed any huge number
+*/
+
 using namespace std;
 
 vector< vector<int> > transitive_closure_floyd(vector< vector<int> > &adjacency_matrix){
