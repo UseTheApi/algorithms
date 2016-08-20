@@ -29,7 +29,12 @@ Current list:
   10. **Bit Manipulations**:
     1. max_without_comparison/
     2. bits_in_integer/
-  9. **Dynamic Programming**
+  10. **Graphs**:
+    1. Warshall's Algorithm:
+      
+      > Build a Reachability Matrix for a given Adjacency Matrix.
+
+  9. **Dynamic Programming**:
     1. Factorial and Fibonacci : factorial_fibonacci.hpp
     2. Binomial Coefficients : binomialCoefficients.hpp
     3. Jump Stairs task: hopSomeStairs.hpp
