@@ -21,6 +21,7 @@ Current list:
       > Given a pointer to the root of BST. Write a function that will return the max set of nodes that are not children or parents for each other.
     7. Determine if two trees are equal: equalTrees.hpp
     8. Lower Common Ancestor for two nodes in BST: lowerCommonAncestor.hpp (2 methods)
+    9. 2nd Largest Node in BST: *TBD*
   6. **Heap** - Binary Min Heap: binaryMinHeap.hpp
   7. **AVL tree balancing** *TBD*
   8. **Red-Black tree** *TBD*
@@ -49,6 +50,55 @@ Current list:
       > *Write a function that will calculate the max welth that can be made.*
       > *Acceptable moves are only __right__ or __down__ .*
   10. **Sorting Algorithms** : sorting/
+  11. **Arrays**:
+    * Prices in Stock: maxProfitInStock.hpp
+      
+      > Write an efficient function that takes stock_prices_yesterday and returns the best profit I could have made from 1 purchase and 1 sale of 1 Apple stock yesterday.
+      
+      > Ex: stock_prices_yesterday = [10, 7, 5, 8, 11, 9], answer is 6
+      
+    * Pairs: pairs/
+    
+      > Given N integers, count the number of pairs of integers whose difference is K.
+      
+    * Multiplication in Array: productAllNumsExceptItself.hpp
+    
+      > Given an array of integrs. Write a function that will return array of products of all numbers in a given array except itslef.
+        Ex: [3,2,4,1] => [8, 12, 6, 24]
+        
+    * Median in merged lists: merge_lists_median/
+    
+      > Given two sorted array. Write a function that returns a median of merged array. 
+      > Both arrays are of the same size
+      
+    * Longest non-decreasing interval: non_decreasing_interval/
+    
+      > Given an array of intergers. Write a funtion that returns an array of max length 
+      > with non-decreasing elements from a given array
+      
+    * Smallest subarray with sum greater than a given value: *TBD*
+    
+      > Given Array:
+      ```c++
+      arr = [1, 4, 45, 6, 0, 19, 39]
+      ```
+      > given number: num = 51 output -> length of shortest subarray with sum of elements > num.
+
+  12. **Strings**:
+    * Substrings: substrings/
+    
+      > Given a string. Write a function to return all substrings for a given string.
+      
+    * All string permutations(without duplicates): *TBD*
+    * All string permutations(with duplicates): *TBD*
+    * Single Char String: *TBD*
+      
+      > Given a string, find the length of the longest substring consisting of a single character.
+    
+    * K distinct Chars String: *TBD*
+      
+      > Find the length of the longest substring consisting of at most k distinct characters.
+    
   11. **Interesting tasks**
     * Reverse a sentance : sentenceReverse.hpp
     
@@ -71,35 +121,7 @@ Current list:
       > Example:
       > Completing the route [{x:0, y:2, z:10}, {x:3, y:5, z:0}, {x:9, y:20, z:6}, {x:10, y:12, z:15}, {x:10, y:10, z:8}] requires a minimum of 5 liters of fuel.
       
-    * Multiplication in Array: productAllNumsExceptItself.hpp
-    
-      > Given an array of integrs. Write a function that will return array of products of all numbers in a given array except itslef.
-        Ex: [3,2,4,1] => [8, 12, 6, 24]
-        
-    * Prices in Stock: maxProfitInStock.hpp
-      
-      > Write an efficient function that takes stock_prices_yesterday and returns the best profit I could have made from 1 purchase and 1 sale of 1 Apple stock yesterday.
-      
-      > Ex: stock_prices_yesterday = [10, 7, 5, 8, 11, 9], answer is 6
-      
     * Pascal's Triangle: pascalsTriangle.hpp
     
       > Given an index k, return the kth row of the Pascal's triangle.
       
-    * Pairs: pairs/
-    
-      > Given N integers, count the number of pairs of integers whose difference is K.
-      
-    * Substrings: substrings/
-    
-      > Given a string. Write a function to return all substrings for a given string.
-      
-    * Median in merged lists: merge_lists_median/
-    
-      > Given two sorted array. Write a function that returns a median of merged array. 
-      > Both arrays are of the same size
-      
-    * Longest non-decreasing interval: non_decreasing_interval/
-    
-      > Given an array of intergers. Write a funtion that returns an array of max length 
-      > with non-decreasing elements from a given array
