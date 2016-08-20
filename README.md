@@ -34,6 +34,10 @@ Current list:
       
       > Build a Reachability Matrix for a given Adjacency Matrix.
 
+    2. Floyd's Algorithm: warshall_floyd_algorithm/
+    
+      > Build a Reachibility Matrix for a weighted graph Adjacency Matrix.
+
   9. **Dynamic Programming**:
     1. Factorial and Fibonacci : factorial_fibonacci.hpp
     2. Binomial Coefficients : binomialCoefficients.hpp
