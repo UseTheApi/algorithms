@@ -29,8 +29,8 @@ Current list:
   10. **Bit Manipulations**:
     1. max_without_comparison/
     2. bits_in_integer/
-  10. **Graphs**:
-    1. Warshall's Algorithm:
+  10. **Graphs**: graphs/
+    1. Warshall's Algorithm: warshall_floyd_algorithm/
       
       > Build a Reachability Matrix for a given Adjacency Matrix.
 
