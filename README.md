@@ -25,7 +25,9 @@ Current list:
   7. **AVL tree balancing** *TBD*
   8. **Red-Black tree** *TBD*
   9. **Binary Search** - set of tasks: binary_search/
-  10. **Bit Manipulations** - binary representations of integer: bits_in_integer/
+  10. **Bit Manipulations**:
+    1. max_without_comparison/
+    2. bits_in_integer/
   9. **Dynamic Programming**
     1. Factorial and Fibonacci : factorial_fibonacci.hpp
     2. Binomial Coefficients : binomialCoefficients.hpp
@@ -46,7 +48,7 @@ Current list:
       > *Given Matrix of integers representing kg of gold at every mine.*
       > *Write a function that will calculate the max welth that can be made.*
       > *Acceptable moves are only __right__ or __down__ .*
-  10. **Sorting Algorithms** *TBD*
+  10. **Sorting Algorithms** : sorting/
   11. **Interesting tasks**
     * Reverse a sentance : sentenceReverse.hpp
     
@@ -84,7 +86,20 @@ Current list:
     
       > Given an index k, return the kth row of the Pascal's triangle.
       
-    * Pairs: pairs.hpp
+    * Pairs: pairs/
     
       > Given N integers, count the number of pairs of integers whose difference is K.
-
+      
+    * Substrings: substrings/
+    
+      > Given a string. Write a function to return all substrings for a given string.
+      
+    * Median in merged lists: merge_lists_median/
+    
+      > Given two sorted array. Write a function that returns a median of merged array. 
+      > Both arrays are of the same size
+      
+    * Longest non-decreasing interval: non_decreasing_interval/
+    
+      > Given an array of intergers. Write a funtion that returns an array of max length 
+      > with non-decreasing elements from a given array
