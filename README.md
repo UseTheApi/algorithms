@@ -21,9 +21,11 @@ Current list:
       > Given a pointer to the root of BST. Write a function that will return the max set of nodes that are not children or parents for each other.
     7. Determine if two trees are equal: equalTrees.hpp
     8. Lower Common Ancestor for two nodes in BST: lowerCommonAncestor.hpp (2 methods)
-  6. **Heap** : Binary Min Heap: binaryMinHeap.hpp
+  6. **Heap** - Binary Min Heap: binaryMinHeap.hpp
   7. **AVL tree balancing** *TBD*
   8. **Red-Black tree** *TBD*
+  9. **Binary Search** - set of tasks: binary_search/
+  10. **Bit Manipulations** - binary representations of integer: bits_in_integer/
   9. **Dynamic Programming**
     1. Factorial and Fibonacci : factorial_fibonacci.hpp
     2. Binomial Coefficients : binomialCoefficients.hpp
@@ -39,6 +41,11 @@ Current list:
 
        > *computes the number of ways to make amount of money with coins of the available denominations.*
     4. Knapsack problem (1-0) : knapsackProblem.hpp
+    5. Max Wealth problem : max_wealth_dp/
+        
+      > *Given Matrix of integers representing kg of gold at every mine.*
+      > *Write a function that will calculate the max welth that can be made.*
+      > *Acceptable moves are only __right__ or __down__ .*
   10. **Sorting Algorithms** *TBD*
   11. **Interesting tasks**
     * Reverse a sentance : sentenceReverse.hpp
