@@ -58,6 +58,11 @@ Current list:
       > *Given Matrix of integers representing kg of gold at every mine.*
       > *Write a function that will calculate the max welth that can be made.*
       > *Acceptable moves are only __right__ or __down__ .*
+      
+    6. Number of words: alphabetic_numbers/
+        
+      > *Given an mapped alphabet A=1, B=2, C=3 ...Z=26.*
+      > *Calculate how many words can you form from a given number.*
   10. **Sorting Algorithms** : sorting/
   11. **Arrays**:
     * Prices in Stock: maxProfitInStock.hpp
