@@ -9,7 +9,7 @@
 
 /*
  Given an mapped alphabet A=1, B=2, C=3 ...Z=26 
- Calculate how many words can you from a given number.
+ Calculate how many words can you form from a given number.
 
  Section: DP.
  	1 method: calculate from the begining of the number: d[i] = [di-1] + (d[i-2] if d[i-1]+arr[i] < 27) - requires to cast number to an array
