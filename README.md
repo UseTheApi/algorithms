@@ -105,11 +105,11 @@ Current list:
       
     * All string permutations(without duplicates): *TBD*
     * All string permutations(with duplicates): *TBD*
-    * Single Char String: *TBD*
+    * Single Char String: substring_with_k_chars/
       
       > Given a string, find the length of the longest substring consisting of a single character.
     
-    * K distinct Chars String: *TBD*
+    * K distinct Chars String: substring_with_k_chars/
       
       > Find the length of the longest substring consisting of at most k distinct characters.
     
