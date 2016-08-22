@@ -90,7 +90,7 @@ Current list:
       > Given an array of intergers. Write a funtion that returns an array of max length 
       > with non-decreasing elements from a given array
       
-    * Smallest subarray with sum greater than a given value: *TBD*
+    * Smallest subarray with sum greater than a given value: shortest_subarray_sum/
     
       > Given Array:
       ```c++
