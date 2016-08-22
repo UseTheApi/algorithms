@@ -49,6 +49,9 @@ int num_of_digits(int number){
 }
 
 int WordsCountBackwards(int number){
+	/*
+	 This method assumes there is no zeroes in a given number
+	*/
 	int size = num_of_digits(number) + 1;
 	vector<int> result(size); 
 	int cur_number = 0;
@@ -70,14 +73,14 @@ int WordsCountBackwards(int number){
 }
 
 int WordsCountStraight(int number){
+	/*
+	 This method assumes there is no zeroes in a given number
+	*/
 	vector<int> n_vector = get_digits(number);
 
 	vector<int>result(n_vector.size());
-
 	result[0] = 1;
-	if(n_vector[0]*10 + n_vector[1] < 27){
-		result[1] = 2;
-	}
+	result[1] = 1;
 
 	for(int i = 2; i < n_vector.size(); ++i){
 		if(n_vector[i-1]*10 + n_vector[1] < 27){
@@ -86,4 +89,33 @@ int WordsCountStraight(int number){
 		result[i] += result[i-1];
 	}
 	return result[n_vector.size() - 1];
+}
+
+int WordsCount(int number){
+	/*
+	 This method can deal with zeroes in a given number:
+	 1023 -> 10,2,3; 10,23. 
+	 result=[1,2]
+	*/
+	vector<int> n_vector = get_digits(number);
+	vector<int> result(n_vector.size());
+	if(n_vector[0]){
+		result[0] = 1;
+	} else{
+		result[0] = 0;
+	}
+	result[1] = result[0];
+	if(result[0]*10 + result[1] < 27){
+		result[1] += 1;
+	}
+
+	for(int i = 2; i < n_vector.size(); ++i){
+		result[i] = result[i-1];
+		int last_two_digits = n_vector[i-1]*10 + n_vector[i];
+		if( last_two_digits > n_vector[i] && last_two_digits < 27 ){
+			result[i] += result[i-2];
+		}
+	}
+
+	return result[n_vector.size()-1];
 }

@@ -13,3 +13,5 @@
 int WordsCountStraight(int number);
 
 int WordsCountBackwards(int number);
+
+int WordsCount(int number);

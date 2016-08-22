@@ -17,7 +17,8 @@
 */
 
 int main(int argc, const char *argv[]){
-	std::cout << WordsCountStraight(2113) << std::endl;
+	std::cout << WordsCountStraight(2143) << std::endl;
 	std::cout << WordsCountBackwards(2113) << std::endl;
+	std::cout << WordsCount(20102143) << std::endl;
 	return 0;
 }
