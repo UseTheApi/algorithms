@@ -103,7 +103,7 @@ Current list:
     
       > Given a string. Write a function to return all substrings for a given string.
       
-    * All string permutations(without duplicates): *TBD*
+    * All string permutations(without duplicates): string_permutations/
     * All string permutations(with duplicates): *TBD*
     * Single Char String: substring_with_k_chars/
       
