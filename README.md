@@ -63,6 +63,14 @@ Current list:
         
       > *Given an mapped alphabet A=1, B=2, C=3 ...Z=26.*
       > *Calculate how many words can you form from a given number.*
+      
+    7. Find min for every window of given size in array : min_or_max_for_window/
+      
+      > *Given an array: [1, -2, 5, 3, 4, 6, 8, 10], window_size = 3.*
+      > *Output is [-2 -2 3 3 4 6 ].*
+      
+      > *This task can also be solved using __dequeue__, but found elegant DP solution.*
+      
   10. **Sorting Algorithms** : sorting/
   11. **Arrays**:
     * Prices in Stock: maxProfitInStock.hpp
