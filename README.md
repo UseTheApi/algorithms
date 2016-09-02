@@ -37,6 +37,10 @@ Current list:
     2. Floyd's Algorithm: warshall_floyd_algorithm/
     
       > Build a Reachibility Matrix for a weighted graph Adjacency Matrix.
+      
+    3. Graph Representations:
+      1. Adjacency matrix: *TBD*
+      2. Adjacency List: *TBD*
 
   9. **Dynamic Programming**:
     1. Factorial and Fibonacci : factorial_fibonacci.hpp
@@ -105,6 +109,10 @@ Current list:
       arr = [1, 4, 45, 6, 0, 19, 39]
       ```
       > given number: num = 51 output -> length of shortest subarray with sum of elements > num.
+      
+    * Find max subarray sum (Kadane's Algorithm) : *TBD*
+      
+      > *With variation of this task: Find a subarray with max sum of elements*
 
   12. **Strings**:
     * Substrings: substrings/
