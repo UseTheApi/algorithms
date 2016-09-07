@@ -130,7 +130,7 @@ Current list:
       > Find the length of the longest substring consisting of at most k distinct characters.
     
   11. **Interesting tasks**
-    * Reverse a sentance : sentenceReverse.hpp
+    * Reverse a sentence : sentenceReverse.hpp
     
       > You are given an array of characters arr, which consists of sequences of characters (words) separated by space characters.
       > How can you most efficiently reverse the order of words in the sentence?
