@@ -13,14 +13,12 @@ using namespace std;
 int main(int argc, const char *argv[]){
 	LinkedList<int> *list = new LinkedList<int>();
 
-	int nodes_num = 7;
 	int item;
-	cout << "Enter 7 nodes: ";
-	while(nodes_num){
+	cout << "Enter integer nodes: ";
+	do{
 		cin >> item;
 		list->append(item);
-		--nodes_num;
-	}
+	} while(cin.get() != '\n');
 
 	cout << "Given list: ";
 	list->print_list();
@@ -38,6 +36,9 @@ int main(int argc, const char *argv[]){
 
 	if(detect_loop(*list)){
 		cout << "loop detected" << endl;
+		detect_and_remove_loop(*list);
+		cout << "loop removed: ";
+		list->print_list();
 	} else{
 		cout << "loop not detected" << endl;
 	}
