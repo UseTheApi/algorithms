@@ -37,6 +37,10 @@ Current list:
     2. Floyd's Algorithm: warshall_floyd_algorithm/
     
       > Build a Reachibility Matrix for a weighted graph Adjacency Matrix.
+      
+    3. Graph Representations:
+      1. Adjacency matrix: *TBD*
+      2. Adjacency List: *TBD*
 
   9. **Dynamic Programming**:
     1. Factorial and Fibonacci : factorial_fibonacci.hpp
@@ -63,6 +67,14 @@ Current list:
         
       > *Given an mapped alphabet A=1, B=2, C=3 ...Z=26.*
       > *Calculate how many words can you form from a given number.*
+      
+    7. Find min for every window of given size in array : min_or_max_for_window/
+      
+      > *Given an array: [1, -2, 5, 3, 4, 6, 8, 10], window_size = 3.*
+      > *Output is [-2 -2 3 3 4 6 ].*
+      
+      > *This task can also be solved using __dequeue__, but found elegant DP solution.*
+      
   10. **Sorting Algorithms** : sorting/
   11. **Arrays**:
     * Prices in Stock: maxProfitInStock.hpp
@@ -97,6 +109,10 @@ Current list:
       arr = [1, 4, 45, 6, 0, 19, 39]
       ```
       > given number: num = 51 output -> length of shortest subarray with sum of elements > num.
+      
+    * Find max subarray sum (Kadane's Algorithm) : *TBD*
+      
+      > *With variation of this task: Find a subarray with max sum of elements*
 
   12. **Strings**:
     * Substrings: substrings/
@@ -138,4 +154,6 @@ Current list:
     * Pascal's Triangle: pascalsTriangle.hpp
     
       > Given an index k, return the kth row of the Pascal's triangle.
+      
+    * Find and Remove loop in Linked List: *TBD*
       
