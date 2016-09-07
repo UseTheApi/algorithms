@@ -8,18 +8,37 @@
 #include "detect_remove_loop.hpp"
 #include <iostream>
 
+using namespace std;
+
 int main(int argc, const char *argv[]){
 	LinkedList<int> *list = new LinkedList<int>();
-	list->push(3);
-	list->push(5);
-	list->append(6);
-	list->append(1);
+
+	int nodes_num = 7;
+	int item;
+	cout << "Enter 7 nodes: ";
+	while(nodes_num){
+		cin >> item;
+		list->append(item);
+		--nodes_num;
+	}
+
+	cout << "Given list: ";
 	list->print_list();
-	std::cout << std::endl;
-	std::cout << list->top()->get_data() << std::endl;
-	std::cout << list->top()->next()->get_data() << std::endl;
+	cout << endl;
 
-	std::cout << "detection" << std::endl;
+	cout << "Enter a cycle node (0 for no loop): ";
+	int cycle_node_data;
+	cin >> cycle_node_data;
+	LinkedList<int> *cycle_node = list->get_node(cycle_node_data);
 
-	std::cout << detect_loop(*list) << std::endl;
+	LinkedList<int> *last = list->get_last();
+	last->set_next(cycle_node);
+
+	cout << "Detection: ";
+
+	if(detect_loop(*list)){
+		cout << "loop detected" << endl;
+	} else{
+		cout << "loop not detected" << endl;
+	}
 }

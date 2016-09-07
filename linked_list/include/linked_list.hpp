@@ -16,12 +16,15 @@ public:
 	void set_data(T);
 	LinkedList<T> * top();
 	LinkedList<T> * next();
+	void set_next(LinkedList<T> *);
 	void push(T);
 	void append(T);
 	void remove_head();
 	void remove_last();
 	void remove(T);
 	void print_list();
+	LinkedList<T> * get_last();
+	LinkedList<T> * get_node(T);
 private:
 	T data;
 	LinkedList<T> *next_node;
@@ -59,6 +62,11 @@ LinkedList<T> * LinkedList<T>::top(){
 template <class T>
 LinkedList<T> * LinkedList<T>::next(){
 	return next_node;
+}
+
+template <class T>
+void LinkedList<T>::set_next(LinkedList<T> *new_node){
+	next_node = new_node;
 }
 
 template <class T>
@@ -134,4 +142,25 @@ void LinkedList<T>::print_list(){
 		std::cout << cur->data << " ";
 		cur = cur->next_node;
 	}
+}
+
+template <class T>
+LinkedList<T> * LinkedList<T>::get_last(){
+	LinkedList<T> *last = head;
+	while(last->next_node){
+		last = last->next_node;
+	}
+	return last;
+}
+
+template <class T>
+LinkedList<T> * LinkedList<T>::get_node(T given_data){
+	LinkedList<T> *cur = head;
+	while(cur){
+		if(cur->get_data() == given_data){
+			return cur;
+		}
+		cur = cur->next_node;
+	}
+	return 0;
 }
