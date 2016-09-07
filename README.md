@@ -155,5 +155,5 @@ Current list:
     
       > Given an index k, return the kth row of the Pascal's triangle.
       
-    * Find and Remove loop in Linked List: *TBD*
+    * Find and Remove loop in Linked List: detect_remove_loop_linked_list/
       
