@@ -29,7 +29,7 @@ int main(int argc, const char *argv[]){
 	std::cout << std::endl;
 	std::cout << "Min for Window:" << std::endl;
 
-	std::vector<int> result = min_for_window(arr, 3);
+	std::vector<int> result = min_for_window(arr, window_size);
 
 	std::cout << "Result: " << std::endl;
 	for(auto it: result){
