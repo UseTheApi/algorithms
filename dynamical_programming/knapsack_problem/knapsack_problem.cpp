@@ -1,5 +1,5 @@
 //
-//  knapsack problem.cpp
+//  knapsack_problem.cpp
 //  algorithms
 //
 //  Created by alifar on 6/28/16.
@@ -7,7 +7,7 @@
 //
 
 #include <iostream>
-#include "knapsackProblem.hpp"
+#include "knapsack_problem.hpp"
 
 /*
  KnapSack Problem:
@@ -38,16 +38,16 @@
   ... an so on filling the table untill done
 */
 
-void printMat(int **matrix, int columns, int rows){
+void print_mat(int **matrix, int columns, int rows){
     for (int i=0; i<columns; ++i) {
-        std::cout << i << " ";
+        std::cout << i << ": ";
         for(int j=0; j<rows; ++j){
             std::cout << matrix[i][j] << " ";
         }
     }
 }
 
-int maxValueforKnapsack(int capacity, int n_items, int *values, int *weights){
+int MaxValueforKnapsack(int capacity, int n_items, int *values, int *weights){
     /* 
      Assuming we need to find total maximum value we can put in a knapsack of capacity W
     */
