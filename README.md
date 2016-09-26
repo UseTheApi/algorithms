@@ -38,8 +38,8 @@ Current list:
     
       > Build a Reachibility Matrix for a weighted graph Adjacency Matrix.
       
-    3. Graph Representations:
-      1. Adjacency matrix: *TBD*
+    3. Graph Representations: representations/
+      1. Adjacency matrix: adjacency_matrix/
       2. Adjacency List: *TBD*
 
   9. **Dynamic Programming**:
