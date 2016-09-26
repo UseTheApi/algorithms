@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <vector>
 #include "knapsack_problem.hpp"
 
 /*
@@ -87,3 +88,5 @@ int MaxValueforKnapsack(int capacity, int n_items, int *values, int *weights){
         std::cout << std::endl;
     }    return 0;
 }
+
+// test test test git
