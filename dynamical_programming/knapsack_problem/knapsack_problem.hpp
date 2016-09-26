@@ -10,6 +10,7 @@
 #define knapsack_problem_hpp
 
 #include <stdio.h>
+#include <vector>
 
 int MaxValueforKnapsack(int capacity, int n_items, int *values, int *weights);
 
