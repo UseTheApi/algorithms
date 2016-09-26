@@ -15,8 +15,8 @@
 int main(int argc, const char *argv[]){
 	int n_items = 5;
     int capacity = 11;
-    int *values = new int[n_items];
-    int *weights = new int[n_items];
+    std::vector<int> values(n_items);
+    std::vector<int> weights(n_items);
     values[0] = 1; weights[0] = 1;
     values[1] = 6; weights[1] = 2;
     values[2] = 18; weights[2] = 5;

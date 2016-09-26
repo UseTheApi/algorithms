@@ -38,22 +38,41 @@
   ... an so on filling the table untill done
 */
 
-void print_mat(int **matrix, int columns, int rows){
-    for (int i=0; i<columns; ++i) {
-        std::cout << i << ": ";
-        for(int j=0; j<rows; ++j){
-            std::cout << matrix[i][j] << " ";
+// void print_mat(int **matrix, int columns, int rows){
+//     for (int i=0; i<columns; ++i) {
+//         std::cout << i << ": ";
+//         for(int j=0; j<rows; ++j){
+//             std::cout << matrix[i][j] << " ";
+//         }
+//     }
+// }
+
+void print_knapsack(int capacity, int n_items, std::vector< std::vector<int> > &matrix){
+    std::cout << "RESULT:" << std::endl;
+    for(int i=0; i<capacity+1; ++i){
+        if(i==0){
+            std::cout << "   ";
         }
+        std::cout << i << " ";
+    }
+    std::cout << std::endl;
+    for(int i=0; i<n_items+1; ++i) {
+        std::cout << i << ": ";
+        for(int j=0; j<capacity+1; ++j){
+            std::cout << matrix[j][i] << " ";
+        }
+        std::cout << std::endl;
     }
 }
 
-int MaxValueforKnapsack(int capacity, int n_items, int *values, int *weights){
+int MaxValueforKnapsack(int capacity, int n_items, std::vector<int> &values, std::vector<int> &weights){
     /* 
      Assuming we need to find total maximum value we can put in a knapsack of capacity W
     */
-    int res_matrix[capacity+1][n_items+1];
-    for(int i=0; i<capacity+1; ++i){
-        for(int j=0; j<n_items+1; ++j){
+    std::vector< std::vector<int> > res_matrix(capacity+1);
+    for(int i = 0; i < capacity+1; ++i){
+        res_matrix[i].resize(n_items+1);
+        for(int j = 0; j < n_items+1; ++j){
             res_matrix[i][j] = 0;
         }
     }
@@ -69,21 +88,9 @@ int MaxValueforKnapsack(int capacity, int n_items, int *values, int *weights){
                 }
             }
         }
-    }
+     }
+
+     print_knapsack(capacity, n_items, res_matrix);
     
-    std::cout << "RESULT:" << std::endl;
-    for(int i=0; i<capacity+1; ++i){
-        if(i==0){
-            std::cout << "   ";
-        }
-        std::cout << i << " ";
-    }
-    std::cout << std::endl;
-    for(int i=0; i<n_items+1; ++i) {
-        std::cout << i << ": ";
-        for(int j=0; j<capacity+1; ++j){
-            std::cout << res_matrix[j][i] << " ";
-        }
-        std::cout << std::endl;
-    }    return 0;
+    return 0;
 }
