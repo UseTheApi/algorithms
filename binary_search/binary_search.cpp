@@ -88,10 +88,10 @@ int RightPosition(const std::vector<int> &array, int key){
 }
 
  int Occurrances(const std::vector<int> &array, int key){
-    int left_postition = LeftPosition(array, key);
+    int left_position = LeftPosition(array, key);
     int right_position = RightPosition(array, key);
 
-    return (array[left_postition] == key && arr[right_position] == key) ? (right_position-left_position)+1 : 0;
+    return (array[left_position] == key && array[right_position] == key) ? (right_position-left_position)+1 : 0;
  }
 
 /*
