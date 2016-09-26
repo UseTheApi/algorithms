@@ -6,7 +6,7 @@
 //  Copyright © 2016 alifar. All rights reserved.
 //
 
-#include "pascalsTriangle.hpp"
+#include "pascals_triangle.hpp"
 
 /*
  Given an index k, return the kth row of the Pascal's triangle.
