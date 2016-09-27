@@ -1,12 +1,12 @@
 //
-//  amountWithCoins.cpp
+//  amount_with_coins.cpp
 //  algorithms
 //
 //  Created by alifar on 6/27/16.
 //  Copyright © 2016 alifar. All rights reserved.
 //
 #include <iostream>
-#include "amountWithCoins.hpp"
+#include "amount_with_coins.hpp"
 
 /*
  Write a function that, given:
@@ -31,7 +31,7 @@
  5: [1,1,1,2,2,3] => answer is res[n=5] = 3
 */
 
-int waysToGetAmount(int amount, int *denominations){
+int WaysToGetAmount(int amount, int *denominations){
     int result[amount+1];
     for(int i=0; i<amount+1; ++i){ // just feeling empty array with 0
         result[i]=0;
