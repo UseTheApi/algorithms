@@ -1,6 +1,6 @@
 //
-//  binomialCoeffitient.cpp
-//  algorithms
+//  binomial_coefficient.cpp
+//  binomial_coefficient
 //
 //  Created by alifar on 6/27/16.
 //  Copyright © 2016 alifar. All rights reserved.
@@ -8,7 +8,7 @@
 
 #include <iostream>
 #include <math.h>
-#include "binomialCoefficient.hpp"
+#include "binomial_coefficient.hpp"
 
 /* Implementation shows creating a matrix representation of Pascal's triangle
    At First initial filling of the matrix fills vertical and diogonal with 1
@@ -57,7 +57,9 @@ int ** initMatrix(int size){
     return fillInitial(matrix, size);
 }
 
-int bimonialCoefficient(int n, int k){
+int BimonialCoefficient(int n, int k){
+    ++n; // first raw and column of the matrix is not part of Pascal's Triangle
+    ++k;
     int max_size = std::max(n, k);
     int **matrix = initMatrix(max_size);
     std::cout << "Initial matrix" << std::endl;

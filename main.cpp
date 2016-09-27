@@ -234,9 +234,6 @@ int main(int argc, const char * argv[]) {
 //    for (std::vector<std::string>::const_iterator i = tokens.begin(); i != tokens.end(); ++i)
 //        std::cout << *i << std::endl;
     
-// TEST: Binomial coefficients calculation: binomialCoefficient.hpp
-//    std::cout << bimonialCoefficient(5,4) << std::endl;
-    
 // TEST: Stack using Queue: stackFromQueue.hpp
 //    {
 //        using namespace stackFromQueue;
