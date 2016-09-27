@@ -42,21 +42,21 @@ Current list:
       1. Adjacency matrix: adjacency_matrix/
       2. Adjacency List: *TBD*
 
-  9. **Dynamic Programming**:
-    1. Factorial and Fibonacci : factorial_fibonacci.hpp
-    2. Binomial Coefficients : binomialCoefficients.hpp
-    3. Jump Stairs task: hopSomeStairs.hpp
+  9. **Dynamic Programming**: dynamic_programming/
+    1. Factorial and Fibonacci : factorial_fibonacci/
+    2. Binomial Coefficient : binomial_coefficient/
+    3. Jump Stairs task: stairs_hopper/
   
        >*A child is running up a staircase with n steps, and can hop either 1 step, 2 steps or 3 steps at a time.*
        >*Implement a method to count how many possible ways the child can run up the stairs.*
-    4. Amount from given denominations: amountWithCoins.hpp
+    4. Amount from given denominations: amount_with_coins/
        
        > *Write a function that, given:*
           >  * *an amount of money*
           >  * *a list of coin denominations*
 
        > *computes the number of ways to make amount of money with coins of the available denominations.*
-    4. Knapsack problem (1-0) : knapsackProblem.hpp
+    4. Knapsack problem (1-0) : knapsack_problem/
     5. Max Wealth problem : max_wealth_dp/
         
       > *Given Matrix of integers representing kg of gold at every mine.*
