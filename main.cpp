@@ -49,10 +49,6 @@ int main(int argc, const char * argv[]) {
 //    heap->print();
 
 
-// TEST: Max Stock Profit: maxProfitInStock.hpp
-//    std::vector<int> prices = {10, 7, 11, 5, 8, 9};
-//    std::cout << maxStockProfit(prices) << std::endl;
-
 // TEST: Product of all numbers in array except itself: productAllNumsExceptItself.hpp
 //    const std::vector<int> numbers = {3,2,4,1,5};
 //    std::cout << numbers.size() << std::endl;

@@ -1,12 +1,12 @@
 //
-//  maxProfitInStock.cpp
-//  algorithms
+//  max_profit_in_stock.cpp
+//  stock_prices
 //
 //  Created by alifar on 7/5/16.
 //  Copyright © 2016 alifar. All rights reserved.
 //
 
-#include "maxProfitInStock.hpp"
+#include "max_profit_in_stock.hpp"
 #include <algorithm>
 /*
  
@@ -27,7 +27,7 @@
  */
 
 
-int maxStockProfit(std::vector<int> &stock_prices){
+int MaxStockProfit(std::vector<int> &stock_prices){
     int max_profit = 0;
     int min_price = stock_prices[0];
     for(int i = 0; i < stock_prices.size(); ++i){
