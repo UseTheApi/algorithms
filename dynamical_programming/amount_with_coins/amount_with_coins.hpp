@@ -10,5 +10,9 @@
 #define amount_with_coins_hpp
 
 #include <stdio.h>
-int WaysToGetAmount(int amount, int denominations[]);
+#include <iostream>
+#include <vector>
+
+int WaysToGetAmount(int, std::vector<int> &);
+
 #endif /* amount_with_coins_hpp */

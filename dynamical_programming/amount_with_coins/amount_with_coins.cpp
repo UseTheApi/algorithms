@@ -5,7 +5,7 @@
 //  Created by alifar on 6/27/16.
 //  Copyright © 2016 alifar. All rights reserved.
 //
-#include <iostream>
+
 #include "amount_with_coins.hpp"
 
 /*
@@ -31,12 +31,12 @@
  5: [1,1,1,2,2,3] => answer is res[n=5] = 3
 */
 
-int WaysToGetAmount(int amount, int *denominations){
+int WaysToGetAmount(int amount, std::vector<int> &denominations){
     int result[amount+1];
     for(int i=0; i<amount+1; ++i){ // just feeling empty array with 0
         result[i]=0;
     }
-    int den_length = sizeof(denominations)/sizeof(*denominations) + 1; //hack to get a length of an array (not given in inputs)
+    int den_length = denominations.size();
     std::cout << "number of coins: " << den_length << std::endl;
     result[0] = 1; // for amount of 0 there is only 1 possibility
     for(int i=0; i < den_length; ++i){ // loop through denominations
