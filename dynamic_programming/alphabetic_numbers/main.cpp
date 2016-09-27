@@ -1,6 +1,6 @@
 //
 //  main.cpp
-//  algorithms
+//  alphabetic_numbers
 //
 //  Created by alifar on 8/21/16.
 //  Copyright © 2016 alifar. All rights reserved.
@@ -17,8 +17,16 @@
 */
 
 int main(int argc, const char *argv[]){
-	std::cout << WordsCountStraight(2143) << std::endl;
-	std::cout << WordsCountBackwards(2113) << std::endl;
-	std::cout << WordsCount(20102143) << std::endl;
+	int code;
+	std::cout << "Enter an code (integer) (ctrl+d to stop): ";
+	while(std::cin >> code){ // ctrl+d to stop
+		std::cout << "Number of words to be formed from the code: " << WordsCount(code) << std::endl;
+	}
+
+	// Another useful Test:
+
+	// std::cout << WordsCountStraight(2143) << std::endl;
+	// std::cout << WordsCountBackwards(2113) << std::endl;
+	// std::cout << WordsCount(20102143) << std::endl;
 	return 0;
 }
