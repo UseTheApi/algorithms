@@ -87,7 +87,7 @@ Current list:
     
       > Given N integers, count the number of pairs of integers whose difference is K.
       
-    * Multiplication in Array: arrays_products/
+    * Multiplication in Array: products_in_array/
     
       > Given an array of integrs. Write a function that will return array of products of all numbers in a given array except itslef.
         Ex: [3,2,4,1] => [8, 12, 6, 24]
