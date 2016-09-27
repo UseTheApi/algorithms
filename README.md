@@ -76,8 +76,8 @@ Current list:
       > *This task can also be solved using __dequeue__, but found elegant DP solution.*
       
   10. **Sorting Algorithms** : sorting/
-  11. **Arrays**:
-    * Prices in Stock: maxProfitInStock.hpp
+  11. **Arrays**: arrays/
+    * Prices in Stock: stock_prices/
       
       > Write an efficient function that takes stock_prices_yesterday and returns the best profit I could have made from 1 purchase and 1 sale of 1 Apple stock yesterday.
       
@@ -87,7 +87,7 @@ Current list:
     
       > Given N integers, count the number of pairs of integers whose difference is K.
       
-    * Multiplication in Array: productAllNumsExceptItself.hpp
+    * Multiplication in Array: arrays_products/
     
       > Given an array of integrs. Write a function that will return array of products of all numbers in a given array except itslef.
         Ex: [3,2,4,1] => [8, 12, 6, 24]
