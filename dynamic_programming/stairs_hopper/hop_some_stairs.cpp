@@ -1,12 +1,12 @@
 //
-//  hopSomeStairs.cpp
-//  algorithms
+//  hop_some_stairs.cpp
+//  stairs_hopper
 //
 //  Created by alifar on 6/27/16.
 //  Copyright © 2016 alifar. All rights reserved.
 //
 #include <iostream>
-#include "hopSomeStairs.hpp"
+#include "hop_some_stairs.hpp"
 
 /*
  A child is running up a staircase with n steps, and can hop either 1 step, 2 steps or 3 steps at a time. 
@@ -20,7 +20,7 @@
                                                                     from the stair 1,2 or 3 below
 */
 
-int walkThroughStairs(int n){
+int WalkThroughStairs(int n){
     int hops[n+1];
     hops[0] = 1; // we don't use this item for calculations but still filling it
     hops[1] = 1;
