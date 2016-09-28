@@ -1,13 +1,13 @@
 //
-//  productAllNumsExceptItself.cpp
-//  algorithms
+//  product_all_num_except_itself.cpp
+//  products_in_array
 //
 //  Created by alifar on 7/5/16.
 //  Copyright © 2016 alifar. All rights reserved.
 //
 
 #include <iostream>
-#include "productAllNumsExceptItself.hpp"
+#include "product_all_num_except_itself.hpp"
 
 /*
  Given an array of integrs. Write a function that will return array of products of all numbers in a given array except itslef.
@@ -25,7 +25,7 @@
     4. return
 */
 
-std::vector<int> productOfAllNumExceptItself(const std::vector<int> &numbers){ // O(n^2)
+std::vector<int> ProductOfAllNumExceptItself(const std::vector<int> &numbers){ // O(n^2)
     /* Brute Force Solution*/
     std::vector<int> result(numbers.size(), 1);
     for(int i=0; i < result.size(); ++i){
@@ -37,7 +37,7 @@ std::vector<int> productOfAllNumExceptItself(const std::vector<int> &numbers){ /
     return result;
 }
 
-std::vector<int> productOfAllNyumbersExceptItselfLinear(const std::vector<int> &numbers){
+std::vector<int> ProductOfAllNyumbersExceptItselfLinear(const std::vector<int> &numbers){
     std::vector<int> products(numbers.size());
     int tmp = 1; // starting left side (for first element in numbers left product is 1
     for(int i=0; i < products.size(); ++i){
