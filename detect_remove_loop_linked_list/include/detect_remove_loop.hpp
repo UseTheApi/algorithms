@@ -23,9 +23,13 @@
 
 template <class T>
 void remove_loop(LinkedList<T> *head, LinkedList<T> *detection_node){
-	LinkedList<T> *after_detection = detection_node->next(); // 1
+	LinkedList<T> *after_detection = detection_node->next();
 	LinkedList<T> *node_in_loop = head->next();
 	while(after_detection != detection_node){
+		if(after_detection->next() == head){
+			after_detection->set_next(0);
+			return;
+		}
 		node_in_loop = node_in_loop->next();
 		after_detection = after_detection->next();
 	}
@@ -43,7 +47,7 @@ void detect_and_remove_loop(LinkedList<T> &list){
 	if(!list.top()){
 		return;
 	}
-	LinkedList<T> *fast_step = list.top(); 
+	LinkedList<T> *fast_step = list.top();
 	LinkedList<T> *slow_step = list.top();
 	while(fast_step && slow_step && fast_step->next()){
 		slow_step = slow_step->next();
