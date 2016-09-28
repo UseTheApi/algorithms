@@ -22,10 +22,12 @@ public:
 	void add_edge(int, int); // positions of vertices
 	void remove_edge(int, int);
 	bool adjacent(int, int);
+	void display_vertices();
+	void display_matrix();
 private:
-	vector< vector<int> > adj_matrix;
-	vector<T> vertices; // {5, 6, 3, 1}
-}
+	std::vector< std::vector<int> > adj_matrix;
+	std::vector<T> vertices; // {5, 6, 3, 1}
+};
 
 /*
 	Adj Matrix ex:
@@ -50,7 +52,7 @@ int Graph<T>::add_vertex(T new_data){
 }
 
 template <class T>
-void add_edge(int v_index1, int v_index2){
+void Graph<T>::add_edge(int v_index1, int v_index2){
 	if(v_index1 >= 0 && v_index2 < vertices.size() && v_index2 >= 0 && v_index2 < vertices.size()){
 		adj_matrix[v_index1][v_index2] = 1;
 		adj_matrix[v_index2][v_index1] = 1;
@@ -58,15 +60,36 @@ void add_edge(int v_index1, int v_index2){
 }
 
 template <class T>
-void remove_edge(int v_index1, int v_index2){
-	if(v_index1 >= 0 && v_index2 < vertices.size() && v_index2 >= 0 && v_index2 < vertices.size()){
+void Graph<T>::remove_edge(int v_index1, int v_index2){
+	if(v_index1 >= 0 && v_index2 < vertices.size() && v_index2 > 0 && v_index2 < vertices.size()){
 		adj_matrix[v_index1][v_index2] = 0;
 		adj_matrix[v_index2][v_index1] = 0;
 	}
 }
 
-bool adjacent(int v_index1, int v_index2){
+template <class T>
+bool Graph<T>::adjacent(int v_index1, int v_index2){
 	if(v_index1 < vertices.size() && v_index2 < vertices.size()){
 		return adj_matrix[v_index1][v_index2];
+	}
+	return false;
+}
+
+template <class T>
+void Graph<T>::display_vertices(){
+	for(auto it: vertices){
+		std::cout << it << " ";
+	}
+	std::cout << std::endl;
+}
+
+template <class T>
+void Graph<T>::display_matrix(){
+	int size = adj_matrix.size();
+	for(auto it = adj_matrix.begin(); it != adj_matrix.end(); ++it){
+		for(auto ti = it->begin(); ti != it->end(); ++ti){
+			std::cout << *ti << " ";
+		}
+		std::cout << std::endl;
 	}
 }
