@@ -1,5 +1,5 @@
 # algorithms
-This repo contains most common algorithms and DS implementations. To execute implemented tasks please follow the instructions in ```main.cpp``` and in ```set_up.md``` files.
+This repo contains most common algorithms and DS implementations. To execute implemented tasks please follow the instructions in wiki of this repo and ```main.cpp``` file.
 Current list:
   1. **Stack implemented with Linked List** : stackUsingLinkedList.hpp
   2. **Queue implemented with Linked List** : queueUsingLinkedList.hpp
