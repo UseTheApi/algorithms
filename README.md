@@ -45,6 +45,9 @@ Current list:
   9. **Dynamic Programming**: dynamic_programming/
     1. Factorial and Fibonacci : factorial_fibonacci/
     2. Binomial Coefficient : binomial_coefficient/
+    3. Pascal's Triangle: pascalsTriangle.hpp
+    
+      > Given an index k, return the kth row of the Pascal's triangle.
     3. Jump Stairs task: stairs_hopper/
   
        >*A child is running up a staircase with n steps, and can hop either 1 step, 2 steps or 3 steps at a time.*
@@ -150,10 +153,6 @@ Current list:
  
       > Example:
       > Completing the route [{x:0, y:2, z:10}, {x:3, y:5, z:0}, {x:9, y:20, z:6}, {x:10, y:12, z:15}, {x:10, y:10, z:8}] requires a minimum of 5 liters of fuel.
-      
-    * Pascal's Triangle: pascalsTriangle.hpp
-    
-      > Given an index k, return the kth row of the Pascal's triangle.
       
     * Find and Remove loop in Linked List: detect_remove_loop_linked_list/
       
