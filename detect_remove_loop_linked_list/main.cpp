@@ -40,6 +40,7 @@ int main(int argc, const char *argv[]){
 		cout << "loop removed: ";
 		list->print_list();
 	} else{
-		cout << "loop not detected" << endl;
+		cout << "loop not detected";
 	}
+	cout << endl;
 }
