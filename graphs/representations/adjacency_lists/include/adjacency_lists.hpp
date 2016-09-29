@@ -32,6 +32,9 @@ public:
 	LinkedList<T> neighbours(int); // adjacent vertices for a given vertex id
 	void display_lists();
 	void display_vertices();
+	int get_id(T);
+	std::vector<T> get_vertices();
+	std::vector<LinkedList<T>> get_adj();
 private:
 	std::vector<T> vertices;
 	std::vector<LinkedList<T>> adj;	
@@ -99,4 +102,26 @@ void Graph<T>::display_vertices(){
 		std::cout << it << " ";
 	}
 	std::cout << std::endl;
+}
+
+template <class T>
+int Graph<T>::get_id(T vertex){
+	int id = 0;
+	for(auto it: vertices){
+		if(vertex == it){
+			return id;
+		}
+		++id;
+	}
+	return -1;
+}
+
+template <class T>
+std::vector<T> Graph<T>::get_vertices(){
+	return vertices;
+}
+
+template <class T>
+std::vector<LinkedList<T>> Graph<T>::get_adj(){
+	return adj;
 }

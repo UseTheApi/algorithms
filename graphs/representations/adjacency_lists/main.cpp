@@ -11,8 +11,8 @@
 using namespace std;
 
 int main(int argc, const char *argv[]){
-	Graph<int> *graph = new Graph<int>();
-	int item;
+	Graph<char> *graph = new Graph<char>();
+	char item;
 
 	cout << "Add vertices to the Graph: ";
 	do{
@@ -45,5 +45,7 @@ int main(int argc, const char *argv[]){
 	cout << endl;
 	cout << "Adjacency Lists for the graph: " << endl;
 	graph->display_lists();
+	cout << endl;
 
+	return 0;
 }
