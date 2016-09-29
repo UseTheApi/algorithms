@@ -56,6 +56,11 @@ int main(int argc, const char *argv[]){
 	list->print_list();
 	cout << endl;
 	cout << "End of test" << endl;
+	cout << "Iteration using ForEach loop" << endl;
+	for(auto it: *list){
+		cout << it << " ";
+	}
+	cout << endl;
 
 	return 0;
 }

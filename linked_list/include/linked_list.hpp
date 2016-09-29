@@ -5,11 +5,14 @@
 //  Created by alifar on 9/4/16.
 //  Copyright © 2016 alifar. All rights reserved.
 //
+#include <vector>
 #include <iostream>
 
 template <class T>
 class LinkedList{
 public:
+	typedef T* iterator;
+	typedef const T* const_iterator;
 	LinkedList();
 	LinkedList(T);
 	T get_data();
@@ -25,16 +28,23 @@ public:
 	void print_list();
 	LinkedList<T> * get_last();
 	LinkedList<T> * get_node(T);
+	iterator begin() { return &store[0]; };
+	const_iterator begin() const { return &store[0]; };
+	iterator end() { return &store[size]; };
+	const_iterator end() const { return &store[size-1]; };
 private:
 	T data;
 	LinkedList<T> *next_node;
 	LinkedList<T> *head;
+	std::vector<T> store;
+	int size;
 };
 
 template <class T>
 LinkedList<T>::LinkedList(){
 	next_node = 0;
 	head = 0;
+	size = 0;
 }
 
 template <class T>
@@ -42,6 +52,7 @@ LinkedList<T>::LinkedList(T init_data){
 	data = init_data;
 	next_node = 0;
 	head = 0;
+	size = 1;
 }
 
 template <class T>
@@ -71,6 +82,8 @@ void LinkedList<T>::set_next(LinkedList<T> *new_node){
 
 template <class T>
 void LinkedList<T>::push(T new_data){
+	++size;
+	store.insert(store.begin(), new_data);
 	if(!head){
 		head = new LinkedList<T>(new_data);
 		return;
@@ -82,6 +95,8 @@ void LinkedList<T>::push(T new_data){
 
 template <class T>
 void LinkedList<T>::append(T new_data){
+	++size;
+	store.push_back(new_data);
 	if(!head){
 		head = new LinkedList<T>(new_data);
 		return;
@@ -96,6 +111,8 @@ void LinkedList<T>::append(T new_data){
 
 template <class T>
 void LinkedList<T>::remove_head(){
+	--size;
+	store.erase(store.begin());
 	if(!head){
 		return;
 	}
@@ -106,6 +123,8 @@ void LinkedList<T>::remove_head(){
 
 template <class T>
 void LinkedList<T>::remove_last(){
+	--size;
+	store.pop_back();
 	if(!head){
 		return;
 	}
@@ -120,6 +139,15 @@ void LinkedList<T>::remove_last(){
 
 template <class T>
 void LinkedList<T>::remove(T some_data){
+	--size;
+	int shift = 0;
+	for(auto it: store){
+		if(some_data == it){
+			break;
+		}
+		++shift;
+	}
+	store.erase(store.begin()+shift);
 	if(!head){
 		return;
 	}
