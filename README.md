@@ -39,8 +39,8 @@ Current list:
       > Build a Reachibility Matrix for a weighted graph Adjacency Matrix.
       
     3. Graph Representations: representations/
-      1. Adjacency matrix: adjacency_matrix/
-      2. Adjacency List: *TBD*
+      1. Adjacency Matrix: adjacency_matrix/
+      2. Adjacency Lists: adjacency_lists/
 
   9. **Dynamic Programming**: dynamic_programming/
     1. Factorial and Fibonacci : factorial_fibonacci/
