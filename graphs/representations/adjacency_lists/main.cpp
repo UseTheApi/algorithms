@@ -30,12 +30,20 @@ int main(int argc, const char *argv[]){
 	} while(cin.get() != '\n');
 
 	cout << endl;
+	cout << "Adjacency Lists for the graph: " << endl;
 	graph->display_lists();
-
-	graph->remove_edge(0, 2);
-
 	cout << endl;
 
+	int i3, i4;
+	cout << "Remove edges using Ids of the vertices (Press enter when done): ";
+	do{
+		cin >> i3;
+		cin >> i4;
+		graph->remove_edge(i3, i4);
+	} while(cin.get() != '\n');
+
+	cout << endl;
+	cout << "Adjacency Lists for the graph: " << endl;
 	graph->display_lists();
 
 }

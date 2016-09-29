@@ -96,7 +96,7 @@ void Graph<T>::display_lists(){
 template <class T>
 void Graph<T>::display_vertices(){
 	for(auto it: vertices){
-		cout << it << " ";
+		std::cout << it << " ";
 	}
-	cout << endl;
+	std::cout << std::endl;
 }
