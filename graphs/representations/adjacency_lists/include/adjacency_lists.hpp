@@ -31,6 +31,7 @@ public:
 	void remove_edge(int, int);
 	LinkedList<T> neighbours(int); // adjacent vertices for a given vertex id
 	void display_lists();
+	void display_vertices();
 private:
 	std::vector<T> vertices;
 	std::vector<LinkedList<T>> adj;	
@@ -90,4 +91,12 @@ void Graph<T>::display_lists(){
 		it.print_list();
 		std::cout << std::endl;
 	}
+}
+
+template <class T>
+void Graph<T>::display_vertices(){
+	for(auto it: vertices){
+		cout << it << " ";
+	}
+	cout << endl;
 }
