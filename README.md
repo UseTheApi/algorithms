@@ -41,6 +41,9 @@ Current list:
     3. Graph Representations: representations/
       1. Adjacency Matrix: adjacency_matrix/
       2. Adjacency Lists: adjacency_lists/
+    
+    4. Graph Traversals: traversals/
+      1. Breadth First Search: breadth_first_search/
 
   9. **Dynamic Programming**: dynamic_programming/
     1. Factorial and Fibonacci : factorial_fibonacci/
