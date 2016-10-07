@@ -1,6 +1,6 @@
 //
 //  bfs.hpp
-//  graph traversals
+//  graph traversals. bfs
 //
 //  Created by alifar on 9/29/16.
 //  Copyright © 2016 alifar. All rights reserved.
