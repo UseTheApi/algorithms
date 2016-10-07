@@ -44,6 +44,7 @@ Current list:
     
     4. Graph Traversals: traversals/
       1. Breadth First Search: breadth_first_search/
+      2. Depth First Search: depth_first_search/
 
   9. **Dynamic Programming**: dynamic_programming/
     1. Factorial and Fibonacci : factorial_fibonacci/
