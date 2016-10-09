@@ -7,6 +7,7 @@
 //
 #include "dfs.hpp"
 #include <iostream>
+#include <map>
 
 /*
  DFS has many application in Graph Theory. With DFS we can solve tasks like:
@@ -51,7 +52,11 @@ int main(int argc, const char *argv[]){
 	graph->display_lists();
 	cout << endl;
 
-	dfs<>(graph);
+	map<char, char> dfs_map = dfs<>(graph);
+
+	for(auto it: dfs_map){
+		cout << it.first << " ";
+	}
 
 	cout << endl;
 }

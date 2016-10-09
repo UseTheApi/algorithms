@@ -17,7 +17,7 @@ std::map<T,T> dfs_visit(Graph<T> *graph, T root_vertex, std::map<T,T> &parent){
 	for(auto v: adj_list){
 		if(!parent.count(v)){
 			parent[v] = root_vertex;
-			std::cout << v << " ";
+			// std::cout << v << " ";
 			dfs_visit(graph, v, parent);
 		}
 	}
@@ -25,13 +25,14 @@ std::map<T,T> dfs_visit(Graph<T> *graph, T root_vertex, std::map<T,T> &parent){
 }
 
 template <class T>
-void dfs(Graph<T> *graph){
+std::map<T,T> dfs(Graph<T> *graph){
 	std::map<T,T> parent;
 	for(auto v: graph->get_vertices()){
 		if(!parent.count(v)){
-			std::cout << v << " ";
+			// std::cout << v << " ";
 			parent[v] = 0;
 			parent = dfs_visit(graph, v, parent);
 		}
 	}
+	return parent;
 }
