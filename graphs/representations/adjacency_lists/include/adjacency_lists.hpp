@@ -26,6 +26,7 @@
 template <class T>
 class Graph{
 public:
+	Graph(bool);
 	int add_vertex(T); // returns an id of the vertex (position in vertices[])
 	void add_edge(int, int); // positions (ids) of vertices
 	void remove_edge(int, int);
@@ -37,8 +38,14 @@ public:
 	std::vector<LinkedList<T>> get_adj();
 private:
 	std::vector<T> vertices;
-	std::vector<LinkedList<T>> adj;	
+	std::vector<LinkedList<T>> adj;
+	bool directed; // true if Directed
 };
+
+template <class T>
+Graph<T>::Graph(bool graph_type){
+	directed = graph_type;
+}
 
 template <class T>
 int Graph<T>::add_vertex(T new_data){
@@ -58,9 +65,11 @@ void Graph<T>::add_edge(int index1, int index2){
 
 	T v1 = vertices[index1];
 	T v2 = vertices[index2];
-
 	adj[index1].append(v2);
-	adj[index2].append(v1);
+
+	if(!directed){
+		adj[index2].append(v1);
+	}
 }
 
 template <class T>
@@ -71,9 +80,11 @@ void Graph<T>::remove_edge(int index1, int index2){
 
 	T v1 = vertices[index1];
 	T v2 = vertices[index2];
-
 	adj[index1].remove(v2);
-	adj[index2].remove(v1);
+
+	if(!directed){
+		adj[index2].remove(v1);
+	}
 }
 
 template <class T>
