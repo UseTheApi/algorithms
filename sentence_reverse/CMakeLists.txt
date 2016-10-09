@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 2.6)
-project (max_without_comparison)
+project (sentence_reverse)
 
 add_definitions(-std=c++11)
 
-add_executable(max_without_comparison max_without_comparison.cpp main.cpp)
+add_executable(sentence_reverse sentence_reverse.cpp main.cpp)

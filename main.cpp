@@ -190,16 +190,7 @@ int main(int argc, const char * argv[]) {
 //    breadthFirstTraversalHeight(tree->getRoot());
 //    std::cout << std::endl;
     
-// TEST: Reverse a sentance: sentecReverse.hpp
-//    std::string array = "practice reverse words";
-//    char arr[22];
-//    std::strcpy(arr, array.c_str());
-//    
-//    reverseWords(arr, 23);
-//    for(int i=0; i<23; ++i){
-//        std::cout << arr[i];
-//    }
-//    std::cout << std::endl;
+
 
 // TEST: split string
 //    std::string str("Split me by spaces");

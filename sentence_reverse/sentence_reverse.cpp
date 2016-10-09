@@ -5,8 +5,7 @@
 //  Created by alifar on 6/28/16.
 //  Copyright © 2016 alifar. All rights reserved.
 //
-#include <iostream>
-#include "sentence_everse.hpp"
+#include "sentence_reverse.hpp"
 
 /*
  You are given an array of characters arr, which consists of sequences of characters (words) separated by space characters.
@@ -24,34 +23,43 @@
  3. Reverse each word in the array
 */
 
-void reverse_string(char *arr, int start, int end){
-    char tmp = 0;
+void reverse(std::vector<char> &array, int start, int end){
     
-    while(start<end){
-        tmp = arr[start];
-        arr[start] = arr[end];
-        arr[end] = tmp;
-        start++;
-        end--;
+    for(; start < end; ++start, --end){
+        if(start == end){
+            break;
+        }
+        array[start] = array[start]^array[end];
+        array[end] = array[start]^array[end];
+        array[start] = array[start]^array[end];
     }
+    // Reverse in place can be done using iterators which is not very suitable for this case:
+    //
+    // auto rit = array.rbegin();
+    // auto it = array.begin();
+    // for(; it < rit.base()-1; ++it, ++rit){
+    //     if(it == rit.base()-1){
+    //         break;
+    //     }
+    //     *it = *it^*rit;
+    //     *rit = *it^*rit;
+    //     *it = *it^*rit;
+    // }
 }
 
-void ReverseWords(char *arr, int length){
-    reverseString(arr, 0, length-1); // reverse the whole string
+void ReverseWords(std::vector<char> &arr){
+    int length = arr.size();
+    reverse(arr, 0, length-1); // reverse the whole string
     int wordStart = 0;
-    for(int i=0; i<=length-1; ++i){
-        if(arr[i] == ' '){
-            if(wordStart){
-                reverse_string(arr, wordStart, i-1); // revers each word back when collected a word
-                wordStart = NULL;
-            }
+    
+    for(int i = 0; i < length; ++i){
+        if(arr[i] == ' ' && wordStart == i){ // ignoring multiple spaces in the string
+            ++wordStart;
+        } else if(arr[i] == ' '){
+            reverse(arr, wordStart, i-1); // reverse each word back when collected a word
+            wordStart = i+1;
         } else if(i == length-1){
-            if(wordStart){
-                reverse_string(arr, wordStart, i);
-                wordStart = NULL;
-            }
-        } else if(wordStart == 0) {
-            wordStart = i;
+            reverse(arr, wordStart, i); 
         }
     }
 }

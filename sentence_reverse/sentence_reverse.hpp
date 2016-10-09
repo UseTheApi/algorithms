@@ -10,7 +10,10 @@
 #define sentence_reverse_hpp
 
 #include <stdio.h>
+#include <vector>
+#include <iostream>
 
-void ReverseWords(char *arr, int length);
+void ReverseWords(std::vector<char> &);
+void reverse(std::vector<char> &, int, int);
 
 #endif /* sentence_reverse_hpp */

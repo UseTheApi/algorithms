@@ -29,7 +29,16 @@
 using namespace std;
 
 int main(int argc, const char *argv[]){
-	Graph<char> *graph = new Graph<char>();
+	bool g_type = false; // true if Graph is Directed
+	char input;
+	cout << "Type of graph? [default: Undirected, 1 for Directed]: ";
+	if(cin.get() != '\n'){
+		g_type = true;
+	}
+
+	cout << endl;
+
+	Graph<char> *graph = new Graph<char>(g_type);
 	char item;
 
 	cout << "Add vertices to the Graph: ";
