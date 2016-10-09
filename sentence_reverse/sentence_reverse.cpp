@@ -1,12 +1,12 @@
 //
-//  sentenceReverse.cpp
+//  sentence_reverse.cpp
 //  algorithms
 //
 //  Created by alifar on 6/28/16.
 //  Copyright © 2016 alifar. All rights reserved.
 //
 #include <iostream>
-#include "sentenceReverse.hpp"
+#include "sentence_everse.hpp"
 
 /*
  You are given an array of characters arr, which consists of sequences of characters (words) separated by space characters.
@@ -24,7 +24,7 @@
  3. Reverse each word in the array
 */
 
-void reverseString(char *arr, int start, int end){
+void reverse_string(char *arr, int start, int end){
     char tmp = 0;
     
     while(start<end){
@@ -36,18 +36,18 @@ void reverseString(char *arr, int start, int end){
     }
 }
 
-void reverseWords(char *arr, int length){
+void ReverseWords(char *arr, int length){
     reverseString(arr, 0, length-1); // reverse the whole string
     int wordStart = 0;
     for(int i=0; i<=length-1; ++i){
         if(arr[i] == ' '){
             if(wordStart){
-                reverseString(arr, wordStart, i-1); // revers each word back when collected a word
+                reverse_string(arr, wordStart, i-1); // revers each word back when collected a word
                 wordStart = NULL;
             }
         } else if(i == length-1){
             if(wordStart){
-                reverseString(arr, wordStart, i);
+                reverse_string(arr, wordStart, i);
                 wordStart = NULL;
             }
         } else if(wordStart == 0) {
