@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 2.6)
-project (special_stack)
+project (count_distinct_elements)
 
 add_definitions(-std=c++11)
 
-add_executable(special_stack special_stack.cpp main.cpp)
+add_executable(count_distinct_elements count_elements.cpp main.cpp)
