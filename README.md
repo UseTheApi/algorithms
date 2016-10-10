@@ -49,7 +49,7 @@ Current list:
   9. **Dynamic Programming**: dynamic_programming/
     1. Factorial and Fibonacci : factorial_fibonacci/
     2. Binomial Coefficient : binomial_coefficient/
-    3. Pascal's Triangle: pascalsTriangle.hpp
+    3. Pascal's Triangle: pascals_triangle/
     
       > Given an index k, return the kth row of the Pascal's triangle.
     3. Jump Stairs task: stairs_hopper/
@@ -120,8 +120,17 @@ Current list:
     * Find max subarray sum (Kadane's Algorithm) : *TBD*
       
       > *With variation of this task: Find a subarray with max sum of elements*
+      
+    * Count Distinct Elements in array: count_distinct_elements/
+    
+      > Given a sorted array. Write a function that calculates all distinct absolute values in this array.
+      > Ex.: 
+      ```c++
+      arr = [-3, -2, 0, 1, 2, 3]
+      ```
+      answer is 4 (0, 1, 2, 3)
 
-  12. **Strings**:
+  12. **Strings**: strings/
     * Substrings: substrings/
     
       > Given a string. Write a function to return all substrings for a given string.
@@ -131,13 +140,12 @@ Current list:
     * Single Char String: substring_with_k_chars/
       
       > Given a string, find the length of the longest substring consisting of a single character.
-    
+      
     * K distinct Chars String: substring_with_k_chars/
       
       > Find the length of the longest substring consisting of at most k distinct characters.
-    
-  11. **Interesting tasks**
-    * Reverse a sentence : sentenceReverse.hpp
+      
+    * Reverse a sentence : sentence_reverse/
     
       > You are given an array of characters arr, which consists of sequences of characters (words) separated by space characters.
       > How can you most efficiently reverse the order of words in the sentence?
@@ -147,7 +155,9 @@ Current list:
       would turn into:
       [ 'p', 'r', 'a', 'c', 't', 'i', 'c', 'e', '  ', 'm', 'a', 'k', 'e', 's', '  ', 'p', 'e', 'r', 'f', 'e', 'c', 't' ]
       ```
-    * Drone Flight Planning : droneFlightPlanner.hpp
+    
+  11. **Interesting tasks**
+    * Drone Flight Planning : drone_flight_planner/
     
       > You are planning the amount of fuel need to complete a drone flight.
       > To fly higher, the drone burns 1 liter of fuel per feet. However, flying lower charges the drone with the amount of energy equivalent to 1 liter of fuel for every feet. Flying sideways takes no energy (only flying up and down takes/charges energy).
