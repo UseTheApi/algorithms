@@ -1,12 +1,12 @@
 //
-//  countElementsInArray.cpp
+//  count_elements.cpp
 //  algorithms
 //
 //  Created by alifar on 7/7/16.
 //  Copyright © 2016 alifar. All rights reserved.
 //
 
-#include "countElementsInArray.hpp"
+#include "count_elements.hpp"
 #include <iostream>
 
 /*
@@ -25,7 +25,7 @@ int abs(int number){
     return number>0 ? number : number*(-1);
 }
 
-size_t noDistinctValues(std::vector<int> numbers){
+size_t CountDistinctValues(std::vector<int> numbers){
     size_t abs_count = numbers.size();
     auto f_it = numbers.begin();
     auto r_it = numbers.rbegin();

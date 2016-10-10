@@ -23,10 +23,6 @@ int main(int argc, const char * argv[]) {
 //    std::cout << BinarySearch(arr, 1) << std::endl;
 //    std::cout << BinarySearch(arr, 55) << std::endl;
     
-// TEST: Count distinct absolute numbers in array: countElementsInArray.hpp
-//    std::vector<int> numbers = {-3, -2, -1, -1, -1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 3};
-//    std::cout << noDistinctValues(numbers) << std::endl;
-    
 // TEST: Min Binary Heap: "binaryMinHeap.hpp"
 //    BinaryMinHeap *heap = new BinaryMinHeap();
 //    heap->Insert(4);
