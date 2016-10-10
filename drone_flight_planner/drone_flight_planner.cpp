@@ -1,5 +1,5 @@
 //
-//  droneFlightPlanner.cpp
+//  drone_flight_planner.cpp
 //  algorithms
 //
 //  Created by alifar on 7/2/16.
@@ -11,7 +11,7 @@
 #include <iterator>
 #include <string>
 #include <algorithm>
-#include "droneFlightPlanner.hpp"
+#include "drone_flight_planner.hpp"
 
 /*
  You are planning the amount of fuel need to complete a drone flight.
@@ -42,7 +42,7 @@ void printList(std::string name, std::vector<int> arr){
     std::cout << std::endl;
 }
 
-int littersRequired(std::vector<int> coordinates){
+int LittersRequired(std::vector<int> &coordinates){
     std::vector<int> distance(coordinates.size());
     std::vector<int> litters(coordinates.size());
     distance[0] = 0;
@@ -58,7 +58,7 @@ int littersRequired(std::vector<int> coordinates){
     return min_litters > 0 ? min_litters : min_litters*(-1);
 }
 
-int littersRequiredSimple(std::vector<int> coordinates){
+int LittersRequiredSimple(std::vector<int> &coordinates){
     int highest_point = *std::max_element(coordinates.begin(), coordinates.end());
     return highest_point - coordinates[0];
 }
