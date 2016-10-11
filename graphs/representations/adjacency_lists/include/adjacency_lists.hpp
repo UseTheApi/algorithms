@@ -34,7 +34,6 @@ public:
 	LinkedList<Vertex<T> *> neighbours(int); // adjacent vertices for a given vertex id
 	void display_lists();
 	void display_vertices();
-	// int get_id(T);
 	std::vector<Vertex<T> *> get_vertices();
 	std::vector<LinkedList<Vertex<T> *>> get_adj();
 	Vertex<T> * get_vertex_by_id(int);
@@ -53,7 +52,6 @@ template <class T>
 int Graph<T>::add_vertex(T new_data){
 	Vertex<T> *new_vertex = new Vertex<T>(new_data, vertices.size());
 	vertices.push_back(new_vertex);
-	// int index = vertices.size()-1;
 	LinkedList<Vertex<T> *> adj_list;
 	adj_list.push(new_vertex);
 	adj.push_back(adj_list);
@@ -78,7 +76,7 @@ void Graph<T>::add_edge(int index1, int index2){
 		adj[index1].append(v2);
 
 		if(!directed){
-			adj[index2].append(v1);
+			adj[index2].append(v1); // indexes are used as ids for vertices. it is to simplify implementation
 		}
 	}
 }
@@ -123,18 +121,6 @@ void Graph<T>::display_vertices(){
 	}
 	std::cout << std::endl;
 }
-
-// template <class T>
-// int Graph<T>::get_id(T vertex){
-// 	int id = 0;
-// 	for(auto it: vertices){
-// 		if(vertex == it){
-// 			return id;
-// 		}
-// 		++id;
-// 	}
-// 	return -1;
-// }
 
 template <class T>
 std::vector<Vertex<T> *> Graph<T>::get_vertices(){
