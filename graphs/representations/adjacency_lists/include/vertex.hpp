@@ -13,8 +13,8 @@ public:
 	Vertex(T, int);
 	T get_data();
 	int get_id();
-	template <typename C>
-	friend std::ostream& operator<<(std::ostream& os, const Vertex<C> *v);
+	template <class V>
+	friend std::ostream& operator<<(std::ostream& os, const Vertex<V> *v);
 	~Vertex();
 private:
 	T data;
@@ -37,8 +37,8 @@ int Vertex<T>::get_id(){
 	return id;
 }
 
-template <typename C>
-std::ostream& operator<<(std::ostream& os, const Vertex<C> *v){
+template <class V>
+std::ostream& operator<<(std::ostream& os, const Vertex<V> *v){
 	os << v->data;
 	return os;
 }
