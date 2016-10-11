@@ -7,9 +7,16 @@
 //
 
 #include "bfs.hpp"
+// #include "vertex_bfs.hpp"
 #include <iostream>
 
 using namespace std;
+
+// int main(int argc, const char *argv[]){
+// 	VertexBfs<int> *v = new VertexBfs<int>(5, 1);
+// 	cout << v->get_data() << endl;
+// 	return 0;
+// }
 
 int main(int argc, const char *argv[]){
 	bool g_type = false; // true if Graph is Directed
@@ -48,5 +55,5 @@ int main(int argc, const char *argv[]){
 	int bfs_start_id;
 	cin >> bfs_start_id;
 
-	bfs<>(graph, bfs_start_id);
+	bfs_map<>(graph, bfs_start_id);
 }

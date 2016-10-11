@@ -11,7 +11,7 @@
 #include <iostream>
 
 template <class T>
-void bfs(Graph<T> *graph, int root_id){
+void bfs_map(Graph<T> *graph, int root_id){
 	Vertex<T> * root_vertex = graph->get_vertex_by_id(root_id);
 	if(!root_vertex){
 		return;
