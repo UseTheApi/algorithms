@@ -1,6 +1,6 @@
 //
 //  main.cpp
-//  algorithms
+//  count_distinct_elements
 //
 //  Created by alifar on 10/10/16.
 //  Copyright © 2016 alifar. All rights reserved.

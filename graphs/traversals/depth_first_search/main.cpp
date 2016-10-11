@@ -61,11 +61,6 @@ int main(int argc, const char *argv[]){
 	graph->display_lists();
 	cout << endl;
 
-	map<char, char> dfs_map = dfs<>(graph);
-
-	for(auto it: dfs_map){
-		cout << it.first << " ";
-	}
-
+	map<Vertex<char> *, Vertex<char> *> dfs_map = dfs<>(graph); // dfs_map represents tree edges of the graph
 	cout << endl;
 }

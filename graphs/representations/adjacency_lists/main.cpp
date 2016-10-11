@@ -10,6 +10,18 @@
 
 using namespace std;
 
+// int main(int argc, const char *argv[]){
+// 	Vertex<int> *v = new Vertex<int>(4, 0);
+// 	cout << v << endl;
+// 	LinkedList<Vertex<int> *> list;
+// 	list.push(v);
+// 	for(auto it: list){
+// 		cout << it << endl;
+// 	}
+// 	return 0;
+// }
+
+
 int main(int argc, const char *argv[]){
 	bool g_type = false; // true if Graph is Directed
 	char input;
