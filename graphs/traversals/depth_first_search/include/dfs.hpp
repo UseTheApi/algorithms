@@ -11,7 +11,7 @@
 #include <iostream>
 
 template <class T>
-std::map<Vertex<T> *, Vertex<T> *> dfs_visit(Graph<T> *graph, Vertex<T> * root_vertex, std::map<Vertex<T> *,Vertex<T> *> &parent){
+std::map<Vertex<T> *, Vertex<T> *> dfs_visit(Graph<T, Vertex> *graph, Vertex<T> * root_vertex, std::map<Vertex<T> *,Vertex<T> *> &parent){
 	int root_id = root_vertex->get_id();
 	LinkedList<Vertex<T> *> adj_list = graph->get_adj()[root_id];
 	for(auto v: adj_list){
@@ -25,7 +25,7 @@ std::map<Vertex<T> *, Vertex<T> *> dfs_visit(Graph<T> *graph, Vertex<T> * root_v
 }
 
 template <class T>
-std::map<Vertex<T> *,Vertex<T> *> dfs(Graph<T> *graph){
+std::map<Vertex<T> *,Vertex<T> *> dfs(Graph<T, Vertex> *graph){
 	std::map<Vertex<T> *,Vertex<T> *> parent;
 	for(auto v: graph->get_vertices()){
 		if(!parent.count(v)){

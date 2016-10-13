@@ -38,7 +38,7 @@ int main(int argc, const char *argv[]){
 
 	cout << endl;
 
-	Graph<char> *graph = new Graph<char>(g_type);
+	Graph<char, Vertex> *graph = new Graph<char, Vertex>(g_type);
 	char item;
 
 	cout << "Add vertices to the Graph: ";
