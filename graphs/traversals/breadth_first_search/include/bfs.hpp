@@ -7,6 +7,7 @@
 //
 #include "vertex_bfs.hpp"
 #include <map>
+#include <queue>
 #include <iostream>
 
 template <class T>
@@ -16,7 +17,7 @@ void bfs_map(Graph<T, VertexBfs> *graph, int root_id){ // explicit specializatio
 	if(!root_vertex){
 		return;
 	}
-	std::cout << "Starting from: " << root_vertex << " ";
+	std::cout << root_vertex << " ";
 	int i = 1;
 	std::map<VertexBfs<T> *, int> level = {{root_vertex, 0}};
 	std::vector<int> frontier = {root_id};
@@ -39,7 +40,29 @@ void bfs_map(Graph<T, VertexBfs> *graph, int root_id){ // explicit specializatio
 	std::cout << std::endl;
 }
 
-// template <class T>
-// void bfs_queue(Graph<T> *graph, int root_id){
-	
-// }
+template <class T>
+void bfs_queue(Graph<T, VertexBfs> *graph, int root_id){
+	std::queue<VertexBfs<T> *> q;
+	std::vector<VertexBfs<T> *> visited;
+	VertexBfs<T> *root_vertex = graph->get_vertex_by_id(root_id);
+	root_vertex->set_parent(0);
+	root_vertex->set_distance(0);
+	root_vertex->visited = true;
+	std::cout << root_vertex << " ";
+	q.push(root_vertex);
+	while(!q.empty()){
+		VertexBfs<T> *cur_vertex = q.front();
+		q.pop();
+		LinkedList<VertexBfs<T> *> adj_list = graph->get_adj()[cur_vertex->get_id()];
+		for(auto it: adj_list){
+			if(!it->visited){
+				it->visited = true;
+				it->set_parent(cur_vertex);
+				it->set_distance(cur_vertex->get_distance() + 1);
+				std::cout << it << " ";
+				q.push(it);
+			}
+		}
+		cur_vertex->visited = true;
+	}
+}

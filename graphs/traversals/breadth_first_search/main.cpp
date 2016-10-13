@@ -55,5 +55,10 @@ int main(int argc, const char *argv[]){
 	int bfs_start_id;
 	cin >> bfs_start_id;
 
+	cout << "BFS using map: ";
 	bfs_map<>(graph, bfs_start_id);
+	cout << endl;
+	cout << "BFS using queue and vertex attributes: ";
+	bfs_queue<>(graph, bfs_start_id);
+	cout << endl;
 }

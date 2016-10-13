@@ -14,11 +14,13 @@ public:
 	VertexBfs(T init_data, int init_id): Vertex<T>(init_data, init_id){
 		parent = 0;
 		distance = 0;
+		visited = false;
 	};
 	VertexBfs<T> * get_parent();
 	int get_distance();
 	void set_parent(VertexBfs<T> *);
 	void set_distance(int);
+	bool visited;
 private:
 	VertexBfs<T> *parent;
 	int distance;
