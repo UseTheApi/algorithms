@@ -6,7 +6,7 @@
 //  Copyright © 2016 alifar. All rights reserved.
 //
 
-#include <vertex.hpp>
+#include <adjacency_lists.hpp>
 
 template <class T>
 class VertexBfs: public Vertex<T>{
