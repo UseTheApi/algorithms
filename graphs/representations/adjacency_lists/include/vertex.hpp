@@ -5,6 +5,7 @@
 //  Created by alifar on 10/11/16.
 //  Copyright © 2016 alifar. All rights reserved.
 //
+
 #include <iostream>
 
 template <class T>

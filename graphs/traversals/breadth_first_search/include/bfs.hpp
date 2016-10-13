@@ -38,3 +38,8 @@ void bfs_map(Graph<T> *graph, int root_id){
 	}
 	std::cout << std::endl;
 }
+
+template <class T>
+void bfs_queue(Graph<T> *graph, int root_id){
+	
+}
