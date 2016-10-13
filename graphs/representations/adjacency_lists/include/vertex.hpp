@@ -18,28 +18,28 @@ public:
 	friend std::ostream& operator<<(std::ostream& os, const Vertex<V> *v);
 	~Vertex();
 private:
-	T data;
-	int id;
+	T data_;
+	int id_;
 };
 
 template <class T>
 Vertex<T>::Vertex(T new_data, int new_id){
-	data = new_data;
-	id = new_id;
+	data_ = new_data;
+	id_ = new_id;
 }
 
 template <class T>
 T Vertex<T>::get_data(){
-	return data;
+	return data_;
 }
 
 template <class T>
 int Vertex<T>::get_id(){
-	return id;
+	return id_;
 }
 
 template <class V>
 std::ostream& operator<<(std::ostream& os, const Vertex<V> *v){
-	os << v->data;
+	os << v->data_;
 	return os;
 }

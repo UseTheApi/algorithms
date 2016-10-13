@@ -19,5 +19,10 @@
  	   then it's a backward edge
  	3. Forward edges: count steps of DFS algorithms and store them in a vertex structure. 
  	   This would tell us time we explored every node and can help to recognize forward edges from cross edges
+
+ Remark: I had to rewrite depth_first_search that was implemented earlier in this project using vertices attributes.
+  It makes it easier to implement edge classification and other tasks. 
+  The easiest implementation of DFS you can find in depth_first_search/ folder.
 */
+
 

@@ -12,8 +12,8 @@ template <class T>
 class VertexBfs: public Vertex<T>{
 public:
 	VertexBfs(T init_data, int init_id): Vertex<T>(init_data, init_id){
-		parent = 0;
-		distance = 0;
+		parent_ = 0;
+		distance_ = 0;
 		visited = false;
 	};
 	VertexBfs<T> * get_parent();
@@ -22,26 +22,26 @@ public:
 	void set_distance(int);
 	bool visited;
 private:
-	VertexBfs<T> *parent;
-	int distance;
+	VertexBfs<T> *parent_;
+	int distance_;
 };
 
 template <class T>
 VertexBfs<T> * VertexBfs<T>::get_parent(){
-	return parent;
+	return parent_;
 }
 
 template <class T>
 int VertexBfs<T>::get_distance(){
-	return distance;
+	return distance_;
 }
 
 template <class T>
 void VertexBfs<T>::set_parent(VertexBfs<T> *new_parent){
-	parent = new_parent;
+	parent_ = new_parent;
 }
 
 template <class T>
 void VertexBfs<T>::set_distance(int new_distance){
-	distance = new_distance;
+	distance_ = new_distance;
 }

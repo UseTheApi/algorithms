@@ -38,8 +38,8 @@ public:
 	std::vector<LinkedList<Node<T> *>> get_adj();
 	Node<T> * get_vertex_by_id(int);
 private:
-	std::vector<Node<T> *> vertices;
-	std::vector<LinkedList<Node<T> *>> adj;
+	std::vector<Node<T> *> vertices_;
+	std::vector<LinkedList<Node<T> *>> adj_;
 	bool directed; // true if Directed
 };
 
@@ -50,17 +50,17 @@ Graph<T, Node>::Graph(bool graph_type){
 
 template <class T, template<class> class Node>
 int Graph<T, Node>::add_vertex(T new_data){
-	Node<T> *new_vertex = new Node<T>(new_data, vertices.size());
-	vertices.push_back(new_vertex);
+	Node<T> *new_vertex = new Node<T>(new_data, vertices_.size());
+	vertices_.push_back(new_vertex);
 	LinkedList<Node<T> *> adj_list;
 	adj_list.push(new_vertex);
-	adj.push_back(adj_list);
+	adj_.push_back(adj_list);
 	return new_vertex->get_id();
 }
 
 template <class T, template<class> class Node>
 Node<T> * Graph<T, Node>::get_vertex_by_id(int given_id){
-	for(auto it: vertices){
+	for(auto it: vertices_){
 		if(it->get_id() == given_id){
 			return it;
 		}
@@ -73,10 +73,10 @@ void Graph<T, Node>::add_edge(int index1, int index2){
 	Node<T> *v1 = get_vertex_by_id(index1);
 	Node<T> *v2 = get_vertex_by_id(index2);
 	if(v1 != 0 && v2 != 0){
-		adj[index1].append(v2);
+		adj_[index1].append(v2);
 
 		if(!directed){
-			adj[index2].append(v1); // indexes are used as ids for vertices. it is to simplify implementation
+			adj_[index2].append(v1); // indexes are used as ids for vertices. it is to simplify implementation
 		}
 	}
 }
@@ -86,21 +86,21 @@ void Graph<T, Node>::remove_edge(int index1, int index2){
 	Node<T> *v1 = get_vertex_by_id(index1);
 	Node<T> *v2 = get_vertex_by_id(index2);
 	if(v1 != 0 && v2 != 0){
-		adj[index1].remove(v2);
+		adj_[index1].remove(v2);
 
 		if(!directed){
-			adj[index2].remove(v1);
+			adj_[index2].remove(v1);
 		}
 	}
 }
 
 template <class T, template<class> class Node>
 LinkedList<Node<T> *> Graph<T, Node>::neighbours(int index){
-	if(index >= vertices.size()){
+	if(index >= vertices_.size()){
 		return 0;
 	}
 
-	LinkedList<Node<T> *> list = adj[index];
+	LinkedList<Node<T> *> list = adj_[index];
 	list.remove_head();
 	return list;
 
@@ -108,7 +108,7 @@ LinkedList<Node<T> *> Graph<T, Node>::neighbours(int index){
 
 template <class T, template<class> class Node>
 void Graph<T, Node>::display_lists(){
-	for(auto it: adj){
+	for(auto it: adj_){
 		it.print_list();
 		std::cout << std::endl;
 	}
@@ -116,7 +116,7 @@ void Graph<T, Node>::display_lists(){
 
 template <class T, template<class> class Node>
 void Graph<T, Node>::display_vertices(){
-	for(auto it: vertices){
+	for(auto it: vertices_){
 		std::cout << it << " ";
 	}
 	std::cout << std::endl;
@@ -124,10 +124,10 @@ void Graph<T, Node>::display_vertices(){
 
 template <class T, template<class> class Node>
 std::vector<Node<T> *> Graph<T, Node>::get_vertices(){
-	return vertices;
+	return vertices_;
 }
 
 template <class T, template<class> class Node>
 std::vector<LinkedList<Node<T> *>> Graph<T, Node>::get_adj(){
-	return adj;
+	return adj_;
 }

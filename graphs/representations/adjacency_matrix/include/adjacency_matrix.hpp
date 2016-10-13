@@ -25,8 +25,8 @@ public:
 	void display_vertices();
 	void display_matrix();
 private:
-	std::vector< std::vector<int> > adj_matrix;
-	std::vector<T> vertices; // {5, 6, 3, 1}
+	std::vector< std::vector<int> > adj_matrix_;
+	std::vector<T> vertices_; // {5, 6, 3, 1}
 };
 
 /*
@@ -39,13 +39,13 @@ private:
 
 template <class T>
 int Graph<T>::add_vertex(T new_data){
-	vertices.push_back(new_data);
-	int size = vertices.size();
-	adj_matrix.resize(size);
+	vertices_.push_back(new_data);
+	int size = vertices_.size();
+	adj_matrix_.resize(size);
 	for(int i = 0; i < size; ++i){
-		adj_matrix[i].resize(size);
+		adj_matrix_[i].resize(size);
 		for(int j = 0; j < size; ++j){
-			adj_matrix[i][j] = 0;
+			adj_matrix_[i][j] = 0;
 		}
 	}
 	return size-1;
@@ -53,31 +53,31 @@ int Graph<T>::add_vertex(T new_data){
 
 template <class T>
 void Graph<T>::add_edge(int v_index1, int v_index2){
-	if(v_index1 >= 0 && v_index2 < vertices.size() && v_index2 >= 0 && v_index2 < vertices.size()){
-		adj_matrix[v_index1][v_index2] = 1;
-		adj_matrix[v_index2][v_index1] = 1;
+	if(v_index1 >= 0 && v_index2 < vertices_.size() && v_index2 >= 0 && v_index2 < vertices_.size()){
+		adj_matrix_[v_index1][v_index2] = 1;
+		adj_matrix_[v_index2][v_index1] = 1;
 	}
 }
 
 template <class T>
 void Graph<T>::remove_edge(int v_index1, int v_index2){
-	if(v_index1 >= 0 && v_index2 < vertices.size() && v_index2 > 0 && v_index2 < vertices.size()){
-		adj_matrix[v_index1][v_index2] = 0;
-		adj_matrix[v_index2][v_index1] = 0;
+	if(v_index1 >= 0 && v_index2 < vertices_.size() && v_index2 > 0 && v_index2 < vertices_.size()){
+		adj_matrix_[v_index1][v_index2] = 0;
+		adj_matrix_[v_index2][v_index1] = 0;
 	}
 }
 
 template <class T>
 bool Graph<T>::adjacent(int v_index1, int v_index2){
-	if(v_index1 < vertices.size() && v_index2 < vertices.size()){
-		return adj_matrix[v_index1][v_index2];
+	if(v_index1 < vertices_.size() && v_index2 < vertices_.size()){
+		return adj_matrix_[v_index1][v_index2];
 	}
 	return false;
 }
 
 template <class T>
 void Graph<T>::display_vertices(){
-	for(auto it: vertices){
+	for(auto it: vertices_){
 		std::cout << it << " ";
 	}
 	std::cout << std::endl;
@@ -85,8 +85,8 @@ void Graph<T>::display_vertices(){
 
 template <class T>
 void Graph<T>::display_matrix(){
-	int size = adj_matrix.size();
-	for(auto it = adj_matrix.begin(); it != adj_matrix.end(); ++it){
+	int size = adj_matrix_.size();
+	for(auto it = adj_matrix_.begin(); it != adj_matrix_.end(); ++it){
 		for(auto ti = it->begin(); ti != it->end(); ++ti){
 			std::cout << *ti << " ";
 		}
