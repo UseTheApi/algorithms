@@ -31,7 +31,7 @@ int main(int argc, const char *argv[]){
 	Graph<char, VertexBfs> *graph = new Graph<char, VertexBfs>(g_type);
 	char item;
 
-	cout << "Add vertices to the Graph: ";
+	cout << "Add vertices to the Graph (type - char): ";
 	do{
 		cin >> item;
 		cout << "Id of item " << item << ": " << graph->add_vertex(item) << endl;

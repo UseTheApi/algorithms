@@ -16,7 +16,7 @@ int main(int argc, const char *argv[]){
 	
 	Graph<int> *graph = new Graph<int>();
 	int item;
-	cout << "Add items to the graph: ";
+	cout << "Add items to the graph (type - int): ";
 	do{
 		cin >> item;
 		cout << "Id of item " << item << " : " <<  graph->add_vertex(item) << endl;
