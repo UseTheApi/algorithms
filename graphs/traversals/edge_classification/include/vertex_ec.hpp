@@ -18,8 +18,8 @@ public:
 	int discovered; // fixes time counter when vertex was discovered
 	int finished; // fixes time counter when vertex left recursion stack of DFS
 	VertexEc(T init_data, int init_id): VertexBfs<T>(init_data, init_id){
-		discovered = -1;
-		finished = -1;
+		discovered = 0;
+		finished = 0;
 	}
 	void add_type(VertexEc<T> *, EdgeType);
 	std::map<VertexEc<T> *, EdgeType> get_types();

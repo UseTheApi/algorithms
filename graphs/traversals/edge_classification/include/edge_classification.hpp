@@ -10,7 +10,7 @@
 #include <iostream>
 
 /*
- Edge Classification.
+ Edge Classification. <- EC
 
  Approaches:
  	1. Tree edges returns DFS itself within Parent structure
@@ -26,70 +26,68 @@
 */
 
 template <class T>
-void dfs_visit(Graph<T,VertexEc> *graph, VertexEc<T> *root_vertex){
+int dfs_ec_visit(Graph<T, VertexEc> *graph, VertexEc<T> *root_vertex, int &time){ // O(V+E)
+	// parent pointer represents tree edge type  
+	// root_vertex->set_parent(0); we store edge types for each vertex
+	root_vertex->visited = true;
+	root_vertex->discovered = ++time;
 	LinkedList<VertexEc<T> *> adj_list = graph->get_adj()[root_vertex->get_id()];
 	for(auto u: adj_list){
 		if(!u->visited){
 			u->visited = true;
-			// overkill in this case, cause we store edge types foe each vertex
-			u->set_parent(root_vertex); // tree edge type represents parent pointer as well
+			// u->set_parent(root_vertex);
 			u->add_type(root_vertex, EdgeType::kTree);
-			std::cout << u << " ";
-			dfs_visit(graph, u);
-		}
-	}
-}
-
-template <class T>
-void Dfs(Graph<T, VertexEc> *graph){
-	for(auto v: graph->get_vertices()){
-		if(!v->visited){
-			v->set_parent(0);
-			v->visited = true;
-			std::cout << v << " ";
-			dfs_visit(graph, v);
-		}
-	}
-}
-
-template <class T>
-void TreeEdges(Graph<T, VertexEc> *graph){
-	std::vector<VertexEc<T> *> vertices = graph->get_vertices();
-	for(auto vertex: vertices){
-		std::map<VertexEc<T> *, EdgeType> edge_types = vertex->get_types();
-		for(auto it: edge_types){
-			if(it.second == EdgeType::kTree){
-				std::cout << it.first << " " << vertex << ": tree edge" << std::endl;
+			u->discovered = ++time;
+			dfs_ec_visit(graph, u, time);
+		} else{
+			if(root_vertex == u){ // excluding visited root_vertex
+				continue;
+			}
+			// (root_vertex is unfinished because we're iterating through its adj_list)
+			if(!u->finished){ // u is unfinished and we're in root_vertex's recursion stack
+				u->add_type(root_vertex, EdgeType::kBackward);
+			} else{ // either cross or forward. calculating based on times of discover
+				if(u->discovered < root_vertex->discovered){
+					u->add_type(root_vertex, EdgeType::kCross);
+				} else{
+					u->add_type(root_vertex, EdgeType::kForward);
+				}
 			}
 		}
 	}
+	root_vertex->finished = ++time;
+	return time;
 }
 
 template <class T>
-void dfs_ec_visit(Graph<T, VertexEc> *graph, VertexEc<T> *root_vertex){
-	root_vertex->set_parent(0);
-	root_vertex->visited = true;
-	root_vertex.discovered = ++time;
-	LinkedList<VertexEc<T> *> adj_list = graph->get_adj()[root_vertex->get_id()];
-	for(auto u: adj_list){
-		if(!u->visited){
-			u->visited = true;
-			u->set_parent(root_vertex);
-			u->add_type(root_vertex, EdgeType::kTree);
-			u->discovered = ++time;
-			dfs_visit(graph, u);
-		} else{
-			
+void dfs_ec(Graph<T, VertexEc> *graph){
+	int time = 0;
+	for(auto v: graph->get_vertices()){
+		if(!v->visited){
+			time = dfs_ec_visit(graph, v, time);
 		}
 	}
 }
 
 template <class T>
-void dfs(Graph<T, VertexEc> *graph){
-	int step = 0;
-	for(auto v: graph->get_vertices()){
-		if(!v.visited){
-			dfs_visit(graph, v, time);
+void EdgeClassification(Graph<T, VertexEc> *graph){ // O(V+E)
+	std::vector<VertexEc<T> *> vertices = graph->get_vertices();
+	for(auto vertex: vertices){
+		for(auto edge: vertex->get_types()){
+			switch(edge.second){
+				case EdgeType::kTree:
+					std::cout << edge.first << " " << vertex << ": tree edge" << std::endl;
+					break;
+				case EdgeType::kForward:
+					std::cout << edge.first << " " << vertex << ": forward edge" << std::endl;
+					break;
+				case EdgeType::kBackward:
+					std::cout << edge.first << " " << vertex << ": backward edge" << std::endl;
+					break;
+				case EdgeType::kCross:
+					std::cout << edge.first << " " << vertex << ": cross edge" << std::endl;
+					break;
+			}
 		}
 	}
 }
