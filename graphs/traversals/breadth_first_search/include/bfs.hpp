@@ -43,7 +43,7 @@ void bfs_map(Graph<T, VertexBfs> *graph, int root_id){ // explicit specializatio
 template <class T>
 void bfs_queue(Graph<T, VertexBfs> *graph, int root_id){
 	std::queue<VertexBfs<T> *> q;
-	std::vector<VertexBfs<T> *> visited;
+	// std::vector<VertexBfs<T> *> visited;
 	VertexBfs<T> *root_vertex = graph->get_vertex_by_id(root_id);
 	root_vertex->set_parent(0);
 	root_vertex->set_distance(0);

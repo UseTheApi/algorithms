@@ -15,6 +15,12 @@ enum EdgeType { kTree, kForward, kBackward, kCross };
 template <class T>
 class VertexEc: public VertexBfs<T>{
 public:
+	int discovered; // fixes time counter when vertex was discovered
+	int finished; // fixes time counter when vertex left recursion stack of DFS
+	VertexEc(T init_data, int init_id): VertexBfs<T>(init_data, init_id){
+		discovered = -1;
+		finished = -1;
+	}
 	void add_type(VertexEc<T> *, EdgeType);
 	std::map<VertexEc<T> *, EdgeType> get_types();
 private:
@@ -27,6 +33,6 @@ void VertexEc<T>::add_type(VertexEc<T> *vertex, EdgeType ktype){
 }
 
 template <class T>
-std::map<VertexEc<T> *, EdgeType> get_types(){
+std::map<VertexEc<T> *, EdgeType> VertexEc<T>::get_types(){
 	return edge_types_;
 }
