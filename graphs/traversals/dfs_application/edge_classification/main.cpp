@@ -55,17 +55,8 @@ int main(int argc, const char *argv[]){
 	graph->display_lists();
 	cout << endl;
 
-	// cout << "Enter vertex id for BFS start: ";
-	// int dfs_start_id;
-	// cin >> dfs_start_id;
-
-	// cout << "DFS using map: ";
+	cout << "Edge Classification Depth First Search" << endl;
 	dfs_ec<>(graph);
-	cout << endl;
-	// cout << "DFS using queue and vertex attributes: ";
-	// dfs_queue<>(graph, bfs_start_id);
-	// cout << endl;
-	// TreeEdges(graph);
 	EdgeClassification(graph);
 	return 0;
 }
