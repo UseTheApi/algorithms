@@ -92,6 +92,8 @@ void EdgeClassification(Graph<T, VertexEc> *graph){ // O(V+E)
 				case EdgeType::kCross:
 					std::cout << edge.first << " " << vertex << ": cross edge" << std::endl;
 					break;
+				case EdgeType::kNone:
+					break;
 			}
 		}
 	}
