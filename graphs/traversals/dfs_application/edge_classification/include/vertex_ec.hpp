@@ -29,12 +29,7 @@ private:
 
 template <class T>
 void VertexEc<T>::add_type(VertexEc<T> *vertex, EdgeType ktype){
-	// std::cout << "VERTEX: " << this << " adding: " <<  edge_types_.count(vertex) << std::endl;
 	if(!edge_types_.count(vertex)){
-		// std::cout << "ADDING" << std::endl;
-		if(ktype == EdgeType::kNone){
-			// std::cout << "Setting edge " << vertex << "-" << this << " to None type" << std::endl;
-		}
 		edge_types_[vertex] = ktype;
 	}
 }
