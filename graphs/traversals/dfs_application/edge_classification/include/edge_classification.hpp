@@ -33,14 +33,15 @@ int dfs_ec_visit(Graph<T, VertexEc> *graph, VertexEc<T> *root_vertex, int &time)
 	root_vertex->discovered = ++time;
 	LinkedList<VertexEc<T> *> adj_list = graph->get_adj()[root_vertex->get_id()];
 	for(auto u: adj_list){
+		if(!graph->directed){
+				root_vertex->add_type(u, EdgeType::kNone);
+		}
 		if(!u->visited){
 			u->visited = true;
 			// u->set_parent(root_vertex);
 			u->add_type(root_vertex, EdgeType::kTree);
 			u->discovered = ++time;
-			if(!graph->directed){
-				root_vertex->add_type(u, EdgeType::kNone);
-			}
+			
 			dfs_ec_visit(graph, u, time);
 		} else{
 			if(root_vertex == u){ // excluding visited root_vertex
@@ -55,9 +56,6 @@ int dfs_ec_visit(Graph<T, VertexEc> *graph, VertexEc<T> *root_vertex, int &time)
 				} else{
 					u->add_type(root_vertex, EdgeType::kForward);
 				}
-			}
-			if(!graph->directed){
-				root_vertex->add_type(u, EdgeType::kNone);
 			}
 		}
 	}
