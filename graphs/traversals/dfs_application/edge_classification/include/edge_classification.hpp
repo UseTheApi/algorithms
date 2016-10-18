@@ -33,8 +33,11 @@ int dfs_ec_visit(Graph<T, VertexEc> *graph, VertexEc<T> *root_vertex, int &time)
 	root_vertex->discovered = ++time;
 	LinkedList<VertexEc<T> *> adj_list = graph->get_adj()[root_vertex->get_id()];
 	for(auto u: adj_list){
+		if(root_vertex == u){ // excluding visited root_vertex
+			continue;
+		}
 		if(!graph->directed){
-				root_vertex->add_type(u, EdgeType::kNone);
+			root_vertex->add_type(u, EdgeType::kNone);
 		}
 		if(!u->visited){
 			u->visited = true;
@@ -44,9 +47,6 @@ int dfs_ec_visit(Graph<T, VertexEc> *graph, VertexEc<T> *root_vertex, int &time)
 			
 			dfs_ec_visit(graph, u, time);
 		} else{
-			if(root_vertex == u){ // excluding visited root_vertex
-				continue;
-			}
 			// (root_vertex is unfinished because we're iterating through its adj_list)
 			if(!u->finished){ // u is unfinished and we're in root_vertex's recursion stack
 				u->add_type(root_vertex, EdgeType::kBackward);

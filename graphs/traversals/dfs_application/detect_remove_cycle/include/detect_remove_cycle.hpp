@@ -21,21 +21,35 @@
 */
 
 template <class T>
-void detect_and_remove_a_cycle(Graph<T, VertexEc> *graph, VertexEc<T> *root_vertex){
+void RemoveACycle(Graph<T, VertexEc> *graph, VertexEc<T> *root_vertex){
 	root_vertex->visited = true;
 	LinkedList<VertexEc<T> *> adj_list = graph->get_adj()[root_vertex->get_id()];
 	for(auto u: adj_list){
+		if(root_vertex == u){
+				continue;
+		}
 		if(!graph->directed){
 			root_vertex->add_type(u, EdgeType::kNone);
 		}
 		if(!u->visited){
 			u->visited = true;
 			u->add_type(root_vertex, EdgeType::kTree);
-			detect_and_remove_a_cycle(graph, u);
+			std::cout << "Tree Edge: " << root_vertex << "-" << u << std::endl;
+			RemoveACycle(graph, u);
 		} else{
-			if(root_vertex == u){
-				continue;
+			if(!u->finished && !u->get_types().count(root_vertex)){
+				std::cout << "Cycle Edge is " << root_vertex << "-" << u << std::endl;
+				std::cout << "Removing a cycle edge" << std::endl;
+				graph->remove_edge(root_vertex->get_id(), u->get_id());
 			}
 		}
+	}
+	root_vertex->finished = 1;
+}
+
+template <class T>
+void DetectRemoveCycles(Graph<T, VertexEc> *graph){
+	for(auto v: graph->get_vertices()){
+		RemoveACycle(graph, v);
 	}
 }
