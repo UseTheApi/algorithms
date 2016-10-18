@@ -38,6 +38,9 @@ int dfs_ec_visit(Graph<T, VertexEc> *graph, VertexEc<T> *root_vertex, int &time)
 			// u->set_parent(root_vertex);
 			u->add_type(root_vertex, EdgeType::kTree);
 			u->discovered = ++time;
+			if(!graph->directed){
+				root_vertex->add_type(u, EdgeType::kNone);
+			}
 			dfs_ec_visit(graph, u, time);
 		} else{
 			if(root_vertex == u){ // excluding visited root_vertex
@@ -52,6 +55,9 @@ int dfs_ec_visit(Graph<T, VertexEc> *graph, VertexEc<T> *root_vertex, int &time)
 				} else{
 					u->add_type(root_vertex, EdgeType::kForward);
 				}
+			}
+			if(!graph->directed){
+				root_vertex->add_type(u, EdgeType::kNone);
 			}
 		}
 	}
@@ -73,6 +79,7 @@ template <class T>
 void EdgeClassification(Graph<T, VertexEc> *graph){ // O(V+E)
 	std::vector<VertexEc<T> *> vertices = graph->get_vertices();
 	for(auto vertex: vertices){
+		// std::cout << "Vertex: " << vertex << std::endl;
 		for(auto edge: vertex->get_types()){
 			switch(edge.second){
 				case EdgeType::kTree:

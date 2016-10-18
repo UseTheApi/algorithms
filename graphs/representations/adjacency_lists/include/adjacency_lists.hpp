@@ -28,6 +28,7 @@ template <class T, template<class> class Node>
 class Graph{
 public:
 	Graph(bool);
+	bool directed; // true if Directed
 	int add_vertex(T); // returns an id of the vertex (position in vertices[])
 	void add_edge(int, int); // positions (ids) of vertices
 	void remove_edge(int, int);
@@ -40,7 +41,6 @@ public:
 private:
 	std::vector<Node<T> *> vertices_;
 	std::vector<LinkedList<Node<T> *>> adj_;
-	bool directed; // true if Directed
 };
 
 template <class T, template<class> class Node>

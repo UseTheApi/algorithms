@@ -10,7 +10,7 @@
 #include <map>
 #include <iostream>
 
-enum EdgeType { kTree, kForward, kBackward, kCross };
+enum EdgeType { kTree, kForward, kBackward, kCross, kNone };
 
 template <class T>
 class VertexEc: public VertexBfs<T>{
@@ -29,7 +29,9 @@ private:
 
 template <class T>
 void VertexEc<T>::add_type(VertexEc<T> *vertex, EdgeType ktype){
-	edge_types_[vertex] = ktype;
+	if(!edge_types_.count(vertex)){
+		edge_types_[vertex] = ktype;
+	}
 }
 
 template <class T>

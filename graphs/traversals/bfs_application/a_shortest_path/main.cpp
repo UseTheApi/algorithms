@@ -67,5 +67,4 @@ int main(int argc, const char *argv[]){
 		cout << it << " ";
 	}
 	cout << end;
-
 }
