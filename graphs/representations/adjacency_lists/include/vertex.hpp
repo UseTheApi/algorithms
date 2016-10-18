@@ -15,7 +15,7 @@ public:
 	T get_data();
 	int get_id();
 	template <class V>
-	friend std::ostream& operator<<(std::ostream& os, const Vertex<V> *v);
+	friend std::ostream & operator<<(std::ostream &, const Vertex<V> *);
 	~Vertex();
 private:
 	T data_;

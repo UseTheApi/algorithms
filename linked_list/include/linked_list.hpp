@@ -31,7 +31,7 @@ public:
 	iterator begin() { return &store_[0]; };
 	const_iterator begin() const { return &store_[0]; };
 	iterator end() { return &store_[size_]; };
-	const_iterator end() const { return &store_[size_-1]; };
+	const_iterator end() const { return &store_[size_]; };
 private:
 	T data_;
 	LinkedList<T> *next_node_;
@@ -111,11 +111,11 @@ void LinkedList<T>::append(T new_data){
 
 template <class T>
 void LinkedList<T>::remove_head(){
-	--size_;
-	store_.erase(store_.begin());
 	if(!head_){
 		return;
 	}
+	--size_;
+	store_.erase(store_.begin());
 	LinkedList<T> *tmp = head_;
 	delete head_;
 	head_ = tmp->next_node_;
