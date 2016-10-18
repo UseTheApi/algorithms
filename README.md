@@ -47,6 +47,18 @@ Current list:
          * BFS using map
          * BFS using queue and vertex attributes
       2. Depth First Search: depth_first_search/
+      3. BFS application tasks: bfs_application/
+         * Finding a shortest path from a given node to a root of BST tree: a_shortest_path/
+      4. DFS application tasks: dfs_application/
+         * Edge Classification for (un-)directed Graphs: edge_classification/
+            
+            > Define Tree, Backward, Forward (only directed) and Cross (only directed) Edges for (un-)directed Graph
+            
+         * Detecting and Removing cycles from (un-)directed Graph: detect_remove_cycle/
+         * Topological Sort for DAG (Directed Acyclic Graph): topological_sort/
+            
+            > A Topological sort of a DAG is a linear ordering of all vertices such that if
+            Graph contains an edge(u, v), then u appears before v in ordering.
 
   9. **Dynamic Programming**: dynamic_programming/
     1. Factorial and Fibonacci : factorial_fibonacci/
