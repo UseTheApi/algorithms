@@ -61,7 +61,7 @@ int main(int argc, const char *argv[]){
 
 	std::vector<VertexBfs<char> *> path;
 
-	a_shortest_path(graph, v2, v1, path);
+	AShortestPath(graph, v2, v1, path);
 
 	for(auto it: path){
 		cout << it << " ";

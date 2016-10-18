@@ -19,7 +19,7 @@
 */
 
 template <class T>
-void a_shortest_path(Graph<T, VertexBfs> *graph, VertexBfs<T> *v1, VertexBfs<T> *v2, std::vector<VertexBfs<T> *> &path){
+void AShortestPath(Graph<T, VertexBfs> *graph, VertexBfs<T> *v1, VertexBfs<T> *v2, std::vector<VertexBfs<T> *> &path){
 	if(!v1 || !v2){
 		return;
 	}
@@ -31,7 +31,7 @@ void a_shortest_path(Graph<T, VertexBfs> *graph, VertexBfs<T> *v1, VertexBfs<T> 
 		return;
 	} else{
 		v1 = v1->get_parent();
-		a_shortest_path(graph, v1, v2, path);
+		AShortestPath(graph, v1, v2, path);
 		path.push_back(v1);
 	}
 }
