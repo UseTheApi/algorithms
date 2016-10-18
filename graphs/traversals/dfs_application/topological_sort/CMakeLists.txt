@@ -9,5 +9,5 @@ include_directories($ENV{algorithms}/graphs/traversals/breadth_first_search/incl
 include_directories($ENV{algorithms}/graphs/traversals/dfs_application/edge_classification/include)
 include_directories(include)
 
-add_executable(detect_remove_cycle main.cpp)
+add_executable(topological_sort main.cpp)
 
