@@ -1,11 +1,12 @@
 # algorithms
 This repo contains most common algorithms and DS implementations. To execute implemented tasks please follow the instructions in wiki of this repo and ```main.cpp``` file.
 Current list:
-  1. **Stack implemented with Linked List** : stackUsingLinkedList.hpp
-  2. **Queue implemented with Linked List** : queueUsingLinkedList.hpp
+  1. **Stack & Queue implementations** : stack_and_queue/
+    1. Stack implemented with Linked List: stack_linked_list/
+    2. Queue implemented with Linked List: queue_linked_list/
+    5. Special Stack with getMin() method : special_stack/
   3. **Stack implemented from a Queue** : stackUsingQueue.hpp
   4. **Queue implemented from a Stack** : queueUsingStack.hpp
-  5. **Special Stack with getMin() method** : special_stack/
   5. **Binary Search Tree**:
     1. Depth traversal (with and InOrder without recursion) : bstTraversals.hpp
       * Pre-, In-, Post-order traversals using recursion
