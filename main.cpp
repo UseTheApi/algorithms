@@ -242,22 +242,5 @@ int main(int argc, const char * argv[]) {
 //    
 //    std::cout << stack->pop() << std::endl;
 //    std::cout << stack->pop() << std::endl;
-    
-// TEST: stack using linked list: stackUsingLinkedList.hpp
-//    stackNode *head = newNode(1);
-//    push(&head, 2);
-//    push(&head, 3);
-//    push(&head, 4);
-//    std::cout << pop(&head) << std::endl;
-//    std::cout << peek(head) << std::endl;
-//    std::cout << " ================== " << std::endl;
-
-// TEST: queue using linked list: queueUsingLinkedList.hpp
-//    Queue *q = createQueue();
-//    enqueue(q, 2);
-//    enqueue(q, 4);
-//    enqueue(q, 5);
-//    std::cout << dequeue(q)->data << std::endl;
-//    std::cout << dequeue(q)->data << std::endl;
     return 0;
 }
