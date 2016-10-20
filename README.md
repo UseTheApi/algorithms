@@ -4,8 +4,8 @@ Current list:
   1. **Stack & Queue implementations** : stack_and_queue/
     1. Stack implemented with Linked List: stack_linked_list/
     2. Queue implemented with Linked List: queue_linked_list/
-    5. Special Stack with getMin() method : special_stack/
-  3. **Stack implemented from a Queue** : stackUsingQueue.hpp
+    3. Special Stack with getMin() method : special_stack/
+    4. Stack implemented from a Queue: stack_queue/
   4. **Queue implemented from a Stack** : queueUsingStack.hpp
   5. **Binary Search Tree**:
     1. Depth traversal (with and InOrder without recursion) : bstTraversals.hpp
@@ -170,6 +170,11 @@ Current list:
       would turn into:
       [ 'p', 'r', 'a', 'c', 't', 'i', 'c', 'e', '  ', 'm', 'a', 'k', 'e', 's', '  ', 'p', 'e', 'r', 'f', 'e', 'c', 't' ]
       ```
+      
+    * Unpack a String: unpack_string/
+     
+        > You are given a string of kind: ```{abc}3xyz``` .
+ Write a function that will unpack a string and will return a result string that looks like: ```abcabcabcxyz```
     
   11. **Interesting tasks**
     * Drone Flight Planning : drone_flight_planner/
