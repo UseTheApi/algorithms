@@ -17,7 +17,7 @@ int main(int argc, const char *argv[]){
 	StackFromQueue<int> *stack = new StackFromQueue<int>();
 
 	int item;
-	cout << "Push several items to a stack" << endl;
+	cout << "Push several items to a stack: ";
 	do{
 		cin >> item;
 		stack->Push(item);
