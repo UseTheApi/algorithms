@@ -22,6 +22,7 @@ public:
 	void set_data(T);
 	Queue<T> * get_next();
 	void set_next(Queue<T> *);
+	Queue<T> * get_rear();
 
 	template <class Q>
 	friend std::ostream & operator<<(std::ostream &os, const Queue<Q> *node);
@@ -76,6 +77,11 @@ Queue<T> * Queue<T>::get_next(){
 template <class T>
 void Queue<T>::set_next(Queue<T> *new_next){
 	next_ = new_next;
+}
+
+template <class T>
+Queue<T> * Queue<T>::get_rear(){
+	return rear_;
 }
 
 template <class T>
