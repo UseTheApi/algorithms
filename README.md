@@ -6,7 +6,7 @@ Current list:
     2. Queue implemented with Linked List: queue_linked_list/
     3. Special Stack with getMin() method : special_stack/
     4. Stack implemented from a Queue: stack_queue/
-  4. **Queue implemented from a Stack** : queueUsingStack.hpp
+    5. Queue implemented from a Stack: queue_stack/
   5. **Binary Search Tree**:
     1. Depth traversal (with and InOrder without recursion) : bstTraversals.hpp
       * Pre-, In-, Post-order traversals using recursion
