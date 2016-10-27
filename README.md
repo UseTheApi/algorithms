@@ -144,6 +144,15 @@ Current list:
       arr = [-3, -2, 0, 1, 2, 3]
       ```
       answer is 4 (0, 1, 2, 3)
+      
+    * Complete Cycle in Array: index_cycle/
+    
+      > Determine whether a circular array of relative indices is composed of a single, complete cycle.
+      > Ex.: 
+      ```c++
+      arr = [3, 2, -1, 1] // 3 is pointing to 0+3 position -> 1, then 1 is pointion to the first on. Incomplete cycle
+      ```
+      > [2, -1, -1] represents a correct Cycle.
 
   12. **Strings**: strings/
     * Substrings: substrings/
