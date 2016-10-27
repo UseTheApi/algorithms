@@ -17,33 +17,6 @@
 
 int main(int argc, const char * argv[]) {
 
-// TEST: Binary Search: binary_search.hpp
-//    std::vector<int> arr = {1, 3, 6, 8, 10, 15, 20, 21, 23, 45, 47};
-//    std::cout << BinarySearch(arr, 15) << std::endl;
-//    std::cout << BinarySearch(arr, 1) << std::endl;
-//    std::cout << BinarySearch(arr, 55) << std::endl;
-    
-// TEST: Min Binary Heap: "binaryMinHeap.hpp"
-//    BinaryMinHeap *heap = new BinaryMinHeap();
-//    heap->Insert(4);
-//    heap->Insert(6);
-//    heap->Insert(3);
-//    heap->Insert(2);
-//    heap->Insert(7);
-//    heap->Insert(5);
-//    heap->Insert(1);
-//    std::cout << "Initial Heap:" << std::endl;
-//    heap->print();
-//    std::cout << "Current Minimal element: ";
-//    std::cout << heap->GetMin() << std::endl;
-//    std::cout << "Extract Min: " << heap->RemoveMin() << std::endl;
-//    std::cout << "Heap:" << std::endl;
-//    heap->print();
-//    size_t index_to_remove = 3;
-//    std::cout << "Remove element at postition: " << index_to_remove << std::endl;
-//    heap->RemoveAt(3);
-//    heap->print();
-
 // TEST: Lowest Common Ancestor: lowestCommonAncestor.hpp
 //    Lca *tree = new Lca();
 //    tree->setRoot(tree->insert(tree->getRoot(), 6));
@@ -107,11 +80,6 @@ int main(int argc, const char * argv[]) {
 //    BstNodeWithParent *temp = tree->getRoot()->left->right;
 //    std::cout << tree->findSuccessorByParent(temp)->data << std::endl;
 //    std::cout << tree->findSuccessorByRoot(tree->getRoot(), temp)->data << std::endl;
-
-// TEST: Drone Flight Planning. both solutions: droneFlightPlanner.hpp
-//    std::vector<int> coordinates {10, 0, 6, 15, 8};
-//    std::cout << littersRequired(coordinates) << std::endl;
-//    std::cout << littersRequiredSimple(coordinates) << std::endl;
 
 // TEST: deletion from BST: bstTraversals.hpp or binarySearchTree.hpp
 //    Bst *tree = new Bst();
@@ -185,62 +153,6 @@ int main(int argc, const char * argv[]) {
 //    std::cout << "Breadth First Traversal using Height:" << std::endl;
 //    breadthFirstTraversalHeight(tree->getRoot());
 //    std::cout << std::endl;
-    
-
-
-// TEST: split string
-//    std::string str("Split me by spaces");
-//    std::string buf;
-//    std::stringstream ss(str);
-//    
-//    std::vector<std::string> tokens;
-//    while(ss >> buf)
-//        tokens.push_back(buf);
-//    
-//    for (std::vector<std::string>::const_iterator i = tokens.begin(); i != tokens.end(); ++i)
-//        std::cout << *i << std::endl;
-    
-// TEST: Stack using Queue: stackFromQueue.hpp
-//    {
-//        using namespace stackFromQueue;
-//        Stack *stack = new Stack();
-//        
-//        stack->push(1);
-//        stack->push(2);
-//        stack->push(3);
-//        
-//        std::cout << stack->pop() << std::endl;
-//        std::cout << stack->pop() << std::endl;
-//        std::cout << stack->pop() << std::endl;
-//    }
-    
-// TEST: Queue using stack: QueueFromStack.hpp
-//    Queue *q = new Queue();
-//    q->enqueue2(1);
-//    q->enqueue2(3);
-//    q->enqueue2(5);
-//    q->enqueue2(9);
-//    std::cout << q->dequeue2() << std::endl;
-//    std::cout << q->dequeue2() << std::endl;
-//    q->enqueue2(15);
-//    std::cout << q->dequeue2() << std::endl;
-//    std::cout << q->dequeue2() << std::endl;
-    
-// TEST: stack using class: QueueFromStack.hpp
-//    Stack *stack = new Stack();
-//    stack->push(3);
-//    stack->push(5);
-//    stack->push(6);
-//    
-//    std::cout << stack->pop() << std::endl;
-//    std::cout << stack->pop() << std::endl;
-//    
-//    stack->push(9);
-//    
-//    std::cout << stack->pop() << std::endl;
-//    std::cout << stack->pop() << std::endl;
-//    
-//    std::cout << stack->pop() << std::endl;
-//    std::cout << stack->pop() << std::endl;
+ 
     return 0;
 }
