@@ -11,6 +11,7 @@
 using namespace std;
 
 int main(int argc, const char *argv[]){
+	cout << "Graph Representations: Adjacency Lists." << endl;
 	bool g_type = false; // true if Graph is Directed
 	char input;
 	cout << "Type of graph? [default: Undirected, 1 for Directed]: ";
