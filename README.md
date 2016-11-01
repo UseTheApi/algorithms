@@ -11,17 +11,17 @@ Current list:
    5. Queue implemented from a Stack: **queue_stack/**
     
 ### Trees: trees/
-  1. **Heap**: binary_heap/
-  5. **Binary Search Tree**: binary_search_tree/
-    0. Implementation: implementation/
+  1. Heap: **binary_heap/**
+  5. Binary Search Tree: **binary_search_tree/**
+    0. Implementation: **implementation/**
        
         > Class template for BST with *Search* and *FindMin* for tree and a subtree
-    1. Depth traversal (with and InOrder without recursion) : traversals/
+    1. Depth traversal (with and InOrder without recursion) : **traversals/**
       * Pre-, In-, Post-order traversals using recursion
       * In-order traversal using Stack
       * In-order traversal without recursion or Stack - Morris traversal
-    2. Breadth traversal (using queue) : traversals
-    3. Breadth traversal (using height of the tree) : traversals
+    2. Breadth traversal (using queue) : **traversals/**
+    3. Breadth traversal (using height of the tree) : **traversals/**
     5. In-order Successor (2 methods) : bstInorderSuccessor.hpp
     6. Non-related nodes in BST: nonRelativeNodes.hpp
       
