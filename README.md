@@ -12,15 +12,16 @@ Current list:
     
 ### Trees: trees/
   1. **Heap**: binary_heap/
-  5. **Binary Search Tree**:
-    1. Depth traversal (with and InOrder without recursion) : bstTraversals.hpp
+  5. **Binary Search Tree**: binary_search_tree/
+    0. Implementation: implementation/
+       
+        > Class template for BST with *Search* and *FindMin* for tree and a subtree
+    1. Depth traversal (with and InOrder without recursion) : traversals/
       * Pre-, In-, Post-order traversals using recursion
       * In-order traversal using Stack
       * In-order traversal without recursion or Stack - Morris traversal
-    2. Breadth traversal (using queue) : bstTraversals.hpp
-    3. Breadth traversal (using height of the tree) : bstTraversals.hpp
-    3. Search and findMin (for tree nad a subtree) : binarySearchTree.hpp
-    4. Insertion and Deletion : binarySearchTree.hpp
+    2. Breadth traversal (using queue) : traversals
+    3. Breadth traversal (using height of the tree) : traversals
     5. In-order Successor (2 methods) : bstInorderSuccessor.hpp
     6. Non-related nodes in BST: nonRelativeNodes.hpp
       
