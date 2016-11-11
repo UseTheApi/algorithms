@@ -11,4 +11,5 @@ int main(int argc, const char *argv[]){
 	tree.Insert(5);
 
 	cout << tree.get_root() << endl;
+	cout << tree.Search(5)->data << endl;
 }

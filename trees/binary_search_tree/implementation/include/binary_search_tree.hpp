@@ -9,13 +9,21 @@
 #include <vector>
 #include <iostream>
 
+template <class N>
+struct Tnode{
+		N data;
+		Tnode *left;
+		Tnode *right;
+		Tnode(N);
+};
+
 template <class T>
 class BinarySearchTree{
 public:
 	BinarySearchTree();
 	BinarySearchTree(T);
 	void Insert(T);
-	// Tnode * Search(T);
+	Tnode<T> * Search(T);
 	// Tnode * Min();
 	// Tnode * SubtreeMin(Tnode *);
 	// void Remove(T);
@@ -23,75 +31,65 @@ public:
 		return root->data;
 	}
 
-protected:
-	struct Tnode{
-		T data;
-		Tnode *left;
-		Tnode *right;
-	};
 	//Tnode(): data(0), left(nullptr), right(nullptr){};
 	// Tnode(T init_data){
 	// 	data = init_data;
 	// 	left = nullptr;
 	// 	right = nullptr;
 	// }; 
+	Tnode<T> *root;
 
-	Tnode *root;
-
-private:
-	Tnode * get_min(BinarySearchTree<T> *);
+// private:
+	
+// 	Tnode * get_min(BinarySearchTree<T> *);
 	
 };
 
+template <class N>
+Tnode<N>::Tnode(N init_data){
+	data = init_data;
+	left = nullptr;
+	right = nullptr;
+}
+
 template <class T>
 BinarySearchTree<T>::BinarySearchTree(){
-	Tnode();
 	root = nullptr;
 }
 
-// template <class T>
-// BinarySearchTree<T>::BinarySearchTree(T init_data){
-// 	Tnode(init_data);
-// 	root = nullptr;
-// }
+template <class T>
+Tnode<T> * BinarySearchTree<T>::Search(T key){
+	if(!root){
+		return nullptr;
+	}
+	Tnode<T> *cur = root;
+	while(cur && cur->data != key){
+		cur = key > cur->data ? cur=cur->right : cur=cur->left;
+	}
+	return cur;
+}
 
 template <class T>
 void BinarySearchTree<T>::Insert(T new_data){
-	Tnode *new_node = new Tnode();
-	new_node->data = new_data;
-	Tnode *tmp = nullptr;
+	Tnode<T> *new_node = new Tnode<T>(new_data);
 	if(!root){
 		root = new_node;
 		return;
 	}
-
-	Tnode * current = root;
-	while(current){
-		tmp = current;
-		current = new_node->data >= current->data ? current->right : current->left;
+	Tnode<T> *tmp = nullptr;
+	Tnode<T> *cur = root;
+	while(cur){
+		tmp = cur;
+		cur = new_data >= root->data ? cur->right : cur->left;
 	}
-
-	if(new_node->data >= tmp->data){
+	if(new_data >= tmp->data){
 		tmp->right = new_node;
 	} else{
 		tmp->left = new_node;
 	}
 }
 
-// template <class T>
-// BinarySearchTree<T> * BinarySearchTree<T>::Search(T key){
-// 	if(!root_){
-// 		return root_;
-// 	}
-// 	if(root_->data_ == key){
-// 		return root_;
-// 	}
-// 	if(key > root_->data_){
-// 		root_->right_->Search(key);
-// 	} else{
-// 		root_->left_->Search(key);
-// 	}
-// }
+template <class T>
 
 // template <class T>
 // BinarySearchTree<T> * BinarySearchTree<T>::get_min(BinarySearchTree *node){
@@ -142,5 +140,4 @@ void BinarySearchTree<T>::Insert(T new_data){
 // 			root_->right_->Remove(right_min->data_);
 // 		}
 // 	}
-// }
-// test 
+// } 
