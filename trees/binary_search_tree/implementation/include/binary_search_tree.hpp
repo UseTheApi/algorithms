@@ -153,7 +153,7 @@ void BinarySearchTree<T>::Remove(T key){
 }
 
 template <class I>
-void InOrder(Tnode <I> *root){
+void InOrder(Tnode<I> *root){
 	if(root){
 		InOrder(root->left);
 		std::cout << root->data << " ";
@@ -161,36 +161,20 @@ void InOrder(Tnode <I> *root){
 	}
 }
 
-// template <class T>
-// BinarySearchTree<T> * BinarySearchTree<T>::SubtreeMin(BinarySearchTree<T> *node){
-// 	if(!node){
-// 		return node;
-// 	}
-// 	return get_min(node);
-// }
+template <class I>
+void PostOrder(Tnode<I> *root){
+	if(root){
+		PostOrder(root->left);
+		PostOrder(root->right);
+		std::cout << root->data << " ";
+	}
+}
 
-// template <class T>
-// void BinarySearchTree<T>::Remove(T key){
-// 	if(!root_){
-// 		return;
-// 	}
-// 	if(key > root_->data_){
-// 		root_->right_->Remove(key);
-// 	} else if(key < root_->data_){
-// 		root_->left_->Remove(key);
-// 	} else{
-// 		if(!root_->left_){
-// 			BinarySearchTree * tmp = root_->right_;
-// 			delete root_;
-// 			root_ = tmp;
-// 		} else if(!root_->right_){
-// 			BinarySearchTree * tmp = root_->left_;
-// 			delete root_;
-// 			root_ = tmp;
-// 		} else{
-// 			BinarySearchTree *right_min = root_->SubtreeMin(root_->right_);
-// 			root_->data_ = right_min->data_;
-// 			root_->right_->Remove(right_min->data_);
-// 		}
-// 	}
-// } 
+template <class I>
+void PreOrder(Tnode<I> *root){
+	if(root){
+		std::cout << root->data << " ";
+		PreOrder(root->left);
+		PreOrder(root->right);
+	}
+}
