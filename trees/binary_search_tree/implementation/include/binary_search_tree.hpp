@@ -24,12 +24,10 @@ public:
 	BinarySearchTree(T);
 	void Insert(T);
 	Tnode<T> * Search(T);
-	// Tnode * Min();
+	Tnode<T> * Min();
+	Tnode<T> * get_root();
 	// Tnode * SubtreeMin(Tnode *);
 	// void Remove(T);
-	T get_root(){
-		return root->data;
-	}
 
 	//Tnode(): data(0), left(nullptr), right(nullptr){};
 	// Tnode(T init_data){
@@ -37,11 +35,11 @@ public:
 	// 	left = nullptr;
 	// 	right = nullptr;
 	// }; 
-	Tnode<T> *root;
-
-// private:
 	
-// 	Tnode * get_min(BinarySearchTree<T> *);
+
+private:
+	Tnode<T> *root_;
+	// Tnode * get_min(BinarySearchTree<T> *);
 	
 };
 
@@ -54,15 +52,20 @@ Tnode<N>::Tnode(N init_data){
 
 template <class T>
 BinarySearchTree<T>::BinarySearchTree(){
-	root = nullptr;
+	root_ = nullptr;
+}
+
+template <class T>
+Tnode<T> * BinarySearchTree<T>::get_root(){
+	return root_;
 }
 
 template <class T>
 Tnode<T> * BinarySearchTree<T>::Search(T key){
-	if(!root){
+	if(!root_){
 		return nullptr;
 	}
-	Tnode<T> *cur = root;
+	Tnode<T> *cur = root_;
 	while(cur && cur->data != key){
 		cur = key > cur->data ? cur=cur->right : cur=cur->left;
 	}
@@ -72,15 +75,15 @@ Tnode<T> * BinarySearchTree<T>::Search(T key){
 template <class T>
 void BinarySearchTree<T>::Insert(T new_data){
 	Tnode<T> *new_node = new Tnode<T>(new_data);
-	if(!root){
-		root = new_node;
+	if(!root_){
+		root_ = new_node;
 		return;
 	}
 	Tnode<T> *tmp = nullptr;
-	Tnode<T> *cur = root;
+	Tnode<T> *cur = root_;
 	while(cur){
 		tmp = cur;
-		cur = new_data >= root->data ? cur->right : cur->left;
+		cur = new_data >= root_->data ? cur->right : cur->left;
 	}
 	if(new_data >= tmp->data){
 		tmp->right = new_node;
@@ -90,6 +93,16 @@ void BinarySearchTree<T>::Insert(T new_data){
 }
 
 template <class T>
+Tnode<T> * BinarySearchTree<T>::Min(){
+	if(!root_){
+		return nullptr;
+	}
+	Tnode<T> *cur = root_;
+	while(cur->left){
+		cur = cur->left;
+	}
+	return cur;
+}
 
 // template <class T>
 // BinarySearchTree<T> * BinarySearchTree<T>::get_min(BinarySearchTree *node){
