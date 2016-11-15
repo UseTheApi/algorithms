@@ -26,8 +26,8 @@ public:
 	Tnode<T> * Search(T);
 	Tnode<T> * Min();
 	Tnode<T> * get_root();
-	// Tnode * SubtreeMin(Tnode *);
-	// void Remove(T);
+	Tnode<T> * SubtreeMin(Tnode<T> *);
+	void Remove(T);
 
 	//Tnode(): data(0), left(nullptr), right(nullptr){};
 	// Tnode(T init_data){
@@ -104,22 +104,50 @@ Tnode<T> * BinarySearchTree<T>::Min(){
 	return cur;
 }
 
-// template <class T>
-// BinarySearchTree<T> * BinarySearchTree<T>::get_min(BinarySearchTree *node){
-// 	BinarySearchTree<T> *current = node;
-// 	while(current->left_){
-// 		current = current->left_;
-// 	}
-// 	return current;
-// }
+template <class T>
+Tnode<T> * BinarySearchTree<T>::SubtreeMin(Tnode<T> *node){
+	if(!node){
+		return nullptr;
+	}
+	Tnode<T> *cur = node;
+	while(cur->left){
+		cur = cur->left;
+	}
+	return cur;
+}
 
-// template <class T>
-// BinarySearchTree<T> * BinarySearchTree<T>::Min(){
-// 	if(!root_){
-// 		return root_;
-// 	}
-// 	return get_min(root_);
-// }
+template <class T>
+void BinarySearchTree<T>::Remove(T key){
+	if(!root_){
+		return;
+	}
+	Tnode<T> *key_node = Search(key);
+	if(!key_node){
+		return;
+	}
+	if(!key_node->left){
+		Tnode<T> *tmp = key_node->right;
+		delete key_node;
+		key_node = tmp;
+	} else if(!key_node->right){
+		Tnode<T> *tmp = key_node->left;
+		delete key_node;
+		key_node = tmp;
+	} else{
+		Tnode<T> *right_min = SubtreeMin(key_node->right);
+		key_node->data = right_min->data;
+		delete right_min;
+	}
+}
+
+template <class I>
+void Traverse(Tnode <I> *root){
+	if(root){
+		Traverse(root->left);
+		std::cout << root->data << " ";
+		Traverse(root->right);
+	}
+}
 
 // template <class T>
 // BinarySearchTree<T> * BinarySearchTree<T>::SubtreeMin(BinarySearchTree<T> *node){
