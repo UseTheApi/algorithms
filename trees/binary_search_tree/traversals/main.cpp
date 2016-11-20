@@ -11,6 +11,7 @@
 using namespace std;
 
 int main(int argc, const char *argv[]){
+	cout << "BST Traversals" << endl;
 	BinarySearchTree<int> tree;
 	tree.Insert(4);
 	tree.Insert(7);
@@ -19,11 +20,14 @@ int main(int argc, const char *argv[]){
 	tree.Insert(2);
 	tree.Insert(1);
 
-	InOrder(&tree);
+	cout << "In Order: ";
+	InOrder(tree.get_root());
 	cout << endl;
-	PreOrder(&tree);
+	cout << "Pre Order: ";
+	PreOrder(tree.get_root());
 	cout << endl;
-	PostOrder(&tree);
+	cout << "Post Order: ";
+	PostOrder(tree.get_root());
 	cout << endl;
 	return 0;
 }
