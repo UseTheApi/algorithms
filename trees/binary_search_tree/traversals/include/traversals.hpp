@@ -9,29 +9,29 @@
 #include <binary_search_tree.hpp>
 #include <iostream>
 
-template <class T>
-void InOrder(BinarySearchTree<T> *tree){
-	if(tree->get_root()){
-		InOrder(tree->get_root()->get_left());
-		std::cout << tree->get_root()->get_data() << " ";
-		InOrder(tree->get_root()->get_right());
+template <class I>
+void InOrder(Tnode<I> *root){
+	if(root){
+		InOrder(root->left);
+		std::cout << root->data << " ";
+		InOrder(root->right);
 	}
 }
 
-template <class T>
-void PreOrder(BinarySearchTree<T> *tree){
-	if(tree->get_root()){
-		std::cout << tree->get_root()->get_data() << " ";
-		PreOrder(tree->get_root()->get_left());
-		PreOrder(tree->get_root()->get_right());
+template <class I>
+void PostOrder(Tnode<I> *root){
+	if(root){
+		PostOrder(root->left);
+		PostOrder(root->right);
+		std::cout << root->data << " ";
 	}
 }
 
-template <class T>
-void PostOrder(BinarySearchTree<T> *tree){
-	if(tree->get_root()){
-		PreOrder(tree->get_root()->get_left());
-		PreOrder(tree->get_root()->get_right());
-		std::cout << tree->get_root()->get_data() << " ";
+template <class I>
+void PreOrder(Tnode<I> *root){
+	if(root){
+		std::cout << root->data << " ";
+		PreOrder(root->left);
+		PreOrder(root->right);
 	}
 }

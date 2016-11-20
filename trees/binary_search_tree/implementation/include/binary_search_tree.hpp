@@ -29,14 +29,6 @@ public:
 	Tnode<T> * SubtreeMin(Tnode<T> *);
 	void Remove(T);
 
-	//Tnode(): data(0), left(nullptr), right(nullptr){};
-	// Tnode(T init_data){
-	// 	data = init_data;
-	// 	left = nullptr;
-	// 	right = nullptr;
-	// }; 
-	
-
 private:
 	Tnode<T> *root_;
 	Tnode<T> * remove(Tnode<T> *, T);
@@ -150,31 +142,4 @@ void BinarySearchTree<T>::Remove(T key){
 		return;
 	}
 	remove(root_, key);
-}
-
-template <class I>
-void InOrder(Tnode<I> *root){
-	if(root){
-		InOrder(root->left);
-		std::cout << root->data << " ";
-		InOrder(root->right);
-	}
-}
-
-template <class I>
-void PostOrder(Tnode<I> *root){
-	if(root){
-		PostOrder(root->left);
-		PostOrder(root->right);
-		std::cout << root->data << " ";
-	}
-}
-
-template <class I>
-void PreOrder(Tnode<I> *root){
-	if(root){
-		std::cout << root->data << " ";
-		PreOrder(root->left);
-		PreOrder(root->right);
-	}
 }
