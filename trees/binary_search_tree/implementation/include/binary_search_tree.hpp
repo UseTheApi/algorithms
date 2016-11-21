@@ -15,6 +15,8 @@ struct Tnode{
 		Tnode *left;
 		Tnode *right;
 		Tnode(N);
+		template <class TN>
+		friend std::ostream & operator<< (std::ostream &os, const Tnode<TN> *node);
 };
 
 template <class T>
@@ -40,6 +42,12 @@ Tnode<N>::Tnode(N init_data){
 	data = init_data;
 	left = nullptr;
 	right = nullptr;
+}
+
+template <class TN>
+std::ostream & operator<<(std::ostream &os, const Tnode<TN> *node){
+	os << node->data;
+	return os;
 }
 
 template <class T>

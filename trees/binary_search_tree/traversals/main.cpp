@@ -29,5 +29,17 @@ int main(int argc, const char *argv[]){
 	cout << "Post Order: ";
 	PostOrder(tree.get_root());
 	cout << endl;
+	cout << "In Order Stack: ";
+	InOrderStack(tree.get_root());
+	cout << endl;
+	cout << "In Order Morris: ";
+	InOrderMorris(tree.get_root());
+	cout << endl;
+	cout << "Breadth First: ";
+	BreadthFirst(tree.get_root());
+	cout << endl;
+	cout << "Level Order: ";
+	LevelOrder(tree.get_root());
+	cout << endl;
 	return 0;
 }
