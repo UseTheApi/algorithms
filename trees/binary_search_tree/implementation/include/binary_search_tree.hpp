@@ -14,6 +14,7 @@ struct Tnode{
 		N data;
 		Tnode *left;
 		Tnode *right;
+		Tnode *parent;
 		Tnode(N);
 		template <class TN>
 		friend std::ostream & operator<< (std::ostream &os, const Tnode<TN> *node);
@@ -42,6 +43,7 @@ Tnode<N>::Tnode(N init_data){
 	data = init_data;
 	left = nullptr;
 	right = nullptr;
+	parent = nullptr;
 }
 
 template <class TN>
@@ -87,8 +89,10 @@ void BinarySearchTree<T>::Insert(T new_data){
 	}
 	if(new_data >= tmp->data){
 		tmp->right = new_node;
+		tmp->right->parent = tmp;
 	} else{
 		tmp->left = new_node;
+		tmp->left->parent = tmp;
 	}
 }
 
@@ -130,10 +134,14 @@ Tnode<T> * BinarySearchTree<T>::remove(Tnode<T> *root, T key){
             Tnode<T> *tmp = root->right;
             delete root;
             root = tmp;
+            tmp->left->parent = root;
+            tmp->right->parent = root;
         } else if(!root->right){
             Tnode<T> *tmp = root->left;
             delete root;
             root = tmp;
+            tmp->left->parent = root;
+            tmp->right->parent = root;
         } else{
             Tnode<T> *right_min = SubtreeMin(root->right);
             root->data = right_min->data;
@@ -141,7 +149,6 @@ Tnode<T> * BinarySearchTree<T>::remove(Tnode<T> *root, T key){
         }
     }
     return root;
-
 }
 
 template <class T>
