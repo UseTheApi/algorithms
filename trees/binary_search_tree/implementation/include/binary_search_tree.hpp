@@ -69,7 +69,7 @@ Tnode<T> * BinarySearchTree<T>::Search(T key){
 	}
 	Tnode<T> *cur = root_;
 	while(cur && cur->data != key){
-		cur = key > cur->data ? cur=cur->right : cur=cur->left;
+		cur = key > cur->data ? cur->right : cur->left;
 	}
 	return cur;
 }
@@ -85,7 +85,7 @@ void BinarySearchTree<T>::Insert(T new_data){
 	Tnode<T> *cur = root_;
 	while(cur){
 		tmp = cur;
-		cur = new_data >= root_->data ? cur->right : cur->left;
+		cur = new_data >= cur->data ? cur->right : cur->left;
 	}
 	if(new_data >= tmp->data){
 		tmp->right = new_node;
@@ -134,14 +134,10 @@ Tnode<T> * BinarySearchTree<T>::remove(Tnode<T> *root, T key){
             Tnode<T> *tmp = root->right;
             delete root;
             root = tmp;
-            tmp->left->parent = root;
-            tmp->right->parent = root;
         } else if(!root->right){
             Tnode<T> *tmp = root->left;
             delete root;
             root = tmp;
-            tmp->left->parent = root;
-            tmp->right->parent = root;
         } else{
             Tnode<T> *right_min = SubtreeMin(root->right);
             root->data = right_min->data;
