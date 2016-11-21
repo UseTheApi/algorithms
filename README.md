@@ -15,7 +15,7 @@ Current list:
   5. Binary Search Tree: **binary_search_tree/**
     0. Implementation: **implementation/**
        
-        > Class template for BST with *Search* and *FindMin* for tree and a subtree
+        > Class template for BST with *Search* and *FindMin* for tree and a subtree. *Parent Pointer*.
     1. Depth traversal (with and InOrder without recursion) : **traversals/**
       * Pre-, In-, Post-order traversals using recursion
       * In-order traversal using Stack
