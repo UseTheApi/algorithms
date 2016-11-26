@@ -1,8 +1,15 @@
+//
+//  main.cpp
+//  algorithms. BST implementation.
+//
+//  Created by alifar on 11/26/16.
+//  Copyright © 2016 alifar. All rights reserved.
+//
+
 #include "binary_search_tree.hpp"
 #include <iostream>
 
 using namespace std;
-
 
 int main(int argc, const char *argv[]){
 	cout << "Binary Search Tree Representation" << endl;
