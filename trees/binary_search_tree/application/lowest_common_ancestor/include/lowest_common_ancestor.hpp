@@ -8,6 +8,19 @@
 
 #include "binary_search_tree.hpp"
 
+/*
+    Given two nodes in a tree. Write a function that will return the lowest common ancestor for given two nodes in BST.
+ 
+    Solution 1 - if root of a tree is given:
+        1. if node1 and node2 are in different subtrees of root (left and right), then the most common ancestor is root
+        2. else if node1 and node2 are in left subtree then recursively call the function from root->left
+        3. else - recursively call function with root->right
+    Solution 2 - use a point to parent for nodes:
+        1. collect parents for both n1 and n2
+        2. if n1->data > n2->data then climb from n2 to top until reached n1->parent or n2->parent greater then n1->parent
+        3. else: same for n1->data < n2->data
+*/
+
 template <class T>
 Tnode<T> * LowestCommonAncestorRoot(Tnode<T> *root, Tnode<T> *n1, Tnode<T> *n2){
 	/*
