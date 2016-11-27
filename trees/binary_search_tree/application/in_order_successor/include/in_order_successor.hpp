@@ -37,7 +37,7 @@ Tnode<T> * InOrderSuccessorRoot(Tnode<T> *root, Tnode<T> *node){
 	Tnode<T> *successor = nullptr;
 	while(root){
 		if(node->data < root->data){
-			successor = root
+			successor = root;
 			root = root->left;
 		} else if(node->data > root->data){
 			root = root->right;
