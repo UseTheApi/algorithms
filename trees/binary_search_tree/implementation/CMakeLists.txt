@@ -6,4 +6,3 @@ add_definitions(-std=c++11)
 include_directories(include)
 
 add_executable(binary_search_tree main.cpp)
-
