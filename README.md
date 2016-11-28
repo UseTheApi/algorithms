@@ -16,19 +16,20 @@ Current list:
     0. Implementation: **implementation/**
        
         > Class template for BST with *Search* and *FindMin* for tree and a subtree. *Parent Pointer*.
-    1. Depth traversal (with and InOrder without recursion) : **traversals/**
+    1. Traversals : **traversals/**
       * Pre-, In-, Post-order traversals using recursion
       * In-order traversal using Stack
       * In-order traversal without recursion or Stack - Morris traversal
-    2. Breadth traversal (using queue) : **traversals/**
-    3. Breadth traversal (using height of the tree) : **traversals/**
-    5. In-order Successor (2 methods) : bstInorderSuccessor.hpp
+      * Breadth traversal (using queue)
+      * Breadth traversal (using height of the tree)
+    2. Applications: **application/**
+      * In-order Successor (2 methods) : **in_order_successor/**
+      * Lowest Common Ancestor for two nodes in BST (2 methods) : **lowest_common_ancestor/**
+      * 2nd Largest Node in BST: **second_largest_node/**
     6. Non-related nodes in BST: nonRelativeNodes.hpp
       
       > Given a pointer to the root of BST. Write a function that will return the max set of nodes that are not children or parents for each other.
     7. Determine if two trees are equal: equalTrees.hpp
-    8. Lower Common Ancestor for two nodes in BST: lowerCommonAncestor.hpp (2 methods)
-    9. 2nd Largest Node in BST: *TBD*
   7. **AVL tree balancing** *TBD*
   8. **Red-Black tree** *TBD*
   9. **Binary Search** - set of tasks: binary_search/
