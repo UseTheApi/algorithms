@@ -24,5 +24,6 @@ int main(int argc, const char *argv[]){
 	for(auto it: result){
 		cout << it << " ";
 	}
+	cout << endl;
 	return 0;
 }
