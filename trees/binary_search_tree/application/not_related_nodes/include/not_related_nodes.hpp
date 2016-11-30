@@ -10,6 +10,15 @@
 #include <vector>
 #include <iostream>
 
+/*
+ Given a pointer to the root of BST. Write a function that will return the max set of nodes that are not children or parents for each other.
+ Solution:
+    1. Calculate height of a given tree
+    2. Create a function that returns vector of nodes for given level
+    3. Iterate through a hight and collect all even and odd level nodes
+    4. Return a vector of max size
+*/
+
 template <class T>
 int height(Tnode<T> *root){
 	if(!root){
