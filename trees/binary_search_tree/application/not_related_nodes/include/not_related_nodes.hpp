@@ -54,13 +54,11 @@ std::vector<Tnode<T> *> NotRelatedNodes(Tnode<T> *root){
 	std::vector<Tnode<T> *> even_nodes;
 	std::vector<Tnode<T> *> odd_nodes;
 	for(int i = 1; i <= h; ++i){
+		std::vector<Tnode<T> *> result;
+		result = CollectLevelNodes(root, i, result);
 		if(i%2 == 0){
-			std::vector<Tnode<T> *> result;
-			result = CollectLevelNodes(root, i, result);
 			even_nodes.insert(even_nodes.end(), result.begin(), result.end());
 		} else{
-			std::vector<Tnode<T> *> result;
-			result = CollectLevelNodes(root, i, result);
 			odd_nodes.insert(odd_nodes.end(), result.begin(), result.end());
 		}
 	}
