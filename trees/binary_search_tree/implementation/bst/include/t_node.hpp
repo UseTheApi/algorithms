@@ -22,6 +22,7 @@ struct Tnode{
 template <class N>
 Tnode<N>::Tnode(N init_data){
 	data = init_data;
+	height = 1;
 	left = nullptr;
 	right = nullptr;
 	parent = nullptr;

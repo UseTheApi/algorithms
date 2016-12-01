@@ -7,7 +7,6 @@
 //
 
 #include "t_node.hpp"
-#include <iostream>
 
 template <class T>
 class BinarySearchTree{
@@ -20,7 +19,6 @@ public:
 	Tnode<T> * get_root();
 	Tnode<T> * SubtreeMin(Tnode<T> *);
 	void Remove(T);
-
 private:
 	Tnode<T> *root_;
 	Tnode<T> * remove(Tnode<T> *, T);
