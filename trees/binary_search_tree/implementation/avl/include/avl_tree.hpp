@@ -102,6 +102,7 @@ Tnode<T> * AVLTree<T>::rotate_right(Tnode<T> *node){
 
 template <class T>
 Tnode<T> * AVLTree<T>::balance(Tnode<T> *node){
+	update_height(node);
 	if(bfactor(node) < -1){
 		if(bfactor(node->right) > 0){
 			node->right = rotate_right(node->right);
@@ -131,20 +132,18 @@ Tnode<T> * AVLTree<T>::Search(T key){
 
 template <class T>
 Tnode<T> * AVLTree<T>::insert(Tnode<T> *root, T key){
+	if(!root){
+		return new Tnode(key);
+	}
 	if(key > root->right){
 		root->right = insert(root->right, key);
 	} else{
 		root->left = insert(root->left, key);
 	}
-	update_height(root);
 	balance(root);
 }
 
 template <class T>
 void AVLTree<T>::Insert(T key){
-	if(!root){
-		root_ = new Tnode(key);
-	} else{
-		root_ = insert(root_, key);
-	}
+	root_ = insert(root_, key);
 }
