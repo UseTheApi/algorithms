@@ -29,7 +29,8 @@ private:
 	int height(Tnode<T> *);
 	int bfactor(Tnode<T> *);
 	void update_height(Tnode<T> *);
-}
+	Tnode<T> * balance(Tnode<T> *);
+};
 
 template <class T>
 AVLTree<T>::AVLTree(){
@@ -38,7 +39,7 @@ AVLTree<T>::AVLTree(){
 
 template <class T>
 AVLTree<T>::AVLTree(T init_key){
-	root_ = new Tnode(init_key);
+	root_ = new Tnode<T>(init_key);
 }
 
 template <class T>
@@ -63,7 +64,7 @@ template <class T>
 void AVLTree<T>::update_height(Tnode<T> *node){
 	int lheight = height(node->left);
 	int rheight = height(node->right);
-	return max(lheight, rheight) + 1;
+	node->height = std::max(lheight, rheight) + 1;
 }
 
 template <class T>
@@ -88,7 +89,7 @@ Tnode<T> * AVLTree<T>::rotate_right(Tnode<T> *node){
 	if(!node){
 		return nullptr;
 	}
-	if(!node->right){
+	if(!node->left){
 		return node;
 	}
 	Tnode<T> *new_root = node->left;
@@ -133,14 +134,14 @@ Tnode<T> * AVLTree<T>::Search(T key){
 template <class T>
 Tnode<T> * AVLTree<T>::insert(Tnode<T> *root, T key){
 	if(!root){
-		return new Tnode(key);
+		return new Tnode<T>(key);
 	}
-	if(key > root->right){
+	if(key > root->data){
 		root->right = insert(root->right, key);
 	} else{
 		root->left = insert(root->left, key);
 	}
-	balance(root);
+	return balance(root);
 }
 
 template <class T>
