@@ -14,8 +14,12 @@ Current list:
   1. Heap: **binary_heap/**
   5. Binary Search Tree: **binary_search_tree/**
     0. Implementation: **implementation/**
-       
+      * BST implementation: **bst/**
+      
         > Class template for BST with *Search* and *FindMin* for tree and a subtree. *Parent Pointer*.
+      * AVL Tree implementation: **avl/**
+      
+        > Class template for AVL tree with implemented balancing methods
     1. Traversals : **traversals/**
       * Pre-, In-, Post-order traversals using recursion
       * In-order traversal using Stack
@@ -30,7 +34,6 @@ Current list:
       
       > Given a pointer to the root of BST. Write a function that will return the max set of nodes that are not children or parents for each other.
     7. Determine if two trees are equal: **equal_trees/**
-  7. **AVL tree balancing** *TBD*
   8. **Red-Black tree** *TBD*
   
 ### Graphs: graphs/
