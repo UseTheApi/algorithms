@@ -34,7 +34,6 @@ Current list:
       
       > Given a pointer to the root of BST. Write a function that will return the max set of nodes that are not children or parents for each other.
     7. Determine if two trees are equal: **equal_trees/**
-  8. **Red-Black tree** *TBD*
   
 ### Graphs: graphs/
    1. Warshall's Algorithm: **warshall_floyd_algorithm/**
