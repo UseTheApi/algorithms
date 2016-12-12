@@ -66,5 +66,5 @@ int main(int argc, const char *argv[]){
 	for(auto it: path){
 		cout << it << " ";
 	}
-	cout << end;
+	cout << endl;
 }
