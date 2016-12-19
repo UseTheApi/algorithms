@@ -16,4 +16,3 @@ bool HasCompleteCycle(const std::vector<int> &array);
 bool HasCompleteCycleSpace(const std::vector<int> &array);
 
 #endif /* index_cycle_hpp */
-

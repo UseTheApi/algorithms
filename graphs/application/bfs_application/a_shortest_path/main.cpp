@@ -7,6 +7,7 @@
 //
 
 #include "a_shortest_path.hpp"
+#include "shortest_path_value.hpp"
 
 using namespace std;
 
@@ -20,8 +21,8 @@ int main(int argc, const char *argv[]){
 
 	cout << endl;
 
-	Graph<char, VertexBfs> *graph = new Graph<char, VertexBfs>(g_type);
-	char item;
+	Graph<int, VertexBfs> *graph = new Graph<int, VertexBfs>(g_type);
+	int item;
 
 	cout << "Add vertices to the Graph (type - char): ";
 	do{
@@ -46,25 +47,26 @@ int main(int argc, const char *argv[]){
 	cout << "Enter two vertex id's for finding a shortest path: ";
 	int id1, id2;
 	cin >> id1;
-	cin >> id2;
+	// cin >> id2;
 
-	bfs_queue(graph, id1);
+	// bfs_queue(graph, id1);
 
-	VertexBfs<char> *v1 = graph->get_vertex_by_id(id1);
-	VertexBfs<char> *v2 = graph->get_vertex_by_id(id2);
+	// VertexBfs<char> *v1 = graph->get_vertex_by_id(id1);
+	// VertexBfs<char> *v2 = graph->get_vertex_by_id(id2);
 
-	cout << "v1: " << v1 << endl;
-	cout << "v2: " << v2 << endl;
+	// cout << "v1: " << v1 << endl;
+	// cout << "v2: " << v2 << endl;
 
-	cout << endl;
-	cout << "A Shortest Path: " << endl;
+	// cout << endl;
+	// cout << "A Shortest Path: " << endl;
 
-	std::vector<VertexBfs<char> *> path;
+	// std::vector<VertexBfs<char> *> path;
 
-	AShortestPath(graph, v2, v1, path);
+	// AShortestPath(graph, v2, v1, path);
 
-	for(auto it: path){
-		cout << it << " ";
-	}
-	cout << endl;
+	// for(auto it: path){
+	// 	cout << it << " ";
+	// }
+	// cout << endl;
+	PrintPaths(graph, id1);
 }
