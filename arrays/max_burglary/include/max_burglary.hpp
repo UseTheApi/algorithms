@@ -1,6 +1,6 @@
 //
 //  max_burglary.hpp
-//  algorithms. determing a cycle
+//  algorithms. max burglary
 //
 //  Created by alifar on 12/19/16.
 //  Copyright © 2016 alifar. All rights reserved.
