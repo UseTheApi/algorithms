@@ -13,6 +13,5 @@
 #include <vector>
 
 int MaxProfit(const std::vector<int> &array);
-// bool HasCompleteCycleSpace(const std::vector<int> &array);
 
 #endif /* max_burglary_hpp */
