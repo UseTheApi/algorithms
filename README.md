@@ -186,15 +186,16 @@ Current list:
       
    7. Unpack a String: **unpack_string/**
      
-        > You are given a string of kind: ```{abc}3xyz``` .
- Write a function that will unpack a string and will return a result string that looks like: ```abcabcabcxyz```
+      > You are given a string of kind: ```{abc}3xyz``` .
+      > Write a function that will unpack a string and will return 
+      > a result string that looks like: ```abcabcabcxyz```
     
-### Bit Manipulations: bit_manipulations
+### Bit Manipulations: bit_manipulations/
    1. Find maximum between two numbers wihout using any comparison: **max_without_comparison/**
    2. Count number of 1s in binary representation of an integer: **bits_in_integer/**
 
 ### Binary Search
-   - set of tasks: binary_search/
+   - set of tasks: **binary_search/**
 
 ### Interesting tasks: 
    1. Drone Flight Planning : **drone_flight_planner/**
