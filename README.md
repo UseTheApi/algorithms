@@ -157,6 +157,13 @@ Current list:
       arr = [3, 2, -1, 1] // 3 is pointing to 0+3 position -> 1, then 1 is pointion to the first on. Incomplete cycle
       ```
       > [2, -1, -1] represents a correct Cycle.
+      
+   10. Robbery with Max benefit: **max_burglary/**
+   
+      > The burglar wants to get the max profit from the street of houses. Array represents amount of money to still
+      > Given array represents amount of money in each house.
+      > The robber cannot get into two houses in a row - the alarm will work and he will get caught.
+
 
 ### Strings: strings/
    1. Substrings: **substrings/**
