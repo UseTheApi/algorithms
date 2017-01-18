@@ -12,10 +12,10 @@
 using namespace std;
 
 int main(int argc, const char *argv[]){
-	vector<int> arr1 = {2, 4, 7, 9};
-	vector<int> arr2 = {1, 6, 8, 10};
+	vector<int> arr1 = {2, 3, 4, 8};
+	vector<int> arr2 = {1, 3, 7, 9};
 
-	// cout << PairsBruteForce(arr1, arr2, 6) << endl;
+	cout << PairsBruteForce(arr1, arr2, 7) << endl;
 	// int num;
 	// cout << "Enter number of elements in arrays: ";
 	// cin >> num;
@@ -31,7 +31,7 @@ int main(int argc, const char *argv[]){
 	// 	}
 	// }
 
-	int num = PairsDP(arr1, arr2, 9);
+	int num = PairsDP(arr1, arr2, 7);
 	cout << num << endl;
 
 }
