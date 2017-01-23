@@ -30,10 +30,11 @@ Current list:
       * In-order Successor (2 methods) : **in_order_successor/**
       * Lowest Common Ancestor for two nodes in BST (2 methods) : **lowest_common_ancestor/**
       * 2nd Largest Node in BST: **second_largest_node/**
-    6. Non-related nodes in BST: **not_related_nodes/**
+      * Non-related nodes in BST: **not_related_nodes/**
       
-      > Given a pointer to the root of BST. Write a function that will return the max set of nodes that are not children or parents for each other.
-    7. Determine if two trees are equal: **equal_trees/**
+          > Given a pointer to the root of BST. Write a function that will return the max set of nodes that are not children or parents for each other.
+          
+      * Determine if two trees are equal: **equal_trees/**
   
 ### Graphs: graphs/
    1. Warshall's Algorithm: **warshall_floyd_algorithm/**
