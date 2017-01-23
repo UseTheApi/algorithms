@@ -5,6 +5,7 @@
 //  Created by alifar on 10/18/16.
 //  Copyright © 2016 alifar. All rights reserved.
 //
+
 #include <vertex_ec.hpp>
 #include <iostream>
 #include <vector>

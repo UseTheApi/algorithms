@@ -10,4 +10,3 @@ include_directories($ENV{algorithms}/graphs/traversals/dfs_application/edge_clas
 include_directories(include)
 
 add_executable(topological_sort main.cpp)
-
