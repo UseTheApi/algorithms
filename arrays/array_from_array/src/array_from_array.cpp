@@ -8,6 +8,11 @@
 
 /*
  Given an int array A, return an int array B that A[i + B[i]] is the first element in A after A[i] that is greater than or equal to A[i]
+
+ Solution: The idea is that we want to sort given array and store positions of elements in an unsorted part.
+ 			This gives us all "greated than" elements in order.
+ 			The condition now can be transformed to:
+ 			B[arr_sorted_indices[i]] = arr_sorted_indices[i+1] - arr_sorted_indices[i]
 */
 
 #include "array_from_array.hpp"
@@ -32,7 +37,7 @@ vector<int> SortAndCopy(const vector<int> &arr){
 	sort(vector_pais.begin(), vector_pais.end(), pair_compare);
 
 	vector<int> sorted_arr_indices;
-	
+
 	for(auto it: vector_pais){
 		sorted_arr_indices.push_back(it.second);
 	}
