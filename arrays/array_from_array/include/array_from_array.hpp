@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <vector>
 
-
+std::vector<int> SortAndCopy(const std::vector<int> &);
+std::vector<int> ComputeArray(const std::vector<int> &);
 
 #endif /* array_from_array_hpp */
