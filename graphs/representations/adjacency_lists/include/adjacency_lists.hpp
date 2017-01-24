@@ -38,6 +38,8 @@ public:
 	std::vector<Node<T> *> get_vertices();
 	std::vector<LinkedList<Node<T> *>> get_adj();
 	Node<T> * get_vertex_by_id(int);
+	Node<T> * get_vertex_by_value(T);
+	bool empty;
 private:
 	std::vector<Node<T> *> vertices_;
 	std::vector<LinkedList<Node<T> *>> adj_;
@@ -46,10 +48,12 @@ private:
 template <class T, template<class> class Node>
 Graph<T, Node>::Graph(bool graph_type){
 	directed = graph_type;
+	empty = true;
 }
 
 template <class T, template<class> class Node>
 int Graph<T, Node>::add_vertex(T new_data){
+	empty = false;
 	Node<T> *new_vertex = new Node<T>(new_data, vertices_.size());
 	vertices_.push_back(new_vertex);
 	LinkedList<Node<T> *> adj_list;
@@ -62,6 +66,17 @@ template <class T, template<class> class Node>
 Node<T> * Graph<T, Node>::get_vertex_by_id(int given_id){
 	for(auto it: vertices_){
 		if(it->get_id() == given_id){
+			return it;
+		}
+	}
+	return 0;
+}
+
+template <class T, template<class> class Node>
+Node<T> * Graph<T, Node>::get_vertex_by_value(T given_value){
+	// std::vector<Node<T> *> vertices =
+	for(auto it: vertices_){
+		if(it->get_data() == given_value){
 			return it;
 		}
 	}
