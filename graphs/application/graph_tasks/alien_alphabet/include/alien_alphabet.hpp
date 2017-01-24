@@ -12,11 +12,6 @@
 #include <iostream>
 
 void AddToGraph(Graph<char, VertexEc> *graph, char ch1, char ch2){
-	// std::vector<VertexEc<char> *> v = graph->get_vertices();
-	// for(auto it: v){
-	// 	std::cout << "WOW";
-	// 	std::cout << it << " ";
-	// }
 	int i1, i2;
 	if( graph->empty ){
 		i1 = graph->add_vertex(ch1);
@@ -35,17 +30,25 @@ void AnalizeDictionary(std::vector<std::string> words){
 	Graph<char, VertexEc> *graph = new Graph<char, VertexEc>(true); // Initializing Directed Graph
 
 	for(int i = 0; i < words.size()-1; ++i){
-		std::cout << words[i] << " " << words[i+1] << std::endl;
+		// std::cout << words[i] << " " << words[i+1] << std::endl;
 		std::string cur_word = words[i];
 		std::string next_word = words[i+1];
 		for(int j = 0; j < std::min(words[i].size(), words[i+1].size()); ++j){
 			if(cur_word[j] != next_word[j]){
 				AddToGraph(graph, cur_word[j], next_word[j]);
+				std::cout << "Dependency found: ";
 				std::cout << cur_word[j] << " - " << next_word[j] << std::endl;
 				break;
 			}
 		}
 	}
+	std::cout << "---> Vertices added to a Graph" << std::endl;
 	graph->display_vertices();
+	std::cout << "---> Running Topological Sort" << std::endl;
+	std::vector<VertexEc<char> *> sorted_result = TopologicalSort(graph);
+	std::cout << "---> Topologically sorted Vertices (Alien Alphabet): " << std::endl;
+	for(auto it: sorted_result){
+		std::cout << it << " ";
+	}
 	std::cout << std::endl;
 }
