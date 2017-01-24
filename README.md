@@ -1,5 +1,5 @@
 # algorithms
-This repo contains most common algorithms and DS implementations. To execute implemented tasks please follow the instructions in wiki of this repo. Tasks are briefly described in Readme, but solution description in source files of actual tasks.
+This repo contains most common algorithms and DS implementations. To execute implemented tasks please follow the instructions in wiki of this repo. Tasks are briefly described in ```Readme.md```, but _solutions description_ are in source files of actual tasks.
 Current list:
 
 ### Stack & Queue: stack_and_queue/
