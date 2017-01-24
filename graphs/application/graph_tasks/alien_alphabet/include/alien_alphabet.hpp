@@ -28,11 +28,11 @@ void AddToGraph(Graph<char, VertexEc> *graph, char ch1, char ch2){
 
 void AnalizeDictionary(std::vector<std::string> words){
 	Graph<char, VertexEc> *graph = new Graph<char, VertexEc>(true); // Initializing Directed Graph
-
+	std::string cur_word;
+	std::string next_word;
 	for(int i = 0; i < words.size()-1; ++i){
-		// std::cout << words[i] << " " << words[i+1] << std::endl;
-		std::string cur_word = words[i];
-		std::string next_word = words[i+1];
+		cur_word = words[i];
+		next_word = words[i+1];
 		for(int j = 0; j < std::min(words[i].size(), words[i+1].size()); ++j){
 			if(cur_word[j] != next_word[j]){
 				AddToGraph(graph, cur_word[j], next_word[j]);
