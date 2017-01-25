@@ -72,69 +72,69 @@ Current list:
          
             > Given a sorted dictionary of an alien language, calculate alien alphabet (order of characters).
 
-### Dynamic Programming: dynamic_programming/
-   1. Factorial and Fibonacci : **factorial_fibonacci/**
-   2. Binomial Coefficient : **binomial_coefficient/**
-   3. Pascal's Triangle: **pascals_triangle/**
+### Dynamic Programming: [dynamic_programming/](dynamic_programming)
+   1. Factorial and Fibonacci : [**factorial_fibonacci/**](dynamic_programming/factorial_fibonacci)
+   2. Binomial Coefficient : [**binomial_coefficient/**](dynamic_programming/binomial_coefficient)
+   3. Pascal's Triangle: [**pascals_triangle/**](dynamic_programming/pascals_triangle)
     
       > Given an index k, return the kth row of the Pascal's triangle.
-   3. Jump Stairs task: **stairs_hopper/**
+   3. Jump Stairs task: [**stairs_hopper/**](dynamic_programming/stairs_hopper)
   
        >*A child is running up a staircase with n steps, and can hop either 1 step, 2 steps or 3 steps at a time.*
        >*Implement a method to count how many possible ways the child can run up the stairs.*
-   4. Amount from given denominations: **amount_with_coins/**
+   4. Amount from given denominations: [**amount_with_coins/**](dynamic_programming/amount_with_coins)
        
        > *Write a function that, given:*
           >  * *an amount of money*
           >  * *a list of coin denominations*
 
        > *computes the number of ways to make amount of money with coins of the available denominations.*
-   4. Knapsack problem (1-0) : **knapsack_problem/**
-   5. Max Wealth problem : **max_wealth_dp/**
+   4. Knapsack problem (1-0) : [**knapsack_problem/**](dynamic_programming/knapsack_problem)
+   5. Max Wealth problem : [**max_wealth_dp/**](dynamic_programming/max_wealth_dp)
         
       > *Given Matrix of integers representing kg of gold at every mine.*
       > *Write a function that will calculate the max welth that can be made.*
       > *Acceptable moves are only __right__ or __down__ .*
       
-   6. Number of words: **alphabetic_numbers/** - solution created can work with any inputs (0 in number)
+   6. Number of words: [**alphabetic_numbers/**](dynamic_programming/alphabetic_numbers) - solution created can work with any inputs (0 in number)
         
       > *Given an mapped alphabet A=1, B=2, C=3 ...Z=26.*
       > *Calculate how many words can you form from a given number.*
       
-   7. Find min for every window of given size in array : **min_or_max_for_window/**
+   7. Find min for every window of given size in array : [**min_or_max_for_window/**](dynamic_programming/min_or_max_for_window)
       
       > *Given an array: [1, -2, 5, 3, 4, 6, 8, 10], window_size = 3.*
       > *Output is [-2 -2 3 3 4 6 ].*
       
       > *This task can also be solved using __dequeue__, but found elegant DP solution.*
      
-### Arrays: arrays/
-   1. Prices in Stock: **stock_prices/**
+### Arrays: [arrays/](arrays)
+   1. Prices in Stock: [**stock_prices/**](arrays/stock_prices)
       
       > Write an efficient function that takes stock_prices_yesterday and returns the best profit I could have made from 1 purchase and 1 sale of 1 Apple stock yesterday.
       
       > Ex: stock_prices_yesterday = [10, 7, 5, 8, 11, 9], answer is 6
       
-   2. Pairs: **pairs/**
+   2. Pairs: [**pairs/**](arrays/pairs)
     
       > Given N integers, count the number of pairs of integers whose difference is K.
       
-   3. Multiplication in Array: **products_in_array/**
+   3. Multiplication in Array: [**products_in_array/**](arrays/products_in_array)
     
       > Given an array of integrs. Write a function that will return array of products of all numbers in a given array except itslef.
         Ex: [3,2,4,1] => [8, 12, 6, 24]
         
-   4. Median in merged lists: **merge_lists_median/**
+   4. Median in merged lists: [**merge_lists_median/**](arrays/merge_lists_median)
     
       > Given two sorted array. Write a function that returns a median of merged array. 
       > Both arrays are of the same size
       
-   5. Longest non-decreasing interval: **non_decreasing_interval/**
+   5. Longest non-decreasing interval: [**non_decreasing_interval/**](arrays/non_decreasing_interval)
     
       > Given an array of intergers. Write a funtion that returns an array of max length 
       > with non-decreasing elements from a given array
       
-   6. Smallest subarray with sum greater than a given value: **shortest_subarray_sum/**
+   6. Smallest subarray with sum greater than a given value: [**shortest_subarray_sum/**](arrays/shortest_subarray_sum)
     
       > Given Array:
       ```c++
@@ -146,7 +146,7 @@ Current list:
       
       > *With variation of this task: Find a subarray with max sum of elements*
       
-   8. Count Distinct Elements in array: **count_distinct_elements/**
+   8. Count Distinct Elements in array: [**count_distinct_elements/**](arrays/count_distinct_elements)
     
       > Given a sorted array. Write a function that calculates all distinct absolute values in this array.
       > Ex.: 
@@ -155,7 +155,7 @@ Current list:
       ```
       answer is 4 (0, 1, 2, 3)
       
-   9. Complete Cycle in Array: **index_cycle/**
+   9. Complete Cycle in Array: [**index_cycle/**](arrays/index_cycle)
     
       > Determine whether a circular array of relative indices is composed of a single, complete cycle.
       > Ex.: 
@@ -164,18 +164,18 @@ Current list:
       ```
       > [2, -1, -1] represents a correct Cycle.
       
-   10. Robbery with Max benefit: **max_burglary/**
+   10. Robbery with Max benefit: [**max_burglary/**](arrays/max_burglary)
    
       > The burglar wants to get the max profit from the street of houses. Array represents amount of money to still
       > Given array represents amount of money in each house.
       > The robber cannot get into two houses in a row - the alarm will work and he will get caught.
    
-   11. Array From Array: **array_from_array/**
+   11. Array From Array: [**array_from_array/**](arrays/array_from_array)
    
       > Given an int array A, return an int array B that A[i + B[i]] is the first element in A after A[i] that is greater than or equal to A[i]: ```A = [2, 5, 1, 3, 4, 7] => B = [3, 4, -2, 1, -3, 0]```
 
-### Strings: strings/
-   1. Substrings: **substrings/**
+### Strings: [strings/](strings)
+   1. Substrings: [**substrings/**](strings/substrings)
     
       > Given a string. Write a function to return all substrings for a given string.
       
