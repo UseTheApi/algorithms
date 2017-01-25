@@ -2,7 +2,7 @@
 This repo contains most common algorithms and DS implementations. To execute implemented tasks please follow the instructions in wiki of this repo. Tasks are briefly described in ```Readme.md```, but _solutions description_ are in source files of actual tasks.
 Current list:
 
-### Stack & Queue: stack_and_queue/
+### Stack & Queue: [stack_and_queue/](stack_and_queue)
     
    1. Stack implemented with Linked List: **stack_linked_list/**
    2. Queue implemented with Linked List: **queue_linked_list/**
