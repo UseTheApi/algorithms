@@ -4,71 +4,71 @@ Current list:
 
 ### Stack & Queue: [stack_and_queue/](stack_and_queue)
     
-   1. Stack implemented with Linked List: **stack_linked_list/**
-   2. Queue implemented with Linked List: **queue_linked_list/**
-   3. Special Stack with getMin() method : **special_stack/**
-   4. Stack implemented from a Queue: **stack_queue/**
-   5. Queue implemented from a Stack: **queue_stack/**
+   1. Stack implemented with Linked List: [**stack_linked_list/**](stack_and_queue/stack_linked_list)
+   2. Queue implemented with Linked List: [**queue_linked_list/**](stack_and_queue/queue_linked_list)
+   3. Special Stack with getMin() method : [**special_stack/**](stack_and_queue/special_stack)
+   4. Stack implemented from a Queue: [**stack_queue/**](stack_and_queue/stack_queue)
+   5. Queue implemented from a Stack: [**queue_stack/**](stack_and_queue/queue_stack)
     
-### Trees: trees/
-  1. Heap: **binary_heap/**
-  5. Binary Search Tree: **binary_search_tree/**
-    0. Implementation: **implementation/**
-      * BST implementation: **bst/**
+### Trees: [trees/](trees)
+  1. Heap: [**binary_heap/**](trees/binary_heap)
+  5. Binary Search Tree: [**binary_search_tree/**](trees/binary_search_tree)
+    0. Implementation: [**implementation/**](trees/binary_search_tree/implementation)
+      * BST implementation: [**bst/**](trees/binary_search_tree/implementation/bst)
       
         > Class template for BST with *Search* and *FindMin* for tree and a subtree. *Parent Pointer*.
-      * AVL Tree implementation: **avl/**
+      * AVL Tree implementation: [**avl/**](trees/binary_search_tree/implementation/avl)
       
         > Class template for AVL tree with implemented balancing methods
-    1. Traversals : **traversals/**
+    1. Traversals : [**traversals/**](trees/binary_search_tree/traversals)
       * Pre-, In-, Post-order traversals using recursion
       * In-order traversal using Stack
       * In-order traversal without recursion or Stack - Morris traversal
       * Breadth traversal (using queue)
       * Breadth traversal (using height of the tree)
-    2. Applications: **application/**
-      * In-order Successor (2 methods) : **in_order_successor/**
-      * Lowest Common Ancestor for two nodes in BST (2 methods) : **lowest_common_ancestor/**
-      * 2nd Largest Node in BST: **second_largest_node/**
-      * Non-related nodes in BST: **not_related_nodes/**
+    2. Applications: [**application/**](trees/binary_search_tree/application)
+      * In-order Successor (2 methods) : **in_order_successor/**](trees/binary_search_tree/application/in_order_successor)
+      * Lowest Common Ancestor for two nodes in BST (2 methods) : [**lowest_common_ancestor/**](trees/binary_search_tree/application/lowest_common_ancestor)
+      * 2nd Largest Node in BST: [**second_largest_node/**](trees/binary_search_tree/application/second_largest_node)
+      * Non-related nodes in BST: [**not_related_nodes/**](trees/binary_search_tree/application/not_related_nodes)
       
           > Given a pointer to the root of BST. Write a function that will return the max set of nodes that are not children or parents for each other.
           
-      * Determine if two trees are equal: **equal_trees/**
+      * Determine if two trees are equal: [**equal_trees/**](trees/binary_search_tree/application/equal_trees)
   
-### Graphs: graphs/
-   1. Warshall's Algorithm: **warshall_floyd_algorithm/**
+### Graphs: [graphs/](graphs)
+   1. Warshall's Algorithm: [**warshall_floyd_algorithm/**](graphs/warshall_floyd_algorithm)
       
       > Build a Reachability Matrix for a given Adjacency Matrix.
 
-   2. Floyd's Algorithm: **warshall_floyd_algorithm/**
+   2. Floyd's Algorithm: [**warshall_floyd_algorithm/**](graphs/warshall_floyd_algorithm)
     
       > Build a Reachibility Matrix for a weighted graph Adjacency Matrix.
       
-   3. Graph Representations: **representations/**
-      1. Adjacency Matrix: **adjacency_matrix/**
-      2. Adjacency Lists: **adjacency_lists/**
+   3. Graph Representations: [**representations/**](graphs/representations)
+      1. Adjacency Matrix: [**adjacency_matrix/**](graphs/representations/adjacency_matrix)
+      2. Adjacency Lists: [**adjacency_lists/**](graphs/representations/adjacency_lists)
     
-   4. Graph Traversals: **traversals/**
-      1. Breadth First Search: **breadth_first_search/**
+   4. Graph Traversals: [**traversals/**](graphs/traversals)
+      1. Breadth First Search: [**breadth_first_search/**](graphs/traversals/breadth_first_search)
          * BFS using map
          * BFS using queue and vertex attributes
-      2. Depth First Search: **depth_first_search/**
-   5. Graph applications: **application/**
-      1. BFS application tasks: **bfs_application/**
-         * Finding a shortest path from a given node to a root of BST tree: **a_shortest_path/**
-      2. DFS application tasks: **dfs_application/**
-         * Edge Classification for (un-)directed Graphs: **edge_classification/**
+      2. Depth First Search: [**depth_first_search/**](breadth_first_search/depth_first_search)
+   5. Graph applications: [**application/**](graphs/application)
+      1. BFS application tasks: [**bfs_application/**](graphs/application/bfs_application)
+         * Finding a shortest path from a given node to a root of BST tree: [**a_shortest_path/**](graphs/application/bfs_application/a_shortest_path)
+      2. DFS application tasks: [**dfs_application/**](graphs/application/dfs_application)
+         * Edge Classification for (un-)directed Graphs: [**edge_classification/**](graphs/application/dfs_application/edge_classification)
             
             > Define Tree, Backward, Forward (only directed) and Cross (only directed) Edges for (un-)directed Graph
             
-         * Detecting and Removing cycles from (un-)directed Graph: **detect_remove_cycle/**
-         * Topological Sort for DAG (Directed Acyclic Graph): **topological_sort/**
+         * Detecting and Removing cycles from (un-)directed Graph: [**detect_remove_cycle/**](graphs/application/dfs_application/detect_remove_cycle)
+         * Topological Sort for DAG (Directed Acyclic Graph): [**topological_sort/**](graphs/application/dfs_application/topological_sort)
             
             > A Topological sort of a DAG is a linear ordering of all vertices such that if
             Graph contains an edge(u, v), then u appears before v in ordering.
-      3. Graph Tasks: **graph_tasks/**
-         * Alien Alphabet: **alien_alphabet/**
+      3. Graph Tasks: [**graph_tasks/**](graphs/application/graph_tasks)
+         * Alien Alphabet: [**alien_alphabet/**](graphs/application/graph_tasks/alien_alphabet)
          
             > Given a sorted dictionary of an alien language, calculate alien alphabet (order of characters).
 
