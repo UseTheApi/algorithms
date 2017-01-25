@@ -27,7 +27,7 @@ Current list:
       * Breadth traversal (using queue)
       * Breadth traversal (using height of the tree)
     2. Applications: [**application/**](trees/binary_search_tree/application)
-      * In-order Successor (2 methods) : **in_order_successor/**](trees/binary_search_tree/application/in_order_successor)
+      * In-order Successor (2 methods) : [**in_order_successor/**](trees/binary_search_tree/application/in_order_successor)
       * Lowest Common Ancestor for two nodes in BST (2 methods) : [**lowest_common_ancestor/**](trees/binary_search_tree/application/lowest_common_ancestor)
       * 2nd Largest Node in BST: [**second_largest_node/**](trees/binary_search_tree/application/second_largest_node)
       * Non-related nodes in BST: [**not_related_nodes/**](trees/binary_search_tree/application/not_related_nodes)
