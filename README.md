@@ -85,8 +85,8 @@ Current list:
    4. Amount from given denominations: [**amount_with_coins/**](dynamic_programming/amount_with_coins)
        
        > *Write a function that, given:*
-          >  * *an amount of money*
-          >  * *a list of coin denominations*
+       >  * *an amount of money*
+       >  * *a list of coin denominations*
 
        > *computes the number of ways to make amount of money with coins of the available denominations.*
    4. Knapsack problem (1-0) : [**knapsack_problem/**](dynamic_programming/knapsack_problem)
