@@ -179,17 +179,17 @@ Current list:
     
       > Given a string. Write a function to return all substrings for a given string.
       
-   2. All string permutations(without duplicates): **string_permutations/**
+   2. All string permutations(without duplicates): [**string_permutations/**](strings/substrings/string_permutations)
    3. All string permutations(with duplicates): *TBD*
-   4. Single Char String: **substring_with_k_chars/**
+   4. Single Char String: [**substring_with_k_chars/**](strings/substrings/substring_with_k_chars)
       
       > Given a string, find the length of the longest substring consisting of a single character.
       
-   5. K distinct Chars String: **substring_with_k_chars/**
+   5. K distinct Chars String: [**substring_with_k_chars/**](strings/substrings/substring_with_k_chars)
       
       > Find the length of the longest substring consisting of at most k distinct characters.
       
-   6. Reverse a sentence : **sentence_reverse/**
+   6. Reverse a sentence : [**sentence_reverse/**](strings/substrings/sentence_reverse)
     
       > You are given an array of characters arr, which consists of sequences of characters (words) separated by space characters.
       > How can you most efficiently reverse the order of words in the sentence?
@@ -200,21 +200,21 @@ Current list:
       [ 'p', 'r', 'a', 'c', 't', 'i', 'c', 'e', '  ', 'm', 'a', 'k', 'e', 's', '  ', 'p', 'e', 'r', 'f', 'e', 'c', 't' ]
       ```
       
-   7. Unpack a String: **unpack_string/**
+   7. Unpack a String: [**unpack_string/**](strings/substrings/unpack_string)
      
       > You are given a string of kind: ```{abc}3xyz``` .
       > Write a function that will unpack a string and will return 
       > a result string that looks like: ```abcabcabcxyz```
     
-### Bit Manipulations: bit_manipulations/
-   1. Find maximum between two numbers wihout using any comparison: **max_without_comparison/**
-   2. Count number of 1s in binary representation of an integer: **bits_in_integer/**
+### Bit Manipulations: [bit_manipulations/](bit_manipulations)
+   1. Find maximum between two numbers wihout using any comparison: [**max_without_comparison/**](bit_manipulations/max_without_comparison)
+   2. Count number of 1s in binary representation of an integer: [**bits_in_integer/**](bit_manipulations/bits_in_integer)
 
 ### Binary Search
-   - set of tasks: **binary_search/**
+   - set of tasks: [**binary_search/**](binary_search)
 
 ### Interesting tasks: 
-   1. Drone Flight Planning : **drone_flight_planner/**
+   1. Drone Flight Planning : [**drone_flight_planner/**](drone_flight_planner)
     
       > You are planning the amount of fuel need to complete a drone flight.
       > To fly higher, the drone burns 1 liter of fuel per feet. However, flying lower charges the drone with the amount of energy equivalent to 1 liter of fuel for every feet. Flying sideways takes no energy (only flying up and down takes/charges energy).
@@ -225,8 +225,8 @@ Current list:
       > Example:
       > Completing the route [{x:0, y:2, z:10}, {x:3, y:5, z:0}, {x:9, y:20, z:6}, {x:10, y:12, z:15}, {x:10, y:10, z:8}] requires a minimum of 5 liters of fuel.
       
-   2. Find and Remove loop in Linked List: **detect_remove_loop_linked_list/**
+   2. Find and Remove loop in Linked List: [**detect_remove_loop_linked_list/**](detect_remove_loop_linked_list)
    
-   3. Template implementation of a *Linked List*: **linked_list/**
+   3. Template implementation of a *Linked List*: [**linked_list/**](linked_list)
     
-### Sorting Algorithms: sorting/
+### Sorting Algorithms: [sorting/](sorting)
