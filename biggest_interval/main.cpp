@@ -12,7 +12,7 @@
 using namespace std;
 
 int main(int args, const char *argv[]){
-	cout << "====The Biggest Inclusive Interval====" << endl;
+	cout << "==== The Biggest Inclusive Interval ====" << endl;
 
 	pair<int, int> p;
 	vector<pair<int, int>> v;
