@@ -214,7 +214,7 @@ Current list:
    - set of tasks: [**binary_search/**](binary_search)
 
 ### Interesting tasks: 
-   1. Drone Flight Planning : [**drone_flight_planner/**](drone_flight_planner)
+   1. Drone Flight Planning: [**drone_flight_planner/**](drone_flight_planner)
     
       > You are planning the amount of fuel need to complete a drone flight.
       > To fly higher, the drone burns 1 liter of fuel per feet. However, flying lower charges the drone with the amount of energy equivalent to 1 liter of fuel for every feet. Flying sideways takes no energy (only flying up and down takes/charges energy).
@@ -228,5 +228,11 @@ Current list:
    2. Find and Remove loop in Linked List: [**detect_remove_loop_linked_list/**](detect_remove_loop_linked_list)
    
    3. Template implementation of a *Linked List*: [**linked_list/**](linked_list)
+   
+   4. Find the biggest inclusive interval from given tuples: [**biggest_interval/**](biggest_interval)
+   
+   5. Dinner Party: [**dinner_party/**](dinner_party)
+   
+       > Given a table for ```N``` people. Figure out every possible seating of the table for ```M``` given friends.
     
 ### Sorting Algorithms: [sorting/](sorting)
