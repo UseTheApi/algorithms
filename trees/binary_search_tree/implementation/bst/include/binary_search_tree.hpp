@@ -12,7 +12,6 @@ template <class T>
 class BinarySearchTree{
 public:
 	BinarySearchTree();
-	BinarySearchTree(T);
 	void Insert(T);
 	Tnode<T> * Search(T);
 	Tnode<T> * Min();
