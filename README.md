@@ -181,11 +181,11 @@ Current list:
       
    2. All string permutations(without duplicates): [**string_permutations/**](strings/substrings/string_permutations)
    3. All string permutations(with duplicates): *TBD*
-   4. Single Char String: [**substring_with_k_chars/**](strings/substrings/substring_with_k_chars)
+   4. Single Char String: [**substring_with_k_chars/**](strings/substring_with_k_chars)
       
       > Given a string, find the length of the longest substring consisting of a single character.
       
-   5. K distinct Chars String: [**substring_with_k_chars/**](strings/substrings/substring_with_k_chars)
+   5. K distinct Chars String: [**substring_with_k_chars/**](strings/substring_with_k_chars)
       
       > Find the length of the longest substring consisting of at most k distinct characters.
       
