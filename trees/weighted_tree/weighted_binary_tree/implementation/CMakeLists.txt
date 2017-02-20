@@ -1,8 +1,8 @@
 cmake_minimum_required (VERSION 2.8.11)
-project (binary_search_tree)
+project (weighted_binary_tree)
 
 add_definitions(-std=c++11)
 
 include_directories(include)
 
-add_executable(binary_search_tree main.cpp)
+add_executable(weighted_binary_tree main.cpp)

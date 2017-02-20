@@ -11,20 +11,19 @@
 template <class N>
 struct TWnode{
 	N data;
-	int distance;
+	int weight;
 	TWnode *left;
 	TWnode *right;
 	TWnode *parent;
-	TWnode(N);
+	TWnode(N, int);
 	template <class TN>
-	friend std::ostream & operator<< (std::ostream &os, const Tnode<TN> *node);
-	~TWnode(N);
+	friend std::ostream & operator<< (std::ostream &os, const TWnode<TN> *node);
+	~TWnode();
 };
 
 template <class N>
 TWnode<N>::TWnode(N init_data, int init_weight){
 	data = init_data;
-	distance = init_weight;
 	weight = init_weight;
 	left = nullptr;
 	right = nullptr;
@@ -32,7 +31,7 @@ TWnode<N>::TWnode(N init_data, int init_weight){
 }
 
 template <class TN>
-std::ostream & operator<< (str::ostream &os, const TWnode<TN> *node){
+std::ostream & operator<< (std::ostream &os, const TWnode<TN> *node){
 	os << node->data;
 	return os;
 }
@@ -50,7 +49,7 @@ public:
 private:
 	TWnode<T> *root_;
 	TWnode<T> * remove(TWnode<T> *, T);
-}
+};
 
 template <class T>
 WeightedBst<T>::WeightedBst(){
@@ -86,7 +85,7 @@ void WeightedBst<T>::Insert(T new_data, int weight){
 
 template <class T>
 TWnode<T> * WeightedBst<T>::Search(T key){
-	if(!root){
+	if(!root_){
 		return nullptr;
 	}
 	TWnode<T> * cur = root_;
@@ -101,7 +100,7 @@ TWnode<T> * WeightedBst<T>::Min(){
 	if(!root_){
 		return root_;
 	}
-	TWnode<T> *tmp = root_;
+	TWnode<T> *cur = root_;
 	while(cur->left){
 		cur = cur->left;
 	}
@@ -150,7 +149,7 @@ TWnode<T> * WeightedBst<T>::remove(TWnode<T> * root, T key){
 template <class T>
 void WeightedBst<T>::Remove(T key){
 	if(!root_){
-		return nullptr;
+		return;
 	}
 	remove(root_, key);
 }
