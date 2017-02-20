@@ -20,8 +20,8 @@ int main(int argc, const char *argv[]){
 	tree->Insert(4, 4);
 	tree->Insert(1, 2);
 
-	cout << tree->get_root() << endl;
-	cout << tree->Min() << endl;
+	cout << tree->get_root()->weight << endl;
+	cout << tree->Min()->weight << endl;
 
 	return 0;
 }

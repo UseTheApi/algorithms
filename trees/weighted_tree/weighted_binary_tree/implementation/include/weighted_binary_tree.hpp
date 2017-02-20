@@ -2,7 +2,7 @@
 //  weighted_binary_tree.hpp
 //  algorithms. weighted BST implementation.
 //
-//  Created by alifar on 02/12/16.
+//  Created by alifar on 02/12/17.
 //  Copyright © 2016 alifar. All rights reserved.
 //
 
@@ -63,11 +63,11 @@ TWnode<T> * WeightedBst<T>::get_root(){
 
 template <class T>
 void WeightedBst<T>::Insert(T new_data, int weight){
-	TWnode<T> *new_node = new TWnode<T>(new_data, weight);
 	if(!root_){
-		root_ = new_node;
+		root_ = new TWnode<T>(new_data, 0);;
 		return;
 	}
+	TWnode<T> *new_node = new TWnode<T>(new_data, weight);
 	TWnode<T> *cur = root_;
 	TWnode<T> *tmp = nullptr;
 	while(cur){
