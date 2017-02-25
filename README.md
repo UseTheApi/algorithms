@@ -189,7 +189,7 @@ Current list:
       
       > Find the length of the longest substring consisting of at most k distinct characters.
       
-   6. Reverse a sentence : [**sentence_reverse/**](strings/substrings/sentence_reverse)
+   6. Reverse a sentence : [**sentence_reverse/**](strings/sentence_reverse)
     
       > You are given an array of characters arr, which consists of sequences of characters (words) separated by space characters.
       > How can you most efficiently reverse the order of words in the sentence?
