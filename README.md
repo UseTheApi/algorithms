@@ -36,15 +36,17 @@ Current list:
           
       * Determine if two trees are equal: [**equal_trees/**](trees/binary_search_tree/application/equal_trees)
       
-  3. Weighted Tree: [**weighted_tree**](algorithms/trees/weighted_tree)
-    0. Weighted BST: [**weighted_binary_tree**](algorithms/trees/weighted_tree/weighted_binary_tree)
-        * Implementation: [**implementation**](algorithms/trees/weighted_tree/weighted_binary_tree/implementation)
-        * Application: [**application**](algorithms/trees/weighted_tree/weighted_binary_tree/application)
+  3. Weighted Tree: [**weighted_tree**](trees/weighted_tree)
+    0. Weighted BST: [**weighted_binary_tree**](trees/weighted_tree/weighted_binary_tree)
+        * Implementation: [**implementation**](trees/weighted_tree/weighted_binary_tree/implementation)
+        * Application: [**application**](trees/weighted_tree/weighted_binary_tree/application)
+            
             > Max Path in Weighted BST
      
-    1. Weighted K-ary tree: [**k-ary_weighted_tree**](algorithms/trees/weighted_tree/k-ary_weighted_tree)
-        * Implementation: [**implementation**](algorithms/trees/weighted_tree/k-ary_weighted_tree/implementation)
-        * Application: [**application**](algorithms/trees/weighted_tree/k-ary_weighted_tree/application)
+    1. Weighted K-ary tree: [**k-ary_weighted_tree**](trees/weighted_tree/k-ary_weighted_tree)
+        * Implementation: [**implementation**](trees/weighted_tree/k-ary_weighted_tree/implementation)
+        * Application: [**application**](trees/weighted_tree/k-ary_weighted_tree/application)
+            
             > Max Path in Weighted K-ary Tree
   
 ### Graphs: [graphs/](graphs)
