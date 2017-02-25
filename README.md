@@ -53,7 +53,7 @@ Current list:
       1. Breadth First Search: [**breadth_first_search/**](graphs/traversals/breadth_first_search)
          * BFS using map
          * BFS using queue and vertex attributes
-      2. Depth First Search: [**depth_first_search/**](breadth_first_search/depth_first_search)
+      2. Depth First Search: [**depth_first_search/**](graphs/traversals/depth_first_search)
    5. Graph applications: [**application/**](graphs/application)
       1. BFS application tasks: [**bfs_application/**](graphs/application/bfs_application)
          * Finding a shortest path from a given node to a root of BST tree: [**a_shortest_path/**](graphs/application/bfs_application/a_shortest_path)
