@@ -179,7 +179,7 @@ Current list:
     
       > Given a string. Write a function to return all substrings for a given string.
       
-   2. All string permutations(without duplicates): [**string_permutations/**](strings/substrings/string_permutations)
+   2. All string permutations(without duplicates): [**string_permutations/**](strings/string_permutations)
    3. All string permutations(with duplicates): *TBD*
    4. Single Char String: [**substring_with_k_chars/**](strings/substring_with_k_chars)
       
