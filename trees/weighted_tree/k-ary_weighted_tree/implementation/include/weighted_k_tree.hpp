@@ -129,7 +129,7 @@ void WeightedKTree<T>::Traverse(){
         if(visited.find(cur) != visited.end()){
             cur = cur->sibling ? cur->sibling : cur->parent;
         } else{
-            std::cout << cur << " ";
+            std::cout << cur << ": " << cur->weight << "; ";
             visited.insert(cur);
             if(cur->f_child){
                 cur = cur->f_child;
