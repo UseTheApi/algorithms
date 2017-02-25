@@ -6,125 +6,138 @@
 //  Copyright © 2016 alifar. All rights reserved.
 //
 
-#include <linked_list.hpp>
 #include <iostream>
 #include <set>
 
 template <class N>
-struct KTNode{
-	N data;
-	int weight;
-	KTNode<N> *f_child;
-	KTNode<N> *parent;
-	LinkedList<KTNode<N> *> siblings;
-	KTNode(N, int);
-	template <class TN>
-	friend std::ostream & operator<< (std::ostream &os, const KTNode<TN> *node);
-	~KTNode();
+struct KWNode{
+    N data;
+    int weight;
+    KWNode<N> *f_child;
+    KWNode<N> *sibling;
+    KWNode<N> *parent;
+    KWNode(N, int);
+    void AddSibling(KWNode<N> *);
+    template <class TN>
+    friend std::ostream & operator<< (std::ostream &, KWNode<TN> *);
+    ~KWNode();
 };
 
 template <class N>
-KTNode<N>::KTNode(N init_data, int init_weight){
-	data = init_data;
-	weight = init_weight;
-	f_child = nullptr;
-	parent = nullptr;
-	// siblings = new LinkedList<KTNode<N> *>();
+KWNode<N>::KWNode(N init_data, int init_weight){
+    data = init_data;
+    weight = init_weight;
+    f_child = nullptr;
+    sibling = nullptr;
+    parent = nullptr;
 }
 
 template <class TN>
-std::ostream & operator<< (std::ostream &os, const KTNode<TN> *node){
-	os << node->data;
-	return os;
+std::ostream & operator<< (std::ostream & os, KWNode<TN> *node){
+    os << node->data;
+    return os;
+}
+
+template <class N>
+void KWNode<N>::AddSibling(KWNode<N> *node){
+    if(!sibling){
+        sibling = node;
+        return;
+    } else{
+        KWNode<N> *cur = sibling;
+        KWNode<N> *tmp = cur;
+        while(cur){
+            tmp = cur;
+            cur = cur->sibling;
+        }
+        tmp->sibling = node;
+    }
 }
 
 template <class T>
 class WeightedKTree{
 public:
-	WeightedKTree();
-	void Insert(T, int, KTNode<T> *);
-	KTNode<T> * Search(T);
-	void Traverse();
-	KTNode<T> * get_root();
-	int k_tree_size;
+    WeightedKTree();
+    void Insert(T, int, KWNode<T>*);
+    KWNode<T> * Search(T);
+    KWNode<T> * get_root();
+    void Traverse();
 private:
-	KTNode<T> *root_;
+    KWNode<T> *root_;
 };
 
 template <class T>
 WeightedKTree<T>::WeightedKTree(){
-	root_ = nullptr;
-	k_tree_size = 0;
+    root_ = nullptr;
 }
 
 template <class T>
-KTNode<T> * WeightedKTree<T>::get_root(){
-	return root_;
+KWNode<T> * WeightedKTree<T>::get_root(){
+    return root_;
 }
 
 template <class T>
-void WeightedKTree<T>::Insert(T new_data, int weight, KTNode<T> *parent){
-	if(!root_){
-		root_ = new KTNode<T>(new_data, 0);
-		++k_tree_size;
-		return;
-	}
-	if(!parent){
-		std::cout << "Parent not Found for: " << new_data << std::endl;
-		return;
-	}
-	KTNode<T> *new_node = new KTNode<T>(new_data, weight);
-	new_node->parent = parent;
-	++k_tree_size;
-	if(!parent->f_child){
-		parent->f_child = new_node;
-	} else{
-		parent->siblings.append(new_node);
-	}
+void WeightedKTree<T>::Insert(T new_data, int new_weight, KWNode<T> *p_node){
+    if(!root_){
+        root_ = new KWNode<T>(new_data, 0);
+        return;
+    }
+    if(!p_node){
+    	std::cout << "Parent node not found" << std::endl;
+    }
+    KWNode<T> *new_node = new KWNode<T>(new_data, new_weight);
+    new_node->parent = p_node;
+    if(!p_node->f_child){
+        p_node->f_child = new_node;
+    } else{
+        p_node->f_child->AddSibling(new_node);
+    }
 }
 
 template <class T>
-KTNode<T> * WeightedKTree<T>::Search(T key){
-	if(!root_){
-		return nullptr;
-	}
-	KTNode<T> *cur = root_;
-	std::set<KTNode<T> *> visited;
-	while(cur && cur->data != key && visited.size() < k_tree_size){
-		if(visited.find(cur) != visited.end()){
-			continue;
-		}
-		visited.insert(cur);
-		if(cur->f_child){
-			cur = cur->f_child;
-		} else if(cur->siblings.top()){
-			cur = cur->siblings.top()->get_data();
-		} else{
-			cur = cur->parent;
-		}
-	}
-	return cur;
+KWNode<T> * WeightedKTree<T>::Search(T key){
+    if(!root_){
+        return nullptr;
+    }
+    KWNode<T> *cur = root_;
+    std::set<KWNode<T> *> visited;
+    while(cur && cur->data != key){
+        if(visited.find(cur) != visited.end()){
+            cur = cur->sibling ? cur->sibling : cur->parent;
+        } else{
+            visited.insert(cur);
+            if(cur->f_child){
+                cur = cur->f_child;
+            } else if(cur->sibling){
+                cur = cur->sibling;
+            } else{
+                cur = cur->parent;
+            }
+        }
+    }
+    return cur;
 }
 
 template <class T>
 void WeightedKTree<T>::Traverse(){
-	if(!root_){
-		return;
-	}
-	KTNode<T> *cur = root_;
-	std::set<KTNode<T> *> visited;
-	while(cur && visited.size() < k_tree_size){
-		std::cout << cur->data << " ";
-		if(visited.find(cur) != visited.end()){
-			continue;
-		}
-		visited.insert(cur);
-		if(cur->f_child){
-			cur = cur->f_child;
-		} else if(cur->siblings.top()){
-			cur = cur->siblings.top()->get_data();
-		} else{
-			cur = cur->parent;
-		}
-	}
+    if(!root_){
+        return;
+    }
+    KWNode<T> *cur = root_;
+    std::set<KWNode<T> *> visited;
+    while(cur){
+        if(visited.find(cur) != visited.end()){
+            cur = cur->sibling ? cur->sibling : cur->parent;
+        } else{
+            std::cout << cur << " ";
+            visited.insert(cur);
+            if(cur->f_child){
+                cur = cur->f_child;
+            } else if(cur->sibling) {
+                cur = cur->sibling;
+            } else{
+                cur = cur->parent;
+            }
+        }
+    }
 }

@@ -12,31 +12,23 @@
 using namespace std;
 
 int main(int argc, const char *argv[]){
+	cout << "==== Weighted K-ary Tree ====" << endl;
 	WeightedKTree<char> tree;
-	int number_of_items;
-	cout << "---> Enter a number of items to insert into a tree: ";
-	cin >> number_of_items;
-	char item, parent_item;
+	char item, parent_char;
 	int weight;
+	int number_of_items = 0;
+	cout << "---> Enter a number of items to be inserted into a tree: ";
+	cin >> number_of_items;
 	for(int i = 0; i < number_of_items; ++i){
-		cout << "---> Enter item [char, weight and parent_char]: ";
+		cout << "---> Enter item, weight and parent to insert into a tree: ";
 		cin >> item;
 		cin >> weight;
-		cin >> parent_item;
-		KTNode<char> * parent = tree.Search(parent_item);
-		if(!parent && i > 0){
-			cout << "nonono" << endl;
-			continue;
-		}
-		tree.Insert(item, weight, parent);
-		cout << "Current size: " << tree.k_tree_size << endl;
+		cin >> parent_char;
+		KWNode<char> *parent_node = tree.Search(parent_char);
+		tree.Insert(item, weight, parent_node);
 	}
-	// cout << "---> Traversing Result Tree: ";
-	// tree.Traverse();
-	// cout << endl;
-	// tree.Insert('a', 1, nullptr);
-	// KTNode<char> *p = tree.Search('a');
-	// tree.Insert('b', 2, p);
-	// tree.Traverse();
+	cout << "Traversing tree:" << endl;
+	tree.Traverse();
+	cout << endl;
 	return 0;
 }
