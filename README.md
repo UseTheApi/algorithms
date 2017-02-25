@@ -35,6 +35,17 @@ Current list:
           > Given a pointer to the root of BST. Write a function that will return the max set of nodes that are not children or parents for each other.
           
       * Determine if two trees are equal: [**equal_trees/**](trees/binary_search_tree/application/equal_trees)
+      
+  3. Weighted Tree: [**weighted_tree**](algorithms/trees/weighted_tree)
+    0. Weighted BST: [**weighted_binary_tree**](algorithms/trees/weighted_tree/weighted_binary_tree)
+        * Implementation: [**implementation**](algorithms/trees/weighted_tree/weighted_binary_tree/implementation)
+        * Application: [**application**](algorithms/trees/weighted_tree/weighted_binary_tree/application)
+            > Max Path in Weighted BST
+     
+    1. Weighted K-ary tree: [**k-ary_weighted_tree**](algorithms/trees/weighted_tree/k-ary_weighted_tree)
+        * Implementation: [**implementation**](algorithms/trees/weighted_tree/k-ary_weighted_tree/implementation)
+        * Application: [**application**](algorithms/trees/weighted_tree/k-ary_weighted_tree/application)
+            > Max Path in Weighted K-ary Tree
   
 ### Graphs: [graphs/](graphs)
    1. Warshall's Algorithm: [**warshall_floyd_algorithm/**](graphs/warshall_floyd_algorithm)
