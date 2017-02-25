@@ -200,7 +200,7 @@ Current list:
       [ 'p', 'r', 'a', 'c', 't', 'i', 'c', 'e', '  ', 'm', 'a', 'k', 'e', 's', '  ', 'p', 'e', 'r', 'f', 'e', 'c', 't' ]
       ```
       
-   7. Unpack a String: [**unpack_string/**](strings/substrings/unpack_string)
+   7. Unpack a String: [**unpack_string/**](strings/unpack_string)
      
       > You are given a string of kind: ```{abc}3xyz``` .
       > Write a function that will unpack a string and will return 
