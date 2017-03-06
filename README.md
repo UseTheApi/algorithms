@@ -11,6 +11,7 @@ Current list:
    5. Queue implemented from a Stack: [**queue_stack/**](stack_and_queue/queue_stack)
     
 ### Trees: [trees/](trees)
+##### For this section ```Makefile``` is provided: [wiki](https://github.com/UseTheApi/algorithms/wiki/Setting-up-a-local-project)
   1. Heap: [**binary_heap/**](trees/binary_heap)
   5. Binary Search Tree: [**binary_search_tree/**](trees/binary_search_tree)
     0. Implementation: [**implementation/**](trees/binary_search_tree/implementation)
@@ -36,20 +37,21 @@ Current list:
           
       * Determine if two trees are equal: [**equal_trees/**](trees/binary_search_tree/application/equal_trees)
       
-  3. Weighted Tree: [**weighted_tree**](trees/weighted_tree)
-    0. Weighted BST: [**weighted_binary_tree**](trees/weighted_tree/weighted_binary_tree)
-        * Implementation: [**implementation**](trees/weighted_tree/weighted_binary_tree/implementation)
-        * Application: [**application**](trees/weighted_tree/weighted_binary_tree/application)
+  3. Weighted Tree: [**weighted_tree/**](trees/weighted_tree)
+    0. Weighted BST: [**weighted_binary_tree/**](trees/weighted_tree/weighted_binary_tree)
+        * Implementation: [**implementation/**](trees/weighted_tree/weighted_binary_tree/implementation)
+        * Application: [**application/**](trees/weighted_tree/weighted_binary_tree/application)
             
             > Max Path in Weighted BST
      
-    1. Weighted K-ary tree: [**k-ary_weighted_tree**](trees/weighted_tree/k-ary_weighted_tree)
-        * Implementation: [**implementation**](trees/weighted_tree/k-ary_weighted_tree/implementation)
-        * Application: [**application**](trees/weighted_tree/k-ary_weighted_tree/application)
+    1. Weighted K-ary tree: [**k-ary_weighted_tree/**](trees/weighted_tree/k-ary_weighted_tree)
+        * Implementation: [**implementation/**](trees/weighted_tree/k-ary_weighted_tree/implementation)
+        * Application: [**application/**](trees/weighted_tree/k-ary_weighted_tree/application)
             
             > Max Path in Weighted K-ary Tree
   
 ### Graphs: [graphs/](graphs)
+##### For this section ```Makefile``` is provided: [wiki](https://github.com/UseTheApi/algorithms/wiki/Setting-up-a-local-project)
    1. Warshall's Algorithm: [**warshall_floyd_algorithm/**](graphs/warshall_floyd_algorithm)
       
       > Build a Reachability Matrix for a given Adjacency Matrix.
@@ -61,6 +63,7 @@ Current list:
    3. Graph Representations: [**representations/**](graphs/representations)
       1. Adjacency Matrix: [**adjacency_matrix/**](graphs/representations/adjacency_matrix)
       2. Adjacency Lists: [**adjacency_lists/**](graphs/representations/adjacency_lists)
+      3. Weighted Directed Graph: [**weighted_graph/**](graphs/representations/weighted_graph)
     
    4. Graph Traversals: [**traversals/**](graphs/traversals)
       1. Breadth First Search: [**breadth_first_search/**](graphs/traversals/breadth_first_search)
