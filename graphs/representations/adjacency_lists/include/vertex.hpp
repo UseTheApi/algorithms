@@ -11,35 +11,35 @@
 template <class T>
 class Vertex{
 public:
-	Vertex(T, int);
-	T get_data();
-	int get_id();
-	template <class V>
-	friend std::ostream & operator<<(std::ostream &, const Vertex<V> *);
-	~Vertex();
+    Vertex(T, int);
+    T get_data();
+    int get_id();
+    template <class V>
+    friend std::ostream & operator<<(std::ostream &, const Vertex<V> *);
+    ~Vertex();
 private:
-	T data_;
-	int id_;
+    T data_;
+    int id_;
 };
 
 template <class T>
 Vertex<T>::Vertex(T new_data, int new_id){
-	data_ = new_data;
-	id_ = new_id;
+    data_ = new_data;
+    id_ = new_id;
 }
 
 template <class T>
 T Vertex<T>::get_data(){
-	return data_;
+    return data_;
 }
 
 template <class T>
 int Vertex<T>::get_id(){
-	return id_;
+    return id_;
 }
 
 template <class V>
 std::ostream& operator<<(std::ostream& os, const Vertex<V> *v){
-	os << v->data_;
-	return os;
+    os << v->data_;
+    return os;
 }
