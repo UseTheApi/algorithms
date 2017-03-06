@@ -31,11 +31,16 @@ int main(int argc, const char *argv[]){
         cin >> weight;
         graph.AddEdge(v1, v2, weight);
     } while(cin.get() != '\n');
-
     cout << endl;
     cout << "Adjacency Lists for the graph: " << endl;
     graph.display_lists();
     cout << endl;
 
+    cout << "Input chars to remove edge: ";
+    cin >> v1;
+    cin >> v2;
+    graph.RemoveEdge(v1, v2);
+    cout << "Adjacency Lists for the graph: " << endl;
+    graph.display_lists();
     return 0;
 }

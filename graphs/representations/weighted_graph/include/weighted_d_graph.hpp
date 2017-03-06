@@ -16,6 +16,7 @@ public:
     WeightedDGraph();
     void AddEdge(T, T, int); // add Edge for 2 nodes and weight
     void AddVertex(T); // add Vertex into the Graph
+    void RemoveEdge(T, T);
     bool kempty;
     std::pair<VertexW<T> *, int> get_vertex(T); // get vertex by it's value
     void display_vertices();
@@ -72,6 +73,22 @@ void WeightedDGraph<T>::AddEdge(T key1, T key2, int weight){
         return;
     }
     adj_[vertex_p1.second].push_back(std::make_pair(vertex_p2.first, weight));
+}
+
+template <class T>
+void WeightedDGraph<T>::RemoveEdge(T key1, T key2){
+    std::pair<VertexW<T> *, int> vertex_p1 = get_vertex(key1);
+    std::pair<VertexW<T> *, int> vertex_p2 = get_vertex(key2);
+    if(!vertex_p1.first || !vertex_p2.first){
+        return;
+    }
+    int id1 = vertex_p1.second;
+    std::vector<std::pair<VertexW<T> *, int>> a_list = adj_[id1];
+    for(int i = 0; i < a_list.size(); ++i){
+        if(a_list[i].first == vertex_p2.first){
+            adj_[id1].erase(adj_[id1].begin()+i, adj_[id1].begin()+i+1);
+        }
+    }
 }
 
 template <class T>
