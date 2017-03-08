@@ -23,6 +23,7 @@ public:
     void display_lists();
     std::vector<VertexW<T> *> get_vertices();
     std::vector<std::vector<std::pair<VertexW<T> *, int>>> get_adj();
+    std::vector<std::pair<VertexW<T> *, int>> Neighbours(T);
 private:
     std::vector<VertexW<T> *> vertices_;
     std::vector<std::vector<std::pair<VertexW<T> *, int>>> adj_;
@@ -107,5 +108,17 @@ void WeightedDGraph<T>::display_lists(){
         }
         std::cout << std::endl;
     }
+}
+
+template <class T>
+std::vector<std::pair<VertexW<T> *, int>> WeightedDGraph<T>::Neighbours(T source){
+    std::pair<VertexW<T> *, int> source_p = get_vertex(source);
+    for(auto adj_list: adj_){
+        if(adj_list[0].first == source_p.first){
+            adj_list.erase(adj_list.begin());
+            return adj_list;
+        }
+    }
+    return std::vector<std::pair<VertexW<T> *, int>>();
 }
 
