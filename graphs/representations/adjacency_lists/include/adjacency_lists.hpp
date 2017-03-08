@@ -27,6 +27,7 @@
 template <class T, template<class> class Node>
 class Graph{
 public:
+    Graph();
     Graph(bool);
     bool directed; // true if Directed
     int add_vertex(T); // returns an id of the vertex (position in vertices[])
@@ -44,6 +45,12 @@ private:
     std::vector<Node<T> *> vertices_;
     std::vector<LinkedList<Node<T> *>> adj_;
 };
+
+template <class T, template <class> class Node>
+Graph<T, Node>::Graph(){
+    directed=false;
+    empty=true;
+}
 
 template <class T, template<class> class Node>
 Graph<T, Node>::Graph(bool graph_type){
