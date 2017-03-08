@@ -87,6 +87,14 @@ Current list:
          * Alien Alphabet: [**alien_alphabet/**](graphs/application/graph_tasks/alien_alphabet)
          
             > Given a sorted dictionary of an alien language, calculate alien alphabet (order of characters).
+     
+         * Dijkstra's Algorithm: [**dijkstra/**](graphs/application/graph_tasks/dijkstra)
+         
+            > Finding the Shortest Weighted Paths in Directed Graph
+           
+         * Graph Coloring: [**graph_coloring/**](graphs/application/graph_tasks/graph_coloring)
+         
+            > Greedy Algorithm to color the graph.Graph coloring problem is to assign colors to certain elements of a graph subject to certain constraints.
 
 ### Dynamic Programming: [dynamic_programming/](dynamic_programming)
    1. Factorial and Fibonacci : [**factorial_fibonacci/**](dynamic_programming/factorial_fibonacci)
