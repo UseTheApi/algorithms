@@ -139,6 +139,10 @@ Current list:
    8. Longest Palindromic Subsequence [**longest_palindromic_subsequence**](dynamic_programming/longest_palindromic_subsequence)
    
       > Find the longest Palindrome that is a subsequence of a given string. Provided Solution return the length of longest palindrome.
+      
+   9. Optimal BST Problem [**optimal_bst**](dynamic_programming/optimal_bst)
+   
+      > Given integer keys for BST (increasing order) and weights for these keys (search probabilities). Calculate minimal cost of the optimal BST that can be constructed from given data. cost(i, j) = di ```*``` wi + dj ```*``` wj, where ```d``` is depth of the given node
      
 ### Arrays: [arrays/](arrays)
    1. Prices in Stock: [**stock_prices/**](arrays/stock_prices)
