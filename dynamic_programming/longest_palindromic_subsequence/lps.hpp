@@ -16,3 +16,4 @@
 int LongestPalindromeSubsequence(const std::string &str);
 
 #endif /* lps_hpp */
+
