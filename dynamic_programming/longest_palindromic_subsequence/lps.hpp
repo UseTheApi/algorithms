@@ -15,4 +15,4 @@
 
 int LongestPalindromeSubsequence(const std::string &str);
 
-#endif /* knapsack_problem_hpp */
+#endif /* lps_hpp */
