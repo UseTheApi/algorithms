@@ -38,8 +38,10 @@ int main(int argc, const char *argv[]){
     cout << "Adjacency Lists for the graph: " << endl;
     graph.display_lists();
     cout << endl;
-    int min_path_weight = TravelingSalesmanNaive<char>(graph);
-    cout << min_path_weight << endl;
+    cout << "Calculated minimal Path using Premutation Approach: " << endl;
+    int min_w = TravelingSalesmanNaive<char>(graph);
+    std::cout << std::endl;
+    std::cout << "Minimum: " << min_w << std::endl;
     return 0;
 }
 

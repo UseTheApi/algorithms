@@ -27,7 +27,7 @@ public:
     std::vector<VertexW<T> *> get_vertices();
     std::vector<std::vector<std::pair<VertexW<T> *, int>>> get_adj();
     std::vector<std::pair<VertexW<T> *, int>> Neighbours(T);
-    int EdgeWeight(VertexW<T> *, VertexW<T> *);
+    int EdgeWeight(T, T);
 private:
     std::vector<VertexW<T> *> vertices_;
     std::vector<std::vector<std::pair<VertexW<T> *, int>>> adj_;
@@ -149,34 +149,23 @@ void WeightedGraph<T>::display_lists(){
 template <class T>
 std::vector<std::pair<VertexW<T> *, int>> WeightedGraph<T>::Neighbours(T source){
     std::pair<VertexW<T> *, int> source_p = get_vertex(source);
-    std::cout << std::endl;
-    std::cout << "Neigbours: "; 
-    std::cout << source_p.first << std::endl;
-    std::vector<std::pair<VertexW<T> *, int>> res;
     for(auto adj_list: adj_){
         if(adj_list[0].first == source_p.first){
-            for(auto v_pair: adj_list){
-                if(v_pair.first != source_p.first){
-                    std::cout << v_pair.first << ": " << v_pair.second << " "; 
-                    res.push_back(v_pair);
-                }
-            }
-            break;
+            adj_list.erase(adj_list.begin());
+            return adj_list;
         }
     }
-    std::cout << std::endl;
-    return res;
+    return std::vector<std::pair<VertexW<T> *, int>>();
 }
 
 template <class T>
-int WeightedGraph<T>::EdgeWeight(VertexW<T> *v1, VertexW<T> *v2){
-    std::vector<std::pair<VertexW<T> *, int>> a_list_v1 = Neighbours(v1->data);
+int WeightedGraph<T>::EdgeWeight(T source1, T source2){
+    std::vector<std::pair<VertexW<T> *, int>> a_list_v1 = Neighbours(source1);
     for(auto it: a_list_v1){
-        if(it.first == v2){
+        if(it.first->data == source2){
             return it.second;
         }
     }
-    std::cout << std::endl;
     return 0;
 }
 

@@ -12,48 +12,42 @@
 #include <algorithm>
 
 template <class T>
-using vertex_vector = std::vector<VertexW<T> *>;
-
-template <class T>
-void swap(VertexW<T> *v1, VertexW<T> *v2){
-    VertexW<T> tmp = *v1;
-    *v1 = *v2;
-    *v2 = tmp;
+void swap(T &item1, T &item2){
+    T tmp = item1;
+    item1 = item2;
+    item2 = tmp;
 }
 
 template <class T>
-int calculate_path_weight(WeightedGraph<T> graph, vertex_vector<T> vertices){
-    for(auto it: vertices){
+int calculate_path_weight(WeightedGraph<T> graph, std::vector<T> v_collection){
+    std::cout << std::endl;
+    for(auto it: v_collection){
         std::cout << it << " ";
     }
-    std::cout << std::endl;
-    graph.display_lists(); 
-    std::cout << std::endl;
     int i = 0;
     int route_weight = 0;
     int cur_w = 0;
-    while(i != vertices.size()-1){
-        cur_w = graph.EdgeWeight(vertices[i], vertices[i+1]);
-        std::cout << "CUR_W: " << cur_w << " ";
+    while(i != v_collection.size()-1){
+        cur_w = graph.EdgeWeight(v_collection[i], v_collection[i+1]);
         route_weight+=cur_w;
         ++i;
     }
-    route_weight += graph.EdgeWeight(vertices[vertices.size()-1], vertices[0]);
-    std::cout << std::endl;
-    //std::cout << route_weight << std::endl;
+    route_weight += graph.EdgeWeight(v_collection[v_collection.size()-1], v_collection[0]);
+    std::cout << ": " << route_weight;
     return route_weight;
 }
 
 template <class T>
-int ts_naive_helper(WeightedGraph<T> &graph, vertex_vector<T> vertices, int min_weight_route, int start, int end){
+int ts_naive_helper(WeightedGraph<T> &graph, std::vector<T> v_collection, int min_weight_route, int start, int end){
     if(start == end){
-        int cur_route_w = calculate_path_weight(graph, vertices);
+        int cur_route_w = calculate_path_weight(graph, v_collection);
         min_weight_route = std::min(min_weight_route, cur_route_w);
+        return min_weight_route;
     }
     for(int i = start; i <= end; ++i){
-        swap(vertices[start], vertices[i]);
-        ts_naive_helper<T>(graph, vertices, min_weight_route, start+1, end);
-        swap(vertices[start], vertices[i]);
+        swap(v_collection[start], v_collection[i]);
+        min_weight_route = std::min(min_weight_route, ts_naive_helper<T>(graph, v_collection, min_weight_route, start+1, end));
+        swap(v_collection[start], v_collection[i]);
     }
     return min_weight_route;
 }
@@ -61,8 +55,11 @@ int ts_naive_helper(WeightedGraph<T> &graph, vertex_vector<T> vertices, int min_
 template <class T>
 int TravelingSalesmanNaive(WeightedGraph<T> &graph){
     int resulting_min_weight = INT_MAX;
-    vertex_vector<T> vertices = graph.get_vertices();
-    resulting_min_weight = ts_naive_helper<T>(graph, vertices, resulting_min_weight, 0, vertices.size()-1);
+    std::vector<T> v_collection;
+    for(auto it: graph.get_vertices()){
+        v_collection.push_back(it->data);
+    }
+    resulting_min_weight = ts_naive_helper<T>(graph, v_collection, resulting_min_weight, 0, v_collection.size()-1);
     return resulting_min_weight;
 }
 
