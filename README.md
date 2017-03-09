@@ -135,6 +135,10 @@ Current list:
       > *Output is [-2 -2 3 3 4 6 ].*
       
       > *This task can also be solved using __dequeue__, but found elegant DP solution.*
+      
+   8. Longest Palindromic Subsequence [**longest_palindromic_subsequence**](dynamic_programming/longest_palindromic_subsequence)
+   
+      > Find the longest Palindrome that is a subsequence of a given string. Provided Solution return the length of longest palindrome.
      
 ### Arrays: [arrays/](arrays)
    1. Prices in Stock: [**stock_prices/**](arrays/stock_prices)
