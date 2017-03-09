@@ -16,7 +16,7 @@ struct VertexW{
     int finished;
     bool visited;
     VertexW(T);
-    ~VertexW();
+    //~VertexW();
 };
 
 template <class T>

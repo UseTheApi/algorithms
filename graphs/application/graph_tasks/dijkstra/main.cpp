@@ -13,7 +13,7 @@ using namespace std;
 int main(int argc, const char *argv[]){
     cout << endl;
     cout << "Graph Shortest Paths: Weighted Graph." << endl;
-    WeightedDGraph<char> graph;
+    WeightedGraph<char> graph;
     cout << "Add vertices to the Graph (type - char): ";
     char item;
 

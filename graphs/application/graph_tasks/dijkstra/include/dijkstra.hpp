@@ -6,7 +6,7 @@
 //  Copyright © 2017 alifar. All rights reserved.
 //
 
-#include <weighted_d_graph.hpp>
+#include <weighted_graph.hpp>
 #include <queue>
 #include <iostream>
 
@@ -23,7 +23,7 @@ template <class T>
 using PriorityQueue = std::priority_queue<VertexW<T> *, std::vector<VertexW<T>*>, GreaterThenByPriority<T>>;
 
 template <class T>
-void InitializeQueue(PriorityQueue<T> &q, WeightedDGraph<T> &graph, T source){
+void InitializeQueue(PriorityQueue<T> &q, WeightedGraph<T> &graph, T source){
     std::pair<VertexW<T> *, int> source_pair= graph.get_vertex(source);
     source_pair.first->min_distance = 0;
     for(auto it: graph.get_vertices()){
@@ -38,7 +38,7 @@ void InitializeQueue(PriorityQueue<T> &q, WeightedDGraph<T> &graph, T source){
 }
 
 template <class T>
-void DisplayMinWeights(WeightedDGraph<T> &graph){
+void DisplayMinWeights(WeightedGraph<T> &graph){
     std::cout << "Min Weights for Vertices: " << std::endl;
     for(auto it: graph.get_vertices()){
         std::cout << it << ": " << it->min_distance << "; ";
@@ -46,7 +46,7 @@ void DisplayMinWeights(WeightedDGraph<T> &graph){
 }
 
 template <class T>
-void ShortestPathsDijkstra(WeightedDGraph<T> &graph, T source){
+void ShortestPathsDijkstra(WeightedGraph<T> &graph, T source){
     PriorityQueue<T> q;
     InitializeQueue(q, graph, source);
     while(!q.empty()){
