@@ -20,7 +20,10 @@ void DisplayColors(Graph<T, ColoredVertex> graph){
 template <class T>
 void GreedyColoring(Graph<T, ColoredVertex> &graph){
     graph.get_vertices()[0]->color = 0;
-    std::vector<bool> available_colors(graph.get_vertices().size());
+    // by four color theorem every map can be colored with 4 colors; 
+    // although strongly connected graph works with with d+1 colors, where d = max degree of a node in a graph
+    std::vector<bool> available_colors(graph.get_vertices().size()); 
+
     // initializing all colors as available
     for(auto it: available_colors){
         it = true;
@@ -33,10 +36,6 @@ void GreedyColoring(Graph<T, ColoredVertex> &graph){
                 available_colors[it->color] = false;
             }
         }
-        for(auto it: available_colors){
-            std::cout << it << " ";
-        }
-        std::cout << std::endl;
         // searching for available color to assign to current vertex
         for(int i = 0; i < available_colors.size(); ++i){
             if(available_colors[i]){
