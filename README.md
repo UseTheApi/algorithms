@@ -95,6 +95,10 @@ Current list:
          * Graph Coloring: [**graph_coloring/**](graphs/application/graph_tasks/graph_coloring)
          
             > Greedy Algorithm to color the graph.Graph coloring problem is to assign colors to certain elements of a graph subject to certain constraints.
+         
+         * Traveling Salesman [**traveling_salesman/**](graphs/application/graph_tasks/traveling_salesman)
+         
+            > Naive Approach (Using vertices permutations) (complexity: O(n!)) and DP realization.
 
 ### Dynamic Programming: [dynamic_programming/](dynamic_programming)
    1. Factorial and Fibonacci : [**factorial_fibonacci/**](dynamic_programming/factorial_fibonacci)
