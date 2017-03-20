@@ -98,7 +98,7 @@ Current list:
          
          * Traveling Salesman [**traveling_salesman/**](graphs/application/graph_tasks/traveling_salesman)
          
-            > Naive Approach (Using vertices permutations) (complexity: O(n!)) and DP realization.
+            > Naive Approach (Using vertices permutations) (complexity: O(n!)) and DP implementation.
 
 ### Dynamic Programming: [dynamic_programming/](dynamic_programming)
    1. Factorial and Fibonacci : [**factorial_fibonacci/**](dynamic_programming/factorial_fibonacci)
