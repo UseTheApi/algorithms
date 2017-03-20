@@ -200,15 +200,15 @@ Current list:
       ```
       > [2, -1, -1] represents a correct Cycle.
       
-   10. Robbery with Max benefit: [**max_burglary/**](arrays/max_burglary)
+   10. Robbery with Max benefit: [**max_burglary/**](arrays/max_burglary) 
    
-      > The burglar wants to get the max profit from the street of houses. Array represents amount of money to still
-      > Given array represents amount of money in each house.
-      > The robber cannot get into two houses in a row - the alarm will work and he will get caught.
+        > The burglar wants to get the max profit from the street of houses. Array represents amount of money to still
+        > Given array represents amount of money in each house.
+        > The robber cannot get into two houses in a row - the alarm will work and he will get caught.
    
    11. Array From Array: [**array_from_array/**](arrays/array_from_array)
    
-      > Given an int array A, return an int array B that A[i + B[i]] is the first element in A after A[i] that is greater than or equal to A[i]: ```A = [2, 5, 1, 3, 4, 7] => B = [3, 4, -2, 1, -3, 0]```
+        > Given an int array A, return an int array B that A[i + B[i]] is the first element in A after A[i] that is greater than or equal to A[i]: ```A = [2, 5, 1, 3, 4, 7] => B = [3, 4, -2, 1, -3, 0]```
 
 ### Strings: [strings/](strings)
    1. Substrings: [**substrings/**](strings/substrings)
