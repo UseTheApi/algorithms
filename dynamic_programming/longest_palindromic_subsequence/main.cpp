@@ -13,7 +13,10 @@ using namespace std;
 
 int main(int argc, const char *argv[]){
     cout << "Dynamic Programming. Longest Palindromic Subsequence." << endl;
-    string s = "character";
+    string s;
+    cout << "Enter a string (1 word): ";
+    cin >> s;
+    cout << "The Longest Palindromic Subsequence length is: ";
     cout << LongestPalindromeSubsequence(s) << endl;
     return 0;
 }
