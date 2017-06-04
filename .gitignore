@@ -27,3 +27,11 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
+
+## PyCharm
+.idea
+.DS_Store
+
+## Python
+.cache
+*.pyc
