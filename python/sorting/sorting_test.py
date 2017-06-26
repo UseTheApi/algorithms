@@ -2,6 +2,7 @@ import unittest
 from .merge_sort import merge_sort
 from .insertion_sort import insertion_sort
 from .selection_sort import selection_sort
+from .quick_sort import quick_sort
 
 
 class SortTest(unittest.TestCase):
@@ -13,6 +14,8 @@ class SortTest(unittest.TestCase):
         self.assertEquals(selection_sort(arr.copy()), sorted(arr))
         # Merge Sort Test
         self.assertEquals(merge_sort(arr.copy(), 0, len(arr)-1), sorted(arr))
+        # Quick Sort test
+        self.assertEquals(quick_sort(arr.copy(), 0, len(arr)-1), sorted(arr))
 
     def test_ascending_ordered_array(self):
         arr = [1, 3, 6, 8, 19]
