@@ -11,6 +11,7 @@
 using namespace std;
 
 int main(int argc, const char *argv[]){
+    cout << "==== Stock Prices ====" << endl;
 	vector<int> prices;
 	int item;
 	cout << "Enter stock prices (integers): ";
@@ -20,7 +21,3 @@ int main(int argc, const char *argv[]){
 	} while(cin.get() != '\n');
 	cout << "Max profit from given prices is: " << MaxStockProfit(prices) << endl;
 }
-
-// TEST: Max Stock Profit: maxProfitInStock.hpp
-//    std::vector<int> prices = {10, 7, 11, 5, 8, 9};
-//    std::cout << maxStockProfit(prices) << std::endl;

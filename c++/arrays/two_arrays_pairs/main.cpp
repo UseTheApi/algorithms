@@ -12,6 +12,7 @@
 using namespace std;
 
 int main(int argc, const char *argv[]){
+    cout << "==== Two Arrays Pairs ====" << endl;
 	vector<int> arr1 = {2, 3, 4, 8};
 	vector<int> arr2 = {1, 3, 7, 9};
 

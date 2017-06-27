@@ -15,6 +15,7 @@
  using namespace std;
 
  int main(int argc, const char *argv[]){
+    cout << "==== Shortest Subarray Sum ====" << endl;
  	vector<int> array = {1, 4, 45, 6, 0, 19, 39};
  	int num = 51;
  	cout << "Case 1: " << endl;

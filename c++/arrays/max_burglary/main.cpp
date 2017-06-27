@@ -12,7 +12,7 @@
 using namespace std;
 
 int main(int argc, const char* argv[]){
-	cout << "Max Benefit in Robbery" << endl;
+	cout << "==== Max Benefit in Robbery ====" << endl;
 	vector<int> arr;
 	int item;
 

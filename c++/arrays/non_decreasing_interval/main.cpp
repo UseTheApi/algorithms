@@ -9,8 +9,19 @@
 #include "non_decreasing_interval.hpp"
 
 int main(int argc, const char *argv[]){
-	std::vector<int> init = {0, 1, 3, 2, -1, 4, 7, 9};
-	std::vector<int> result = max_increasing_interval(init);
+	std::cout << "==== Non Decreasing Interval ====" << std::endl;
+
+	std::vector<int> arr;
+
+	int item;
+
+	std::cout << "Enter elements of array: ";
+	do{
+		std::cin >> item;
+		arr.push_back(item);
+	} while(std::cin.get() != '\n');
+
+	std::vector<int> result = max_increasing_interval(arr);
 
 	for(auto it: result){
 		std::cout << it << " ";

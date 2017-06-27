@@ -13,6 +13,7 @@
 using namespace std;
 
 int main(int argc, const char *argv[]){
+    cout << "==== Product of All Numbers Except Itself ====" << endl;
 	vector<int> numbers;
 	int item;
 	cout << "Enter some integers: ";

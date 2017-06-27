@@ -13,7 +13,7 @@
 using namespace std;
 
 int main(int argc, const char *argv[]){
-	cout << "Finding a cycle in Array of relative indices" << endl;
+	cout << "==== Finding a cycle in Array of relative indices==== " << endl;
 	vector<int> arr;
 	int item;
 

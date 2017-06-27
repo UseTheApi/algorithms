@@ -18,6 +18,7 @@ using namespace std;
 //    std::cout << noDistinctValues(numbers) << std::endl;
 
 int main(int argc, const char *argv[]){
+    cout << "==== Count Distinct Elements ====" << endl;
 	vector<int> numbers;
 
 	cout << "Please enter items: ";
