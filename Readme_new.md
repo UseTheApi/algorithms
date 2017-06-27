@@ -9,11 +9,11 @@ Description for each task and solution is in folders (click on links in task lis
 
 ## Current List:
 
-### Stack & Queue: [stack_and_queue/](stack_and_queue)
+### Stack & Queue: [stack_and_queue/](c++/stack_and_queue)
     
-   1. Stack implemented with Linked List: [**stack_linked_list/**](stack_and_queue/stack_linked_list)
-   2. Queue implemented with Linked List: [**queue_linked_list/**](stack_and_queue/queue_linked_list)
-   3. Special Stack with getMin() method : [**special_stack/**](stack_and_queue/special_stack)
-   4. Stack implemented from a Queue: [**stack_queue/**](stack_and_queue/stack_queue)
-   5. Queue implemented from a Stack: [**queue_stack/**](stack_and_queue/queue_stack)
+   1. Stack implemented with Linked List: [**stack_linked_list/**](c++/stack_and_queue/stack_linked_list)
+   2. Queue implemented with Linked List: [**queue_linked_list/**](c++/stack_and_queue/queue_linked_list)
+   3. Special Stack with getMin() method : [**special_stack/**](c++/stack_and_queue/special_stack)
+   4. Stack implemented from a Queue: [**stack_queue/**](c++/stack_and_queue/stack_queue)
+   5. Queue implemented from a Stack: [**queue_stack/**](c++/stack_and_queue/queue_stack)
 
