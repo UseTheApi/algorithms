@@ -1,6 +1,6 @@
 # Algorithms Study Cases
 
-This repo contains most common algorithms and DS implementations. Solution are implemented in ```c++``` or [```python```](python).
+This repo contains most common algorithms and DS implementations. Solution are implemented in [```c++```](c++) or [```python```](python).
 
 To execute implemented tasks please follow the instructions in **wiki** of this repo.
 ##### ```Makefiles``` are provided: [wiki](https://github.com/UseTheApi/algorithms/wiki/Setting-up-a-local-project)
