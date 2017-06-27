@@ -2,10 +2,11 @@
 
 This repo contains most common algorithms and DS implementations. Solution are implemented in ```c++``` or [```python```](python).
 
-To execute implemented tasks please follow the instructions in **wiki** of this repo. 
-The list of implemented tasks is represented in ```Readme.md```
+To execute implemented tasks please follow the instructions in **wiki** of this repo.
+##### ```Makefiles``` are provided: [wiki](https://github.com/UseTheApi/algorithms/wiki/Setting-up-a-local-project)
+The list of implemented tasks is represented in ```Readme.md```.
 
-Description for each task and solution is in folders (click on links in task lists)
+Descriptions for each task and solution are in folders (click on links in task lists).
 
 ## Current List:
 
