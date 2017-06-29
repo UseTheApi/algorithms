@@ -21,9 +21,9 @@ Descriptions for each task and solution are in folders (click on links in task l
 ### Trees: [trees/](c++/trees)
 
    1. Binary Heap: [```c++```](c++/trees/binary_heap) [```python```]()
-   2. [Binary Search Tree](с++/trees/binary_search_tree)
+   2. Binary Search Tree: [```c++```](с++/trees/binary_search_tree)
         
-        1. Implementation: [**bst**](с++/trees/binary_search_tree/implementation/bst), [**avl**](с++/trees/binary_search_tree/implementation/avl)
+        1. Implementation: ```c++``` [**bst**](с++/trees/binary_search_tree/implementation/bst), [**avl**](с++/trees/binary_search_tree/implementation/avl)
         2. Traversals: [```c++```](c++/trees/binary_search_tree/traversals)
         3. Applications: [```c++```](c++/trees/binary_search_tree/application)
             * In-order Successor: [```c++```](c++/trees/binary_search_tree/application/in_order_successor)
@@ -31,3 +31,4 @@ Descriptions for each task and solution are in folders (click on links in task l
             * 2nd Largest Node in BST: [```c++```](c++/trees/binary_search_tree/application/second_largest_node)
             * Non-related nodes in BST: [```c++```](c++/trees/binary_search_tree/application/not_related_nodes)
             * Determine if two trees are equal: [```c++```](c++/trees/binary_search_tree/application/equal_trees)
+    3. Weighted Tree
