@@ -15,7 +15,7 @@ neighbours_positions = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1
 num_of_neighbours = 8
 
 
-def is_save(matrix, cur_pos, visited):
+def is_safe(matrix, cur_pos, visited):
     return (0 <= cur_pos[0] < len(matrix) and 0 <= cur_pos[1] < len(matrix)) \
            and \
            (matrix[cur_pos[0]][cur_pos[1]] and not visited[cur_pos[0]][cur_pos[1]])
@@ -33,7 +33,7 @@ def check_neighbours(matrix, cur_pos, visited):
 
     for i in range(num_of_neighbours):
         cur_neighbour = (cur_pos[0]+neighbours_positions[i][0], cur_pos[1]+neighbours_positions[i][1])
-        if is_save(matrix, cur_neighbour, visited):
+        if is_safe(matrix, cur_neighbour, visited):
             check_neighbours(matrix, cur_neighbour, visited)
 
 
