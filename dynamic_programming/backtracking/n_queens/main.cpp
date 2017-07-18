@@ -1,8 +1,8 @@
 //
 //  main.cpp
-//  algorithms. Dynamic Programming. Backtracking. Knight tour
+//  algorithms. Dynamic Programming. Backtracking. N Queens
 //
-//  Created by alifar on 03/10/17.
+//  Created by alifar on 07/18/17.
 //  Copyright © 2017 alifar. All rights reserved.
 //
 
