@@ -5,19 +5,9 @@ Given connected graph G with positive edge weights, find a min weight set of edg
 Note: Prim's Greedy Algorithm is used here
 """
 
-from python.trees.binary_heap_map import MinHeapMap
+from python.trees.binary_heap_map import init_heap
 from .undirected_graph import WGraph
 import unittest
-
-
-def init_heap(graph, start_vertex):
-    heap = MinHeapMap()
-    for v in graph.vertices:
-        if v == start_vertex:
-            heap.insert(v, 0)
-            continue
-        heap.insert(v, heap.max_int)
-    return heap
 
 
 def prim_min_spanning_tree(graph, start_v):

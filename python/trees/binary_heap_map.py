@@ -102,3 +102,18 @@ class MinHeapMap(object):
         self.array.pop()
         self.heapify(0)
         return top_v
+
+    def top(self):
+        if self.last_index < 0:
+            return None
+        return self.heap_map[self.array[0]]
+
+
+def init_heap(graph, start_vertex):
+    heap = MinHeapMap()
+    for v in graph.vertices:
+        if v == start_vertex:
+            heap.insert(v, 0)
+            continue
+        heap.insert(v, heap.max_int)
+    return heap
