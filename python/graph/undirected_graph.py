@@ -37,6 +37,18 @@ class WGraph(Graph):
         else:
             self.adj[key2].append((key1, weight))
 
+    def unique_edges(self):
+        all_edges = list()
+        visited = list()
+        for v in self.vertices:
+            neighbours = self.adj[v]
+            visited.append(v)
+            for n in neighbours:
+                if n[0] in visited:
+                    continue
+                all_edges.append((v, n[0], n[1]))
+        return all_edges
+
 
 class UGraph(Graph):
 

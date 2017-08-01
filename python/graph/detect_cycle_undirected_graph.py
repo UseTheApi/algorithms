@@ -19,7 +19,7 @@ class DisjointSet(object):
     def __init__(self, graph):
         self.parent = dict()
         for v in graph.vertices:
-            self.parent[v] = list()
+            self.parent[v] = set()
 
     def find(self, v):
         for vertex in self.parent:
@@ -28,7 +28,19 @@ class DisjointSet(object):
         return None
 
     def union(self, v1, v2):
-        self.parent[v1].append(v2)
+        p1 = None
+        p2 = None
+        for vertex in self.parent:
+            if v1 in self.parent[vertex]:
+                self.parent[vertex].add(v2)
+                p1 = vertex
+            if v2 in self.parent[vertex]:
+                self.parent[vertex].add(v1)
+                p2 = vertex
+        if p1 and p2:
+            self.parent[p1].add(p2)
+            self.parent[p2].add(p1)
+        self.parent[v1].add(v2)
 
     def __str__(self):
         return str(self.parent)
