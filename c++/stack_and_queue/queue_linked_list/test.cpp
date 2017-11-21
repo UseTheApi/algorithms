@@ -3,7 +3,7 @@
 //  algorithms. stack and queue implementations. queue_linked_list
 //
 //  Created by alifar on 11/20/17.
-//  Copyright © 2016 alifar. All rights reserved.
+//  Copyright © 2017 alifar. All rights reserved.
 //
 
 #define CATCH_CONFIG_MAIN

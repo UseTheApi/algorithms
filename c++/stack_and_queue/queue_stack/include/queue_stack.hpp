@@ -27,9 +27,11 @@ QueueFromStack<T>::QueueFromStack(){
 	stack2 = new Stack<T>();
 }
 
+
+
 template <class T>
 void QueueFromStack<T>::Enqueue(T new_data){
-	/* Expensive Enqueue: 
+	/* Expensive Enqueue:
 	   1. popping everything from stack 1 to stack 2 until empty
 	   2. pushing an item to stack1
 	   3. popping from stack2 back to stack1, so item to be Dequeue is on top
