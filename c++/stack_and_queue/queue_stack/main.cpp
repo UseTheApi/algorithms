@@ -22,19 +22,19 @@ using namespace std;
 int main(int argc, const char *argv[]){
 	cout << "Queue Implemented with Stack" << endl;
 
-	QueueFromStack<int> *queue = new QueueFromStack<int>();
+	QueueFromStack<int> queue;
 
 	cout << "Enqueue several items to a queue: ";
 	int item;
 	do{
 		cin >> item;
-		queue->Enqueue(item);
+		queue.Enqueue(item);
 	} while(cin.get() != '\n');
 
 	cout << "Dequeueing items until empty" << endl;
-	while(!queue->empty()){
-		cout << "Top of Stack: " << queue->Top() << endl;
-		queue->Dequeue();
+	while(!queue.empty()){
+		cout << "Top of Stack: " << queue.Top() << endl;
+		queue.Dequeue();
 	}
 	cout << "Done" << endl;
 

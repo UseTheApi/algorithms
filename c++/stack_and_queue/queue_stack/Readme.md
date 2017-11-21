@@ -1,7 +1,7 @@
 # Queue from Stack
 
 #### Task
-Implement a Queue data structure using Stack implemented [**stack**](/c++/stack_and_queue/stack_linked_list).
+Implement a Queue data structure using standard implementation of stack.
 
 #### Notes
 Queue data structure may be implemented with 2 stacks. When implementing Queue through Stack there is a tradeoff. We only can make 1 of Queue operations effective - ```Enqueue``` or ```Dequeue```.
