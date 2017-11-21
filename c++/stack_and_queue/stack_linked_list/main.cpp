@@ -15,18 +15,13 @@ int main(int argc, const char *argv[]){
 	cout << "Stack Implemented with Linked List" << endl;
 
 	Stack<int> stack;
-	
+
 	int item;
 	cout << "Add items to Stack (press Enter to proceed): ";
 	do{
 		cin >> item;
 		stack.Push(item);
 	} while(cin.get() != '\n');
-
-	cout << "ForEach loop on Stack: ";
-	for(auto it: stack){
-		cout << it << " ";
-	}
 
 	cout << "Popping 1 item from Stack" << endl;
 	stack.Pop();
@@ -38,16 +33,10 @@ int main(int argc, const char *argv[]){
 		stack.Push(item);
 	} while(cin.get() != '\n');
 
-	cout << "ForEach loop on Stack: ";
-	for(auto it: stack){
-		cout << it << " ";
-	}
-	cout << endl;
-
 	cout << "Popping items until Empty: ";
 	while(!stack.empty()){
 		stack.Pop();
-	} 
+	}
 	cout << endl;
 
 	return 0;

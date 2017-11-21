@@ -12,52 +12,50 @@
 template <class T>
 class Stack{
 public:
-	Stack();
-	Stack(T);
+	// Functionality
 	void Push(T); // adds new item to stack
 	void Pop(); // removes an item from stack
-	bool empty(); 
+	bool empty();
 	Stack<T> * Top(); // returns top of stack (next to be removed item)
 	T get_data();
 	void set_data(T);
 	Stack * get_next();
 	void set_next(Stack *);
+	// Infrastructure
 	template <class S>
 	friend std::ostream & operator<<(std::ostream &os, const Stack<S> *node);
-	// This part to allow foreach loop for this DS
-	typedef T* iterator;
-	typedef const T* const_iterator;
-	iterator begin(){ return &store_[0]; };
-	const_iterator begin() const { return &store_[0]; };
-	iterator end(){ return &store_[size_]; };
-	const_iterator end() const { return &store_[size_]; };
+	Stack(){};
+	Stack(T);
+	~Stack();
 private:
-	T data_;
-	Stack *next_;
-	Stack *head_;
-	std::vector<T> store_;
-	size_t size_;
+	T data_ = 0;
+	Stack *next_ = nullptr;
+	Stack *head_ = nullptr;
+	size_t size_ = 0;
 };
-
-template <class T>
-Stack<T>::Stack(){
-	next_ = 0;
-	head_ = 0;
-	size_ = 0;
-}
 
 template <class T>
 Stack<T>::Stack(T init_data){
 	data_ = init_data;
-	next_ = 0;
-	head_ = 0;
 	size_ = 1;
+}
+
+template <class T>
+Stack<T>::~Stack(){
+	if(!head_){
+		return;
+	}
+	Stack<T> *next;
+	while(head_){
+		next = head_->next_;
+		delete head_;
+		head_ = next;
+	}
 }
 
 template <class T>
 void Stack<T>::Push(T new_data){
 	++size_;
-	store_.insert(store_.begin(), new_data);
 	if(!head_){
 		head_ = new Stack<T>(new_data);
 		return;
@@ -73,7 +71,6 @@ void Stack<T>::Pop(){
 		return;
 	}
 	--size_;
-	store_.erase(store_.begin());
 	Stack<T> *tmp = head_;
 	delete head_;
 	head_ = tmp->next_;
