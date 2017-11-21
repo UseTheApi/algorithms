@@ -11,11 +11,11 @@
 template <class T>
 class QueueFromStack{
 public:
-	QueueFromStack(){};
 	void Enqueue(T);
 	void Dequeue();
 	T Top();
 	bool empty();
+	QueueFromStack(){};
 private:
 	std::stack<T> stack1;
 	std::stack<T> stack2;

@@ -3,7 +3,8 @@ project (stack_queue)
 
 add_definitions(-std=c++11)
 
-include_directories($ENV{algorithms}/c++/stack_and_queue/queue_linked_list/include)
 include_directories(include)
+include_directories(../../..)
 
 add_executable(stack_queue main.cpp)
+add_executable(stack_queue_test test.cpp)

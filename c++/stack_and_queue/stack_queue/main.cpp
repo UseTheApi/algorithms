@@ -14,19 +14,19 @@ using namespace std;
 int main(int argc, const char *argv[]){
 	cout << "Stack Implemented with Queue" << endl;
 
-	StackFromQueue<int> *stack = new StackFromQueue<int>();
+	StackFromQueue<int> stack;
 
 	int item;
 	cout << "Push several items to a stack: ";
 	do{
 		cin >> item;
-		stack->Push(item);
+		stack.Push(item);
 	} while(cin.get() != '\n');
 
 	cout << "Popping items until empty" << endl;
-	while(!stack->empty()){
-		cout << "Top of Stack: " << stack->Top() << endl;
-		stack->Pop();
+	while(!stack.empty()){
+		cout << "Top of Stack: " << stack.Top() << endl;
+		stack.Pop();
 	}
 	cout << "Done" << endl;
 
