@@ -1,25 +1,23 @@
 //
-//  detect_remove_loop.cpp
-//  algorithms
+//  linked_list.hpp
+//  algorithms. Linked List. Implementation
 //
-//  Created by alifar on 9/4/16.
-//  Copyright © 2016 alifar. All rights reserved.
+//  Created by alifar on 11/22/17.
+//  Copyright © 2017 alifar. All rights reserved.
 //
+
 #include <vector>
 #include <iostream>
+#include <limits>
 
 template <class T>
 class LinkedList{
 public:
-	typedef T* iterator;
-	typedef const T* const_iterator;
-	LinkedList();
-	LinkedList(T);
-	T get_data();
-	void set_data(T);
+	// public fields
+	T value;
+	// Functionality
 	LinkedList<T> * top();
 	LinkedList<T> * next();
-	void set_next(LinkedList<T> *);
 	void push(T);
 	void append(T);
 	void remove_head();
@@ -28,41 +26,69 @@ public:
 	void print_list();
 	LinkedList<T> * get_last();
 	LinkedList<T> * get_node(T);
-	iterator begin() { return &store_[0]; };
-	const_iterator begin() const { return &store_[0]; };
-	iterator end() { return &store_[size_]; };
-	const_iterator end() const { return &store_[size_]; };
+	void set_next(LinkedList<T> *);
+	bool empty();
+	// Infrastructure
+	LinkedList(){};
+	LinkedList(T);
+	~LinkedList();
+	template <class S>
+	friend std::ostream & operator<<(std::ostream &os, const LinkedList<S> &node);
+	// Iterator
+	class iterator;
+	friend class iterator;
+	class iterator{
+	public:
+		iterator(const LinkedList* begin): it_(begin){};
+		iterator& operator++(){
+			it_ = it_->next_node_;
+			return *this;
+		}
+		bool operator==(const iterator& rhs) const{
+			return it_ == rhs.it_;
+		}
+		bool operator!=(const iterator& rhs) const{
+			return !(*this == rhs);
+		}
+		T operator*() const{
+			return it_->value;
+		}
+	private:
+		const LinkedList* it_;
+	};
+
+	iterator begin() const{
+		return iterator(head_);
+	}
+	iterator end() const{
+		return iterator(nullptr);
+	}
+
 private:
-	T data_;
-	LinkedList<T> *next_node_;
-	LinkedList<T> *head_;
-	std::vector<T> store_;
+	LinkedList<T> *next_node_ = nullptr;
+	LinkedList<T> *head_ = nullptr;
 	int size_;
 };
 
 template <class T>
-LinkedList<T>::LinkedList(){
-	next_node_ = 0;
-	head_ = 0;
-	size_ = 0;
-}
-
-template <class T>
 LinkedList<T>::LinkedList(T init_data){
-	data_ = init_data;
-	next_node_ = 0;
-	head_ = 0;
+	value = init_data;
 	size_ = 1;
 }
 
 template <class T>
-T LinkedList<T>::get_data(){
-	return data_;
+LinkedList<T>::~LinkedList(){
+	LinkedList<T> *tmp;
+	while(head_){
+		tmp = head_;
+		head_ = head_->next_node_;
+		delete tmp;
+	}
 }
 
 template <class T>
-void LinkedList<T>::set_data(T new_data){
-	data_ = new_data;
+bool LinkedList<T>::empty(){
+	return !head_;
 }
 
 template <class T>
@@ -83,7 +109,6 @@ void LinkedList<T>::set_next(LinkedList<T> *new_node){
 template <class T>
 void LinkedList<T>::push(T new_data){
 	++size_;
-	store_.insert(store_.begin(), new_data);
 	if(!head_){
 		head_ = new LinkedList<T>(new_data);
 		return;
@@ -96,7 +121,6 @@ void LinkedList<T>::push(T new_data){
 template <class T>
 void LinkedList<T>::append(T new_data){
 	++size_;
-	store_.push_back(new_data);
 	if(!head_){
 		head_ = new LinkedList<T>(new_data);
 		return;
@@ -115,7 +139,6 @@ void LinkedList<T>::remove_head(){
 		return;
 	}
 	--size_;
-	store_.erase(store_.begin());
 	LinkedList<T> *tmp = head_;
 	delete head_;
 	head_ = tmp->next_node_;
@@ -124,7 +147,6 @@ void LinkedList<T>::remove_head(){
 template <class T>
 void LinkedList<T>::remove_last(){
 	--size_;
-	store_.pop_back();
 	if(!head_){
 		return;
 	}
@@ -140,22 +162,18 @@ void LinkedList<T>::remove_last(){
 template <class T>
 void LinkedList<T>::remove(T some_data){
 	--size_;
-	int shift = 0;
-	for(auto it: store_){
-		if(some_data == it){
-			break;
-		}
-		++shift;
-	}
-	store_.erase(store_.begin()+shift);
 	if(!head_){
 		return;
 	}
+	if(head_->value == some_data){
+		remove_head();
+		return;
+	}
 	LinkedList<T> *last = head_;
-	while(last->next_node_){
-		if(last->next_node_->data_ == some_data){
-			LinkedList<T> *tmp = last->next_node_;
-			last->next_node_ = tmp->next_node_;
+	while(last){
+		if(last->value == some_data){
+			LinkedList<T> *tmp = last;
+			last = tmp->next_node_;
 			delete tmp;
 			return;
 		}
@@ -163,13 +181,12 @@ void LinkedList<T>::remove(T some_data){
 	}
 }
 
-template <class T>
-void LinkedList<T>::print_list(){
-	LinkedList<T> *cur = head_;
-	while(cur){
-		std::cout << cur->data_ << " ";
-		cur = cur->next_node_;
+template <class S>
+std::ostream & operator<<(std::ostream &os, const LinkedList<S> &node){
+	for(auto it: node){
+		os << it << " ";
 	}
+	return os;
 }
 
 template <class T>
