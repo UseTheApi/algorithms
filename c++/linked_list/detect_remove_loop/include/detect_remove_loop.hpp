@@ -1,6 +1,6 @@
 //
 //  detect_remove_loop.hpp
-//  algorithms
+//  algorithms. Linked List.
 //
 //  Created by alifar on 9/4/16.
 //  Copyright © 2016 alifar. All rights reserved.
@@ -13,12 +13,6 @@
   5->4->3->6->1->9
         |________|
  Write a function to detect and remove the loop.
-
- Tip to a solution: list is singly linked (meands that loop can go only from the last node)
-
- There are multiple solutions: the most effective is to go with slow and fast pointer untill they meet each other
- Removing is based on calculating a length of the loop and moving from the head to start of the loop
-
 */
 
 template <class T>
@@ -27,7 +21,7 @@ void remove_loop(LinkedList<T> *head, LinkedList<T> *detection_node){
 	LinkedList<T> *node_in_loop = head->next();
 	while(after_detection != detection_node){
 		if(after_detection->next() == head){
-			after_detection->set_next(0);
+			after_detection->set_next(nullptr);
 			return;
 		}
 		node_in_loop = node_in_loop->next();
@@ -39,7 +33,7 @@ void remove_loop(LinkedList<T> *head, LinkedList<T> *detection_node){
 		tmp_head = tmp_head->next();
 		node_in_loop = node_in_loop->next();
 	}
-	node_in_loop->set_next(0);
+	node_in_loop->set_next(nullptr);
 }
 
 template <class T>

@@ -14,7 +14,8 @@ template <class T>
 class LinkedList{
 public:
 	// public fields
-	T value;
+	T value = 0;
+	size_t size = 0;
 	// Functionality
 	LinkedList<T> * top();
 	LinkedList<T> * next();
@@ -67,13 +68,12 @@ public:
 private:
 	LinkedList<T> *next_node_ = nullptr;
 	LinkedList<T> *head_ = nullptr;
-	int size_;
 };
 
 template <class T>
 LinkedList<T>::LinkedList(T init_data){
 	value = init_data;
-	size_ = 1;
+	size = 1;
 }
 
 template <class T>
@@ -84,6 +84,7 @@ LinkedList<T>::~LinkedList(){
 		head_ = head_->next_node_;
 		delete tmp;
 	}
+	size = 0;
 }
 
 template <class T>
@@ -108,7 +109,7 @@ void LinkedList<T>::set_next(LinkedList<T> *new_node){
 
 template <class T>
 void LinkedList<T>::push(T new_data){
-	++size_;
+	++size;
 	if(!head_){
 		head_ = new LinkedList<T>(new_data);
 		return;
@@ -120,7 +121,7 @@ void LinkedList<T>::push(T new_data){
 
 template <class T>
 void LinkedList<T>::append(T new_data){
-	++size_;
+	++size;
 	if(!head_){
 		head_ = new LinkedList<T>(new_data);
 		return;
@@ -138,15 +139,14 @@ void LinkedList<T>::remove_head(){
 	if(!head_){
 		return;
 	}
-	--size_;
 	LinkedList<T> *tmp = head_;
 	delete head_;
 	head_ = tmp->next_node_;
+	size > 0 ? --size : size = 0;
 }
 
 template <class T>
 void LinkedList<T>::remove_last(){
-	--size_;
 	if(!head_){
 		return;
 	}
@@ -157,11 +157,11 @@ void LinkedList<T>::remove_last(){
 	LinkedList<T> *to_remove = last->next_node_;
 	last->next_node_ = 0;
 	delete to_remove;
+	size > 0 ? --size : size = 0;
 }
 
 template <class T>
 void LinkedList<T>::remove(T some_data){
-	--size_;
 	if(!head_){
 		return;
 	}
@@ -179,6 +179,7 @@ void LinkedList<T>::remove(T some_data){
 		}
 		last = last->next_node_;
 	}
+	size > 0 ? --size : size = 0;
 }
 
 template <class S>
@@ -202,7 +203,7 @@ template <class T>
 LinkedList<T> * LinkedList<T>::get_node(T given_data){
 	LinkedList<T> *cur = head_;
 	while(cur){
-		if(cur->get_data() == given_data){
+		if(cur->value == given_data){
 			return cur;
 		}
 		cur = cur->next_node_;
