@@ -20,7 +20,8 @@ Descriptions for each task and solution are in folders (click on links in task l
 
 ## Linked List: [linked_list/](/c++/linked_list)
 
-   1. Implementation of a class: [**implementation**](/c++/linked_list/implementation)
+   1. Implementation of a class: [**implementation/**](/c++/linked_list/implementation)
+   2. Detect and Remove cycle: [**detect_remove_loop/**](/c++/linked_list/detect_remove_loop)
 
 ### Trees: [trees/](c++/trees)
 
