@@ -16,3 +16,12 @@ There are multiple solutions: the most effective is to go with slow and fast poi
 
 ###### Cycle removal
 Removing is based on calculating a length of the loop and moving from the head to start of the loop. Calculating a length can be done by incrementing a flag, or by moving a **head pointer**.
+
+This implementation contains a few template functions that work with template class ```LinkedList```.
+```make``` helps generate main and test binaries to run tests or interactive main program.
+
+#### Targets:
+  * ```make build```
+  * ```make run```
+  * ```make test```
+  * ```make clean```

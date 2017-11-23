@@ -8,4 +8,12 @@ Linked List represents a linear Data Structure where each node has a pointer to 
 
 ![linked_list](/static/linked_list.png)
 
-This implementation contains a template class LinkedList with iterator implemented for it. head of list, pointer to next and value are stored in this class.
+This implementation contains a ```template class``` LinkedList with iterator implemented for it. head of list, pointer to next and value are stored in this class.
+
+```make``` helps generate main and test binaries to run tests or interactive main program.
+
+#### Targets:
+  * ```make build```
+  * ```make run```
+  * ```make test```
+  * ```make clean```
