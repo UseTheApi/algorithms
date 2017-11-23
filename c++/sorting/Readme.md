@@ -14,7 +14,7 @@ Selection sort is the most conceptually simple of all the sorting algorithms. It
 
 ## Sorting Algorithms Comparison
 ##### http://bigocheatsheet.com/
-![sort_algo_compared](/static/sort_algo_compared.png)
+<img src="/static/sort_algo_compared.png" width="600">
 
 #### Notes
 Sorting Algorithms are implemented in ```include/sorting.hpp``` source file. ```make``` helps generate main and test binaries to run tests or interactive main program.
