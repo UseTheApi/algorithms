@@ -3,4 +3,8 @@ project (sorting)
 
 add_definitions(-std=c++11)
 
-add_executable(sorting selection_sort.cpp insertion_sort.cpp merge_sort.cpp main.cpp)
+include_directories(include)
+include_directories(../..)
+
+add_executable(sorting main.cpp)
+add_executable(sorting_test test.cpp)

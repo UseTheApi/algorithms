@@ -1,13 +1,14 @@
 //
 //  main.cpp
-//  algorithms
+//  algorithms. Sorting. Implementations
 //
-//  Created by alifar on 8/7/16.
-//  Copyright © 2016 alifar. All rights reserved.
-//
-#include "selection_sort.hpp"
-#include "insertion_sort.hpp"
-#include "merge_sort.hpp"
+//  Created by alifar on 11/23/17.
+//  Copyright © 2017 alifar. All rights reserved.
+
+#include "sorting.hpp"
+#include <iostream>
+
+using sort_function = std::function<std::vector<int>(const std::vector<int> &)>;
 
 void print_array(const std::vector<int> &array){
 	for(auto it: array){
@@ -16,46 +17,25 @@ void print_array(const std::vector<int> &array){
 	std::cout << std::endl;
 }
 
-void selection_sort_run(){
+void sort_run(sort_function sort_func, std::vector<int> to_sort){
 	std::cout << "Given array: ";
-	std::vector<int> arr = {5, 3, 6, 1, 7};
-
-	print_array(arr);
-
-	selection_sort(arr);
-
-	std::cout << "Result of Selection Sort: ";
-	print_array(arr);
-}
-
-void insertion_sort_run(){
-	std::cout << "Given array: ";
-	std::vector<int> arr = {5, 3, 6, 1, 7};
-
-	print_array(arr);
-
-	insertion_sort(arr);
-
-	std::cout << "Result of Insertion Sort: ";
-	print_array(arr);
-}
-
-void merge_sort_run(){
-	std::cout << "Given array: ";
-	std::vector<int> arr = {5, 3, 6, 1, 7};
-
-	print_array(arr);
-
-	merge_sort(arr);
-
-	std::cout << "Result of Merge Sort: ";
-	print_array(arr);
+	print_array(to_sort);
+	std::vector<int> result;
+	result = sort_func(to_sort);
+	print_array(result);
 }
 
 int main(int argc, const char *argv[]){
-	selection_sort_run();
 
-	insertion_sort_run();
+	std::cout << "== Sorting array ==" << std::endl;
 
-	merge_sort_run();
+	std::cout << "Enter integer items to sort and hit Enter: ";
+	std::vector<int> items;
+	int num;
+	do{
+		std::cin >> num;
+		items.push_back(num);
+	} while(std::cin.get() != '\n');
+
+	sort_run(selection_sort, items);
 }
