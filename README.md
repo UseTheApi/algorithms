@@ -23,6 +23,10 @@ Descriptions for each task and solution are in folders (click on links in task l
    1. Implementation of a class: [**implementation/**](/c++/linked_list/implementation)
    2. Detect and Remove cycle: [**detect_remove_loop/**](/c++/linked_list/detect_remove_loop)
 
+## Sorting: [sorting/](/c++/sorting)
+
+   1. Selection Sort [**selection_sort**](/c++/sorting/include/sorting.hpp#L17)
+
 ### Trees: [trees/](c++/trees)
 
    1. Binary Heap: [```c++```](c++/trees/binary_heap) [```python```]()

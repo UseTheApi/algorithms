@@ -10,7 +10,7 @@ Sorting Algorithms implemented:
 
 Selection sort is the most conceptually simple of all the sorting algorithms. It works by selecting the smallest (or largest, if you want to sort from big to small) element of the array and placing it at the head of the array. Then the process is repeated for the remainder of the array; the next largest element is selected and put into the next slot, and so on down the line. [(c)](https://www.cprogramming.com/tutorial/computersciencetheory/sorting2.html)
 
-**Time Complexity**: ```O(n)``` **Space Complexity**: ```O(1)```
+**Time Complexity**: ```O(n^2)``` **Space Complexity**: ```O(1)```
 
 ## Sorting Algorithms Comparison
 ##### http://bigocheatsheet.com/
