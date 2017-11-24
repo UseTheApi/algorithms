@@ -37,5 +37,8 @@ int main(int argc, const char *argv[]){
 		items.push_back(num);
 	} while(std::cin.get() != '\n');
 
+	std::cout << "Selection Sort: ";
 	sort_run(selection_sort, items);
+	std::cout << "Insertion Sort: ";
+	sort_run(insertion_sort, items);
 }

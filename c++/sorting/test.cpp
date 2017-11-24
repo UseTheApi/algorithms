@@ -17,6 +17,9 @@ TEST_CASE("Empty vector sort"){
 
   result = selection_sort(items);
   REQUIRE(result == items);
+
+  result = insertion_sort(items);
+  REQUIRE(result == items);
 }
 
 TEST_CASE("Ascending Ordered vector sort"){
@@ -24,6 +27,9 @@ TEST_CASE("Ascending Ordered vector sort"){
   std::vector<int> result;
 
   result = selection_sort(items);
+  REQUIRE(result == items);
+
+  result = insertion_sort(items);
   REQUIRE(result == items);
 }
 
@@ -34,7 +40,9 @@ TEST_CASE("Descending Ordered vector sort ascendingly"){
   std::vector<int> result;
 
   result = selection_sort(items);
+  REQUIRE(result == sorted_items);
 
+  result = insertion_sort(items);
   REQUIRE(result == sorted_items);
 }
 
@@ -45,6 +53,8 @@ TEST_CASE("Random vector sort ascendingly"){
   std::vector<int> result;
 
   result = selection_sort(items);
+  REQUIRE(result == sorted_items);
 
+  result = insertion_sort(items);
   REQUIRE(result == sorted_items);
 }
