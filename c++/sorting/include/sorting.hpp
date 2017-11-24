@@ -7,6 +7,7 @@
 //
 
 #include <vector>
+#include <iostream>
 
 void swap(int &el1, int &el2){
   int tmp = el1;
@@ -80,4 +81,75 @@ std::vector<int> insertion_sort(const std::vector<int> &array){
     result[left_i+1] = key;
   }
   return result;
+}
+
+std::vector<int> merge(std::vector<int> &array, int l_start, int l_end, int r_start, int r_end){
+  /*
+  Merge two sorted parts of array.
+  keep comparing both parts until one is empty.
+  then adding what's left from available part.
+  returning modificated array.
+  merge sort: 5 2 1 7 4 9 split start
+          /             \
+      5 2 1           7 4 9
+     /   \             /  \
+  5 2     1          7 4   9
+  / \    /           / \    \
+  5 2   1           7  4    9 split done. merge start
+  \ /   /           \ /     \
+  2 5  1            4 7     9
+    \ /               \    /
+  1 2 5              4 7 9
+        \           /
+        1 2 4 5 7 9 merge done
+  */
+  std::vector<int> result = array;
+  int l_i = l_start;
+  int r_i = r_start;
+  int i = l_start;
+  while(l_i <= l_end && r_i <= r_end){
+    // comparing elements in both parts
+    if(result[l_i] < result[r_i]){
+      array[i] = result[l_i];
+      l_i++;
+    } else{
+      array[i] = result[r_i];
+      r_i++;
+    }
+    i++;
+  }
+  while(l_i <= l_end){
+    // add what's left in left part
+    array[i] = result[l_i];
+    l_i++; i++;
+  }
+  while(r_i <= r_end){
+    // add what's left in right part
+    array[i] = result[r_i];
+    r_i++; i++;
+  }
+  return array;
+}
+
+std::vector<int> merge_sort_helper(std::vector<int> &array, int begin, int last){
+  /*
+  Split array in parts and merge sorted.
+  Split happens around middle element that is calculating on each revursive call.
+  merge happens in bottom-up manner.
+  */
+  if(begin >= last){
+    return array;
+  }
+  int middle = (last+begin)/2;
+
+  merge_sort_helper(array, begin, middle);
+  merge_sort_helper(array, middle+1, last);
+
+  return merge(array, begin, middle, middle+1, last);
+}
+
+std::vector<int> merge_sort(const std::vector<int> &array){
+  // wrapper for recuirsive sort.
+  std::vector<int> result = array;
+  return merge_sort_helper(result, 0, array.size()-1);
 }

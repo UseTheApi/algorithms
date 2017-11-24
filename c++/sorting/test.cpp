@@ -20,6 +20,9 @@ TEST_CASE("Empty vector sort"){
 
   result = insertion_sort(items);
   REQUIRE(result == items);
+
+  result = merge_sort(items);
+  REQUIRE(result == items);
 }
 
 TEST_CASE("Ascending Ordered vector sort"){
@@ -30,6 +33,9 @@ TEST_CASE("Ascending Ordered vector sort"){
   REQUIRE(result == items);
 
   result = insertion_sort(items);
+  REQUIRE(result == items);
+
+  result = merge_sort(items);
   REQUIRE(result == items);
 }
 
@@ -44,6 +50,9 @@ TEST_CASE("Descending Ordered vector sort ascendingly"){
 
   result = insertion_sort(items);
   REQUIRE(result == sorted_items);
+
+  result = merge_sort(items);
+  REQUIRE(result == sorted_items);
 }
 
 TEST_CASE("Random vector sort ascendingly"){
@@ -56,5 +65,8 @@ TEST_CASE("Random vector sort ascendingly"){
   REQUIRE(result == sorted_items);
 
   result = insertion_sort(items);
+  REQUIRE(result == sorted_items);
+
+  result = merge_sort(items);
   REQUIRE(result == sorted_items);
 }

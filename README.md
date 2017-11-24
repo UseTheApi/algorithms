@@ -27,6 +27,7 @@ Descriptions for each task and solution are in folders (click on links in task l
 
    1. Selection Sort [**selection_sort**](/c++/sorting/include/sorting.hpp#L17)
    2. Insertion Sort [**insertion_sort**](/c++/sorting/include/sorting.hpp#L50)
+   3. Merge Sort [**merge_sort**](/c++/sorting/include/sorting.hpp#L151)
 
 ### Trees: [trees/](c++/trees)
 

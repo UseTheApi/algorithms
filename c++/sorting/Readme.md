@@ -20,6 +20,16 @@ Insertion Sort inserts each element of the array into its proper position, leavi
 
 *Insertion Sort* shows better performance then *Selection Sort*.
 
+### Merge Sort
+
+Here's how merge sort uses *divide-and-conquer*:
+
+  1. Divide by finding the number ``q``of the position midway between ```p``` and ```r```. ```q``` is a middle element of an array at current time.
+  2. Conquer by recursively sorting the subarrays in each of the two subproblems created by the divide step. That is, recursively sort the subarray ```array[p..q]``` and recursively sort the subarray ```array[q+1..r]```.
+  3. Combine by merging the two sorted subarrays back into the single sorted subarray ```array[p..r]```.
+
+  **Time Complexity**: ```O(n log(n))``` **Space Complexity**: ```O(n)```
+
 ## Sorting Algorithms Comparison
 ##### http://bigocheatsheet.com/
 <img src="/static/sort_algo_compared.png" width="600">
