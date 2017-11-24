@@ -5,8 +5,8 @@ Sorting is one of the main basic areas of Algorithms.
 Sorting Algorithms implemented:
 
   * [**Selection Sort**](/c++/sorting/include/sorting.hpp#L17)
-  * [**Insertion Sort**](/c++/sorting/include/sorting.hpp#L50)
-  * [**Merge Sort**](/c++/sorting/include/sorting.hpp#L15)
+  * [**Insertion Sort**](/c++/sorting/include/sorting.hpp#L51)
+  * [**Merge Sort**](/c++/sorting/include/sorting.hpp#L151)
 
 ### Selection Sort
 
