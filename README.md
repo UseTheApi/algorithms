@@ -29,6 +29,10 @@ Descriptions for each task and solution are in folders (click on links in task l
    2. Insertion Sort [**insertion_sort**](/c++/sorting/include/sorting.hpp#L50)
    3. Merge Sort [**merge_sort**](/c++/sorting/include/sorting.hpp#L151)
 
+## Binary Min Heap: [binary_heap](/c++/binary_heap/)
+
+  1. Implementation of a class: [**implementation**](/c++/binary_heap/implementation)
+
 ### Trees: [trees/](c++/trees)
 
    1. Binary Heap: [```c++```](c++/trees/binary_heap) [```python```]()
