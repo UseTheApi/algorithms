@@ -18,18 +18,18 @@ Descriptions for each task and solution are in folders (click on links in task l
    4. Stack implemented from a Queue: [**stack_queue/**](/c++/stack_and_queue/stack_queue)
    5. Queue implemented from a Stack: [**queue_stack/**](/c++/stack_and_queue/queue_stack)
 
-## Linked List: [linked_list/](/c++/linked_list)
+### Linked List: [linked_list/](/c++/linked_list)
 
    1. Implementation of a class: [**implementation/**](/c++/linked_list/implementation)
    2. Detect and Remove cycle: [**detect_remove_loop/**](/c++/linked_list/detect_remove_loop)
 
-## Sorting: [sorting/](/c++/sorting)
+### Sorting: [sorting/](/c++/sorting)
 
    1. Selection Sort [**selection_sort**](/c++/sorting/include/sorting.hpp#L17)
    2. Insertion Sort [**insertion_sort**](/c++/sorting/include/sorting.hpp#L50)
    3. Merge Sort [**merge_sort**](/c++/sorting/include/sorting.hpp#L151)
 
-## Binary Min Heap: [binary_heap](/c++/binary_heap/)
+### Binary Min Heap: [binary_heap](/c++/binary_heap/)
 
   1. Implementation of a class: [**implementation**](/c++/binary_heap/implementation)
 
