@@ -8,6 +8,7 @@
 #include "sorting.hpp"
 #include <iostream>
 
+// C++11 std::function allows to pass function as parameter easier
 using sort_function = std::function<std::vector<int>(const std::vector<int> &)>;
 
 void print_array(const std::vector<int> &array){
@@ -41,4 +42,8 @@ int main(int argc, const char *argv[]){
 	sort_run(selection_sort, items);
 	std::cout << "Insertion Sort: ";
 	sort_run(insertion_sort, items);
+	std::cout << "Merge Sort: ";
+	sort_run(merge_sort, items);
+	std::cout << "Heap Sort: ";
+	sort_run(heap_sort, items);
 }

@@ -32,6 +32,16 @@ Here's how merge sort uses *divide-and-conquer*:
 
   **Time Complexity**: ```O(n log(n))``` **Space Complexity**: ```O(n)```
 
+### Heap Sort
+
+Heap Sort uses *Heap* Data Structure. You can get more familiar with *Heap* DS and its implementation [here](/c++/binary_heap/).
+
+Heap Sort is in-place sorting algorithm. Heap Sort does not support elements position order (meaning that if array has a few elements with same value, they will not be place in the same order as in original array). This happens because on each step of algorithm, we remove **max/min** from *Heap* and *Heap* DS get rebalanced by ```Heapify()``` operation.
+
+**Time Complexity**: ```O(n log(n))```
+**Space Complexity**: ```O(n)``` in case of using independent Heap DS
+**Space Complexity**: ```O(1)``` in case of using ```BuildHeap()``` method.
+
 ## Sorting Algorithms Comparison
 ##### http://bigocheatsheet.com/
 <img src="/static/sort_algo_compared.png" width="600">

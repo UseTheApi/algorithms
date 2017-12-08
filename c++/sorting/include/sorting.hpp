@@ -8,6 +8,7 @@
 
 #include <vector>
 #include <iostream>
+#include <queue>
 
 void swap(int &el1, int &el2){
   int tmp = el1;
@@ -152,4 +153,30 @@ std::vector<int> merge_sort(const std::vector<int> &array){
   // wrapper for recuirsive sort.
   std::vector<int> result = array;
   return merge_sort_helper(result, 0, array.size()-1);
+}
+
+struct compare{
+  /*
+  Comparator struct for standard priority queue to support MinHeap.
+  */
+  bool operator()(const int &l, const int &r){
+    return l > r;
+  }
+};
+
+std::vector<int> heap_sort(const std::vector<int> &array){
+  /*
+  Heap Sort is done through adding all items from given array into a MinHeap.
+  Then Extracting Min from MinHeap one by one and replacing items in result sorted array.
+  */
+  std::vector<int> result = array;
+  std::priority_queue<int, std::vector<int>, compare> heap;
+  for(auto it: result){
+    heap.push(it);
+  }
+  for(int i=0; i < result.size(); ++i){
+    result[i] = heap.top();
+    heap.pop();
+  }
+  return result;
 }
