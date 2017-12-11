@@ -25,9 +25,10 @@ Descriptions for each task and solution are in folders (click on links in task l
 
 ### Sorting: [sorting/](/c++/sorting)
 
-   1. Selection Sort [**selection_sort**](/c++/sorting/include/sorting.hpp#L17)
-   2. Insertion Sort [**insertion_sort**](/c++/sorting/include/sorting.hpp#L50)
-   3. Merge Sort [**merge_sort**](/c++/sorting/include/sorting.hpp#L151)
+   1. Selection Sort [**selection_sort**](/c++/sorting/include/sorting.hpp#L19)
+   2. Insertion Sort [**insertion_sort**](/c++/sorting/include/sorting.hpp#L52)
+   3. Merge Sort [**merge_sort**](/c++/sorting/include/sorting.hpp#L152)
+   4. Heap Sort [**heap_sort**](/c++/sorting/include/sorting.hpp#L167)
 
 ### Binary Min Heap: [binary_heap](/c++/binary_heap/)
 
