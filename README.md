@@ -48,3 +48,11 @@ Descriptions for each task and solution are in folders (click on links in task l
             * Non-related nodes in BST: [```c++```](c++/trees/binary_search_tree/application/not_related_nodes)
             * Determine if two trees are equal: [```c++```](c++/trees/binary_search_tree/application/equal_trees)
     3. Weighted Tree
+
+### Dynamic programming: [dp_python](python/dynamic_programming/)
+
+    1. Edit Distance: [```python```](python/dynamic_programming/edit_distance#L63)
+
+### Recursion:
+
+    1. Edit Distance: [```python```](python/dynamic_programming/edit_distance/#L36)
