@@ -53,7 +53,7 @@ Else (If last characters are not same), we consider all operations on ‘str1’
 
 This problem can be solved ```recursively``` (which gives us many calculations repetitions) and ```dynamically```
 
-This implementation contains 2 functions for recursive and dynamic implementations and a Test case with basic tests. tests can be run with ```make``` or manually.
+This implementation contains 2 functions for recursive and dynamic implementations and a Test case with basic tests. tests can be run with ```make``` or manually
 
 #### Targets:
   * ```make test```
