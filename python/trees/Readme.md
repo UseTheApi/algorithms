@@ -18,3 +18,41 @@ to print all paths which sum up to the given value.
  *[Note]*: that it can be any path in the tree - it does not have to start at the root.
 
  [*source*](all_paths_with_sum.py)
+
+ ### Duplicated Subtrees
+
+ Given a binary tree, find all duplicate subtrees.
+ Two trees are duplicate if they have the same structure with same node values.
+
+  **Example**:
+
+  Input :
+  ```
+       1
+      / \
+     2   3
+    /   / \
+   4   2   4
+      /
+     4
+```
+
+Output :
+```
+   2           
+  /    and    4
+ 4
+```
+Explanation: Above Trees are two duplicate subtrees.
+Therefore, you need to return above trees traversals in the
+form of a list.
+
+  [*source*](duplicated_subtrees.py)
+
+ To run tests:
+
+ ```pytest <name_of_file>```
+
+ To run source:
+
+ ```python3 <name_of_file>```

@@ -37,6 +37,7 @@ Descriptions for each task and solution are in folders (click on links in task l
 ### Trees: [c++](trees) | [python](python/trees)
 
    1. Binary Heap: [```c++```](trees/binary_heap)
+
    2. Binary Search Tree: [```c++```](trees/binary_search_tree)
 
         1. Implementation: ```c++``` [**bst**](trees/binary_search_tree/implementation/bst), [**avl**](trees/binary_search_tree/implementation/avl)
@@ -48,11 +49,12 @@ Descriptions for each task and solution are in folders (click on links in task l
             * Non-related nodes in BST: [```c++```](trees/binary_search_tree/application/not_related_nodes)
             * Determine if two trees are equal: [```c++```](trees/binary_search_tree/application/equal_trees)
 
-4. Binary Tree Applications:
+   3. Binary Tree Applications:
 
-      1. All Paths With Sum [```python```](python/trees/all_paths_with_sum.py)
+       1. All Paths With Sum [```python```](python/trees/all_paths_with_sum.py)
+       2. Duplicated Subtrees [```python```](python/trees/duplicated_subtrees.py)
 
-3. Weighted Tree
+   3. Weighted Tree
 
 ### Dynamic programming: [python](python/dynamic_programming/)
 
