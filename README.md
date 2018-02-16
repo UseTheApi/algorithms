@@ -34,9 +34,9 @@ Descriptions for each task and solution are in folders (click on links in task l
 
   1. Implementation of a class: [**implementation**](/c++/binary_heap/implementation)
 
-### Trees: [trees/](c++/trees)
+### Trees: [c++_trees](c++/trees) [python_trees](python/trees)
 
-   1. Binary Heap: [```c++```](c++/trees/binary_heap) [```python```]()
+   1. Binary Heap: [```c++```](c++/trees/binary_heap)
    2. Binary Search Tree: [```c++```](с++/trees/binary_search_tree)
 
         1. Implementation: ```c++``` [**bst**](с++/trees/binary_search_tree/implementation/bst), [**avl**](с++/trees/binary_search_tree/implementation/avl)
@@ -47,7 +47,12 @@ Descriptions for each task and solution are in folders (click on links in task l
             * 2nd Largest Node in BST: [```c++```](c++/trees/binary_search_tree/application/second_largest_node)
             * Non-related nodes in BST: [```c++```](c++/trees/binary_search_tree/application/not_related_nodes)
             * Determine if two trees are equal: [```c++```](c++/trees/binary_search_tree/application/equal_trees)
-    3. Weighted Tree
+
+4. Binary Tree Applications:
+
+      1. All Paths With Sum [```python```](python/trees/all_paths_with_sum.py)
+
+3. Weighted Tree
 
 ### Dynamic programming: [dp_python](python/dynamic_programming/)
 
