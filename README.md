@@ -52,7 +52,9 @@ Descriptions for each task and solution are in folders (click on links in task l
 ### Dynamic programming: [dp_python](python/dynamic_programming/)
 
    1. Edit Distance: [```python```](python/dynamic_programming/edit_distance/edit_distance.py#L63)
+   2. Longest Increasing Subsequence: [```python```](python/dynamic_programming/longest_increasing_subsequence/longest_increasing_subsequence.py#L49)
 
 ### Recursion:
 
    1. Edit Distance: [```python```](python/dynamic_programming/edit_distance/edit_distance.py/#L36)
+   2. Longest Increasing Subsequence: [```python```](python/dynamic_programming/longest_increasing_subsequence/longest_increasing_subsequence.py#L35)
