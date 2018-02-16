@@ -10,43 +10,43 @@ Descriptions for each task and solution are in folders (click on links in task l
 
 ## Current List:
 
-### Stack & Queue: [stack_and_queue/](/c++/stack_and_queue)
+### Stack & Queue: [c++](c++/stack_and_queue)
 
-   1. Stack implemented with Linked List: [**stack_linked_list/**](/c++/stack_and_queue/stack_linked_list)
-   2. Queue implemented with Linked List: [**queue_linked_list/**](/c++/stack_and_queue/queue_linked_list)
-   3. Special Stack with getMin() method: [**special_stack/**](/c++/stack_and_queue/special_stack)
-   4. Stack implemented from a Queue: [**stack_queue/**](/c++/stack_and_queue/stack_queue)
-   5. Queue implemented from a Stack: [**queue_stack/**](/c++/stack_and_queue/queue_stack)
+   1. Stack implemented with Linked List: [**stack_linked_list/**](c++/stack_and_queue/stack_linked_list)
+   2. Queue implemented with Linked List: [**queue_linked_list/**](c++/stack_and_queue/queue_linked_list)
+   3. Special Stack with getMin() method: [**special_stack/**](c++/stack_and_queue/special_stack)
+   4. Stack implemented from a Queue: [**stack_queue/**](c++/stack_and_queue/stack_queue)
+   5. Queue implemented from a Stack: [**queue_stack/**](c++/stack_and_queue/queue_stack)
 
-### Linked List: [linked_list/](/c++/linked_list)
+### Linked List: [c++](c++/linked_list)
 
-   1. Implementation of a class: [**implementation/**](/c++/linked_list/implementation)
-   2. Detect and Remove cycle: [**detect_remove_loop/**](/c++/linked_list/detect_remove_loop)
+   1. Implementation of a class: [**implementation/**](c++/linked_list/implementation)
+   2. Detect and Remove cycle: [**detect_remove_loop/**](c++/linked_list/detect_remove_loop)
 
-### Sorting: [sorting/](/c++/sorting)
+### Sorting: [c++](c++/sorting)
 
-   1. Selection Sort [**selection_sort**](/c++/sorting/include/sorting.hpp#L19)
-   2. Insertion Sort [**insertion_sort**](/c++/sorting/include/sorting.hpp#L52)
-   3. Merge Sort [**merge_sort**](/c++/sorting/include/sorting.hpp#L152)
-   4. Heap Sort [**heap_sort**](/c++/sorting/include/sorting.hpp#L167)
+   1. Selection Sort [**selection_sort**](c++/sorting/include/sorting.hpp#L19)
+   2. Insertion Sort [**insertion_sort**](c++/sorting/include/sorting.hpp#L52)
+   3. Merge Sort [**merge_sort**](c++/sorting/include/sorting.hpp#L152)
+   4. Heap Sort [**heap_sort**](c++/sorting/include/sorting.hpp#L167)
 
-### Binary Min Heap: [binary_heap](/c++/binary_heap/)
+### Binary Min Heap: [c++](c++/binary_heap/)
 
-  1. Implementation of a class: [**implementation**](/c++/binary_heap/implementation)
+  1. Implementation of a class: [**implementation**](c++/binary_heap/implementation)
 
-### Trees: [c++_trees](c++/trees) [python_trees](python/trees)
+### Trees: [c++](trees) | [python](python/trees)
 
-   1. Binary Heap: [```c++```](c++/trees/binary_heap)
-   2. Binary Search Tree: [```c++```](с++/trees/binary_search_tree)
+   1. Binary Heap: [```c++```](trees/binary_heap)
+   2. Binary Search Tree: [```c++```](trees/binary_search_tree)
 
-        1. Implementation: ```c++``` [**bst**](с++/trees/binary_search_tree/implementation/bst), [**avl**](с++/trees/binary_search_tree/implementation/avl)
-        2. Traversals: [```c++```](c++/trees/binary_search_tree/traversals)
-        3. Applications: [```c++```](c++/trees/binary_search_tree/application)
-            * In-order Successor: [```c++```](c++/trees/binary_search_tree/application/in_order_successor)
+        1. Implementation: ```c++``` [**bst**](trees/binary_search_tree/implementation/bst), [**avl**](trees/binary_search_tree/implementation/avl)
+        2. Traversals: [```c++```](trees/binary_search_tree/traversals)
+        3. Applications: [```c++```](trees/binary_search_tree/application)
+            * In-order Successor: [```c++```](trees/binary_search_tree/application/in_order_successor)
             * Lowest Common Ancestor for two nodes in BST: [```c++```](trees/binary_search_tree/application/lowest_common_ancestor)
-            * 2nd Largest Node in BST: [```c++```](c++/trees/binary_search_tree/application/second_largest_node)
-            * Non-related nodes in BST: [```c++```](c++/trees/binary_search_tree/application/not_related_nodes)
-            * Determine if two trees are equal: [```c++```](c++/trees/binary_search_tree/application/equal_trees)
+            * 2nd Largest Node in BST: [```c++```](trees/binary_search_tree/application/second_largest_node)
+            * Non-related nodes in BST: [```c++```](trees/binary_search_tree/application/not_related_nodes)
+            * Determine if two trees are equal: [```c++```](trees/binary_search_tree/application/equal_trees)
 
 4. Binary Tree Applications:
 
@@ -54,7 +54,7 @@ Descriptions for each task and solution are in folders (click on links in task l
 
 3. Weighted Tree
 
-### Dynamic programming: [dp_python](python/dynamic_programming/)
+### Dynamic programming: [python](python/dynamic_programming/)
 
    1. Edit Distance: [```python```](python/dynamic_programming/edit_distance/edit_distance.py#L63)
    2. Longest Increasing Subsequence: [```python```](python/dynamic_programming/longest_increasing_subsequence/longest_increasing_subsequence.py#L49)
