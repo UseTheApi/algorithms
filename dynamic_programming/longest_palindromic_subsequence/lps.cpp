@@ -1,6 +1,6 @@
 //
 //  lps.cpp
-//  algorithms. Dynamic Programming. Longest Palidromic Subsequence
+//  algorithms. Dynamic Programming. Longest Palindromic Subsequence
 //
 //  Created by alifar on 03/09/17.
 //  Copyright © 2017 alifar. All rights reserved.
@@ -13,7 +13,7 @@
 int LongestPalindromeSubsequence(const std::string &str){
     int l_mat[str.size()][str.size()];
     int j; // last index in palindromic subsequence
-    
+
     for(size_t i = 0; i < str.size(); ++i){
         l_mat[i][i] = 1;
     }
@@ -31,4 +31,3 @@ int LongestPalindromeSubsequence(const std::string &str){
     }
     return l_mat[0][str.size()-1];
 }
-
