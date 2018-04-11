@@ -57,5 +57,29 @@ def collect_all_palindromic_parts(given_string):
     return result
 
 
+def collect_partitions(s, result=None, pal_size=1):
+    if pal_size == 1:
+        result = [list(s)]
+        return collect_partitions(s, result, pal_size+1)
+    if pal_size == len(s):
+        return result
+    parts = list()
+    i = 0
+    while i < len(s) - pal_size + 1:
+        cur_str = ''
+        for _ in range(pal_size):
+            cur_str += s[_+i]
+        if palindrom(cur_str):
+            parts.append(cur_str)
+            i += pal_size
+        else:
+            parts.append(s[i])
+            i += 1
+    while i < len(s):
+        parts.append(s[i])
+        i += 1
+    if parts not in result:
+        result.append(parts)
+    return collect_partitions(s, result, pal_size+1)
 if __name__ == "__main__":
     print(collect_all_palindromic_parts('banana'))
